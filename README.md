@@ -21,9 +21,14 @@ what makes injection safe.
 | `EXPERIMENTS.md` | The complete, dated experiment log (E1 to E41). The predictions cited in the paper's Discussion were written into this log before the runs that tested them. |
 | `figures/`, `paper_figures/` | Scripts that produce every figure in the paper from the files in `results/`. |
 
-Large artifacts that exceed GitHub's file limits (the 100k Million-AID distractor index and its BLIP-large caption
-embeddings, about 210 MB, and the 1M DataComp web-distractor embeddings, about 1 GB) are deposited separately; the
-Zenodo DOI will be added here and in the paper's data-availability statement.
+The 100k aerial distractor set (Sec. IV-F5, Tables X and XI) is attached to the
+[v1.0 release](https://github.com/usamasshaikh165/DCKF/releases/tag/v1.0) because the files exceed the repository size
+limit: `distractors_millionaid_100000_raw_v2.fp16.npy` (CLIP ViT-B/32 image embeddings of 100,000 Million-AID images,
+float16, 100000 x 512), `distractors_millionaid_100000_cap_bliplarge.fp16.npy` (CLIP text embeddings of their
+BLIP-large aerial-prompt captions, same order), `distractors_millionaid_100000_captions_bliplarge.jsonl` (the captions),
+and the `*.meta.json` provenance files. Download them into `results/` before running `src/rs_scale_eval.py` or
+`src/rs_scale_gallery_eval.py`. No Million-AID images are redistributed. The 1M DataComp web-distractor embeddings
+(about 1 GB) are regenerated with `src/fetch_distractors.py`.
 
 ## Setup
 
