@@ -1,0 +1,71 @@
+### gallery_caption_expansion rsicd (E15 broken-channel KG increment)
+Loaded cached features for 1093 images.
+5465 queries over 1093 images (rsicd)
+Loaded 1093 cached BLIP captions.
+  expanded 250/1093
+  expanded 500/1093
+  expanded 750/1093
+  expanded 1000/1093
+KG expansion: 1085/1093 captions enriched, 34 ms/image (offline)
+
+config                      R@1      R@5     R@10   dR@1
+A baseline                5.40%   17.73%   27.94%   +0.00
+B emb cap a=0.8           3.99%   13.36%   22.05%   -1.41
+C emb cap+KG a=0.8        3.86%   13.92%   22.07%   -1.54
+B emb cap a=0.9           4.61%   15.65%   25.51%   -0.79
+C emb cap+KG a=0.9        4.54%   16.10%   26.28%   -0.86
+B emb cap a=0.95          5.27%   17.04%   26.99%   -0.13
+C emb cap+KG a=0.95       5.27%   17.27%   27.39%   -0.13
+D score cap b=0.05        5.22%   17.11%   27.01%   -0.18
+E score cap+KG b=0.05     5.38%   17.26%   27.47%   -0.02
+D score cap b=0.1         4.56%   15.59%   25.49%   -0.84
+E score cap+KG b=0.1      4.54%   15.75%   26.57%   -0.86
+D score cap b=0.15        4.15%   14.40%   24.14%   -1.24
+E score cap+KG b=0.15     4.12%   14.99%   24.15%   -1.28
+D score cap b=0.2         4.06%   13.36%   22.01%   -1.34
+E score cap+KG b=0.2      3.55%   13.87%   22.23%   -1.85
+
+Paired bootstrap best KG vs baseline [E score cap+KG b=0.05 vs A baseline], R@1:
+  mean delta -0.02 pts, 95% CI [-0.44, +0.38], p(delta<=0) = 0.5527
+
+Paired bootstrap best KG vs best caption-only (KG increment) [E score cap+KG b=0.05 vs B emb cap a=0.95], R@1:
+  mean delta +0.11 pts, 95% CI [-0.15, +0.37], p(delta<=0) = 0.2232
+### multihop hop2-parity rsicd
+Loaded cached features for 1093 images.
+5465 queries over 1093 images (rsicd)
+Loaded cached multihop pools.
+11867 unique candidate concepts (pool avg 66.0/query)
+
+fusion a=0.9, min_sim=0.55, keep=2
+config                                  R@1      R@5     R@10  dR@1(A)  dR@1(B)
+A baseline                            5.40%   17.73%   27.94%  +0.00   -0.13
+B 1-hop (E7 ref) (n=5446,h2=0)        5.53%   17.95%   27.83%  +0.13   +0.00
+C 1+2-hop pooled (n=5453,h2=3823)     5.47%   17.84%   27.83%  +0.07   -0.05
+D 2-hop backoff (n=5453,h2=7)         5.53%   17.95%   27.83%  +0.13   +0.00
+E 2-hop if short (n=5446,h2=1500)     5.49%   17.91%   27.80%  +0.09   -0.04
+
+Paired bootstrap D 2-hop backoff (n=5453,h2=7) vs B 1-hop (E7 ref) (n=5446,h2=0) (multi-hop increment), R@1:
+  mean delta +0.00 pts, 95% CI [+0.00, +0.00], p(delta<=0) = 1.0000
+
+Paired bootstrap D 2-hop backoff (n=5453,h2=7) vs A baseline, R@1:
+  mean delta +0.13 pts, 95% CI [-0.07, +0.35], p(delta<=0) = 0.1328
+### multihop hop2-parity flickr legacy
+Loaded cached features for 1000 images.
+5000 queries over 1000 images (flickr30k)
+Loaded cached multihop pools.
+23857 unique candidate concepts (pool avg 66.1/query)
+
+fusion a=0.9, min_sim=0.55, keep=2
+config                                  R@1      R@5     R@10  dR@1(A)  dR@1(B)
+A baseline                           59.22%   84.50%   90.60%  +0.00   -0.26
+B 1-hop (E7 ref) (n=4051,h2=0)       59.48%   84.64%   90.72%  +0.26   +0.00
+C 1+2-hop pooled (n=4113,h2=2826)    59.38%   84.50%   90.72%  +0.16   -0.10
+D 2-hop backoff (n=4113,h2=62)       59.48%   84.64%   90.72%  +0.26   +0.00
+E 2-hop if short (n=4061,h2=1524)    59.38%   84.54%   90.76%  +0.16   -0.10
+
+Paired bootstrap D 2-hop backoff (n=4113,h2=62) vs B 1-hop (E7 ref) (n=4051,h2=0) (multi-hop increment), R@1:
+  mean delta -0.00 pts, 95% CI [-0.06, +0.06], p(delta<=0) = 0.6577
+
+Paired bootstrap D 2-hop backoff (n=4113,h2=62) vs A baseline, R@1:
+  mean delta +0.26 pts, 95% CI [-0.02, +0.54], p(delta<=0) = 0.0391
+E35A_DONE

@@ -1,0 +1,15 @@
+torch>=2.1
+torchvision
+numpy
+pillow
+ftfy
+regex
+tqdm
+requests
+matplotlib
+scikit-learn
+faiss-cpu
+# optional, needed only for specific experiments
+open_clip_torch      # RemoteCLIP backbone ablation
+transformers>=4.40   # BLIP captioning, Qwen2.5 rewriting baseline
+accelerate

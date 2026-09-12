@@ -1,0 +1,49 @@
+=== flickr30k_k1k
+Loaded cached features for 1000 images.
+dtypes: torch.float16 torch.float16 | img norm dev (fp32): 5.41e-04 | txt norm dev: 6.13e-04
+
+config                                  R@1 | vs fp16 A            | vs fp32 A
+A cached fp16 (paper baseline)       0.5870 | +0.00 [+0.00,+0.00] p=1.000 | -0.16 [-0.28,-0.06] p=1.000
+A img renorm                         0.5886 | +0.16 [+0.06,+0.28] p=0.000 | +0.00 [+0.00,+0.00] p=1.000
+A txt renorm                         0.5870 | +0.00 [+0.00,+0.00] p=1.000 | -0.16 [-0.28,-0.06] p=1.000
+A both renorm                        0.5886 | +0.16 [+0.06,+0.28] p=0.000 | +0.00 [+0.00,+0.00] p=1.000
+B KG (vs both-renorm A)              0.5924 | +0.54 [+0.22,+0.86] p=0.000 | +0.38 [+0.08,+0.68] p=0.008
+C captions (vs both-renorm A)        0.6112 | +2.42 [+1.64,+3.22] p=0.000 | +2.26 [+1.48,+3.04] p=0.000
+D both (vs both-renorm A)            0.6108 | +2.38 [+1.58,+3.18] p=0.000 | +2.22 [+1.42,+3.00] p=0.000
+=== rsicd
+Loaded cached features for 1093 images.
+dtypes: torch.float16 torch.float16 | img norm dev (fp32): 5.23e-04 | txt norm dev: 6.60e-04
+
+config                                  R@1 | vs fp16 A            | vs fp32 A
+A cached fp16 (paper baseline)       0.0545 | +0.00 [+0.00,+0.00] p=1.000 | +0.05 [-0.02,+0.15] p=0.125
+A img renorm                         0.0540 | -0.05 [-0.15,+0.02] p=0.950 | +0.00 [+0.00,+0.00] p=1.000
+A txt renorm                         0.0545 | +0.00 [+0.00,+0.00] p=1.000 | +0.05 [-0.02,+0.15] p=0.125
+A both renorm                        0.0540 | -0.05 [-0.15,+0.02] p=0.950 | +0.00 [+0.00,+0.00] p=1.000
+B KG (vs both-renorm A)              0.0558 | +0.13 [-0.09,+0.35] p=0.139 | +0.18 [-0.02,+0.40] p=0.048
+C captions (vs both-renorm A)        0.0461 | -0.84 [-1.35,-0.33] p=1.000 | -0.79 [-1.30,-0.27] p=0.999
+D both (vs both-renorm A)            0.0470 | -0.75 [-1.26,-0.22] p=0.998 | -0.69 [-1.21,-0.16] p=0.996
+=== coco5k
+Loaded cached features for 5000 images.
+dtypes: torch.float16 torch.float16 | img norm dev (fp32): 5.22e-04 | txt norm dev: 6.98e-04
+
+config                                  R@1 | vs fp16 A            | vs fp32 A
+A cached fp16 (paper baseline)       0.3045 | +0.00 [+0.00,+0.00] p=1.000 | -0.00 [-0.04,+0.03] p=0.627
+A img renorm                         0.3045 | +0.00 [-0.03,+0.04] p=0.458 | +0.00 [+0.00,+0.00] p=1.000
+A txt renorm                         0.3045 | +0.00 [+0.00,+0.00] p=1.000 | -0.00 [-0.04,+0.03] p=0.627
+A both renorm                        0.3045 | +0.00 [-0.03,+0.04] p=0.458 | +0.00 [+0.00,+0.00] p=1.000
+B KG (vs both-renorm A)              0.3049 | +0.04 [-0.08,+0.16] p=0.252 | +0.04 [-0.08,+0.16] p=0.269
+C captions (vs both-renorm A)        0.3326 | +2.81 [+2.46,+3.16] p=0.000 | +2.81 [+2.46,+3.16] p=0.000
+D both (vs both-renorm A)            0.3337 | +2.92 [+2.57,+3.27] p=0.000 | +2.92 [+2.56,+3.26] p=0.000
+=== rsicd large_aerial
+Loaded cached features for 1093 images.
+dtypes: torch.float16 torch.float16 | img norm dev (fp32): 5.23e-04 | txt norm dev: 6.60e-04
+
+config                                  R@1 | vs fp16 A            | vs fp32 A
+A cached fp16 (paper baseline)       0.0545 | +0.00 [+0.00,+0.00] p=1.000 | +0.05 [-0.02,+0.15] p=0.125
+A img renorm                         0.0540 | -0.05 [-0.15,+0.02] p=0.950 | +0.00 [+0.00,+0.00] p=1.000
+A txt renorm                         0.0545 | +0.00 [+0.00,+0.00] p=1.000 | +0.05 [-0.02,+0.15] p=0.125
+A both renorm                        0.0540 | -0.05 [-0.15,+0.02] p=0.950 | +0.00 [+0.00,+0.00] p=1.000
+B KG (vs both-renorm A)              0.0558 | +0.13 [-0.09,+0.35] p=0.139 | +0.18 [-0.02,+0.40] p=0.048
+C captions (vs both-renorm A)        0.0586 | +0.41 [-0.04,+0.86] p=0.042 | +0.46 [+0.02,+0.91] p=0.024
+D both (vs both-renorm A)            0.0604 | +0.59 [+0.13,+1.04] p=0.006 | +0.64 [+0.18,+1.10] p=0.003
+E31_DONE

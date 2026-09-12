@@ -1,0 +1,21 @@
+{
+ "dataset": "rsicd",
+ "n_queries": 500,
+ "device": "mps",
+ "median_ms": {
+  "baseline_query_encode": 8.880396000677138,
+  "expansion_as_deployed": 186.25981299919658,
+  "expansion_with_concept_cache": 32.91079200062086,
+  "conceptnet_lookup_only": 3.139895999993314
+ },
+ "p90_ms": {
+  "baseline_query_encode": 10.521374999370892,
+  "expansion_as_deployed": 226.02591600298183,
+  "expansion_with_concept_cache": 36.8834170003538
+ },
+ "mean_candidates_per_query": 28.192,
+ "concept_cache": {
+  "unique_concepts": 1916,
+  "offline_seconds": 12.48777620799956
+ }
+}

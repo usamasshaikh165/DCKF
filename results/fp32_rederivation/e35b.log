@@ -1,0 +1,54 @@
+### ablations flickr legacy (IV-F1)
+Loaded cached features for 1000 images.
+5000 queries over 1000 images (flickr30k)
+Loaded cached expansions (expansions_flickr30k_1000_5.json)
+
+config                            R@1      R@5     R@10   MedR
+baseline                       59.22%   84.50%   90.60%      1   dR@1 +0.00
+expand-all T1                  54.42%   80.58%   88.14%      1   dR@1 -4.80
+expand-all T2                  58.40%   83.54%   90.16%      1   dR@1 -0.82
+expand-all T3                  56.74%   82.64%   89.54%      1   dR@1 -2.48
+selective<5w (n=1403)          58.86%   84.10%   90.30%      1   dR@1 -0.36
+only-IsA (n=4146)              58.22%   83.62%   90.18%      1   dR@1 -1.00
+only-AtLocation (n=217)        59.18%   84.38%   90.66%      1   dR@1 -0.04
+only-UsedFor (n=209)           58.96%   84.34%   90.54%      1   dR@1 -0.26
+only-PartOf (n=102)            59.18%   84.48%   90.58%      1   dR@1 -0.04
+only-CapableOf (n=30)          59.24%   84.48%   90.60%      1   dR@1 +0.02
+fused a=0.5                    59.08%   83.78%   90.76%      1   dR@1 -0.14
+fused a=0.6                    59.22%   83.88%   90.90%      1   dR@1 +0.00
+fused a=0.7                    59.46%   84.18%   91.06%      1   dR@1 +0.24
+fused a=0.8                    59.46%   84.42%   91.00%      1   dR@1 +0.24
+fused a=0.9                    59.66%   84.52%   90.70%      1   dR@1 +0.44
+
+Saved /home/usama/RA-KG-T2I/results/ablations_flickr30k_1000_5.csv
+### gallery_expansion flickr legacy (IV-F2 image-derived concepts)
+Loaded cached features for 1000 images.
+5000 queries over 1000 images (flickr30k)
+vocab 10000, tagged 1000 images (5.1s total)
+KG expansion: 94393 unique neighbors, 36 ms/image (offline, index-time only)
+
+config                    R@1      R@5     R@10   dR@1
+A baseline             59.22%   84.50%   90.60%   +0.00
+B tags a=0.7           50.08%   76.80%   84.98%   -9.14
+C tags+KG a=0.7        50.34%   77.52%   85.58%   -8.88
+B tags a=0.8           54.40%   81.22%   88.42%   -4.82
+C tags+KG a=0.8        55.04%   81.60%   88.80%   -4.18
+B tags a=0.9           58.52%   83.38%   90.30%   -0.70
+C tags+KG a=0.9        58.26%   83.88%   90.32%   -0.96
+B tags a=0.95          59.00%   84.16%   90.54%   -0.22
+C tags+KG a=0.95       59.06%   84.38%   90.64%   -0.16
+D score tags b=0.05    59.02%   84.16%   90.48%   -0.20
+E score tags+KG b=0.05   58.92%   84.32%   90.58%   -0.30
+D score tags b=0.1     58.32%   83.40%   90.14%   -0.90
+E score tags+KG b=0.1   57.98%   83.62%   90.22%   -1.24
+D score tags b=0.15    56.64%   82.72%   89.30%   -2.58
+E score tags+KG b=0.15   56.32%   82.74%   89.70%   -2.90
+D score tags b=0.2     54.08%   81.20%   88.46%   -5.14
+E score tags+KG b=0.2   54.58%   81.26%   88.62%   -4.64
+
+Paired bootstrap best KG vs baseline [C tags+KG a=0.95 vs A baseline], R@1:
+  mean delta -0.16 pts, 95% CI [-0.62, +0.30], p(delta<=0) = 0.7707
+
+Paired bootstrap best KG vs best tags-only (KG increment) [C tags+KG a=0.95 vs D score tags b=0.05], R@1:
+  mean delta +0.04 pts, 95% CI [-0.32, +0.38], p(delta<=0) = 0.4397
+E35B_DONE

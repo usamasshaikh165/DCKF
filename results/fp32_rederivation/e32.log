@@ -1,0 +1,926 @@
+
+### 17:01 bidirectional (Tables II, VIII base)
+
+### 17:01 bidirectional flickr30k_k1k
+Loaded cached features for 1000 images.
+5000 captions over 1000 images (flickr30k_k1k); captions/image histogram tail: {5: 1000}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |   58.86%  83.48%  89.94%     1 |   78.80%  94.90%  98.20%     1 | 84.03%
+B query-KG aq=0.9        |   59.24%  83.74%  90.12%     1 |   78.70%  95.00%  98.30%     1 | 84.18%
+C gallery-cap ag=0.9     |   61.12%  84.92%  90.42%     1 |   77.20%  94.60%  97.90%     1 | 84.36%
+D both                   |   61.10%  84.96%  90.66%     1 |   77.80%  94.70%  98.00%     1 | 84.54%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.38 pts, 95% CI [+0.08, +0.68], p(delta<=0)=0.0081
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): -0.10 pts, 95% CI [-0.60, +0.40], p(delta<=0)=0.7120
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): +2.26 pts, 95% CI [+1.48, +3.04], p(delta<=0)=0.0000
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): -1.60 pts, 95% CI [-3.70, +0.40], p(delta<=0)=0.9440
+bootstrap D both vs A, t2i R@1 (paired over captions): +2.24 pts, 95% CI [+1.46, +3.02], p(delta<=0)=0.0000
+bootstrap D both vs A, i2t R@1 (paired over images): -0.99 pts, 95% CI [-3.10, +1.10], p(delta<=0)=0.8341
+
+wrote results/bidirectional_flickr30k_k1k_1000_5.json
+
+### 17:01 bidirectional coco5k
+Loaded cached features for 5000 images.
+25000 captions over 5000 images (coco5k); captions/image histogram tail: {5: 5000}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |   30.45%  55.95%  66.87%     4 |   50.14%  74.98%  83.52%     1 | 60.32%
+B query-KG aq=0.9        |   30.49%  55.99%  66.90%     4 |   50.56%  75.50%  83.28%     1 | 60.45%
+C gallery-cap ag=0.9     |   33.26%  59.36%  70.11%     3 |   50.76%  74.96%  83.94%     1 | 62.06%
+D both                   |   33.38%  59.47%  70.22%     3 |   50.86%  75.18%  83.74%     1 | 62.14%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.04 pts, 95% CI [-0.08, +0.16], p(delta<=0)=0.2706
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): +0.42 pts, 95% CI [+0.04, +0.80], p(delta<=0)=0.0179
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): +2.81 pts, 95% CI [+2.46, +3.16], p(delta<=0)=0.0000
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): +0.62 pts, 95% CI [-0.38, +1.62], p(delta<=0)=0.1190
+bootstrap D both vs A, t2i R@1 (paired over captions): +2.93 pts, 95% CI [+2.57, +3.27], p(delta<=0)=0.0000
+bootstrap D both vs A, i2t R@1 (paired over images): +0.71 pts, 95% CI [-0.30, +1.74], p(delta<=0)=0.0877
+
+wrote results/bidirectional_coco5k_5000_5.json
+
+### 17:02 bidirectional rsicd
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd); captions/image histogram tail: {5: 1093}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |    5.40%  17.73%  27.94%    26 |    5.40%  16.01%  26.17%    40 | 16.44%
+B query-KG aq=0.9        |    5.58%  18.02%  28.16%    26 |    6.04%  16.10%  25.71%    39 | 16.60%
+C gallery-cap ag=0.9     |    4.61%  15.65%  25.51%    29 |    5.58%  16.83%  24.98%    37 | 15.53%
+D both                   |    4.68%  15.77%  25.54%    29 |    5.40%  17.20%  25.16%    36 | 15.63%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.18 pts, 95% CI [-0.02, +0.40], p(delta<=0)=0.0481
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): +0.64 pts, 95% CI [+0.00, +1.28], p(delta<=0)=0.0298
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): -0.79 pts, 95% CI [-1.30, -0.27], p(delta<=0)=0.9987
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): +0.18 pts, 95% CI [-0.64, +1.01], p(delta<=0)=0.3703
+bootstrap D both vs A, t2i R@1 (paired over captions): -0.71 pts, 95% CI [-1.23, -0.18], p(delta<=0)=0.9964
+bootstrap D both vs A, i2t R@1 (paired over images): -0.00 pts, 95% CI [-0.91, +0.91], p(delta<=0)=0.5472
+
+wrote results/bidirectional_rsicd_1093_5.json
+
+### 17:02 bidirectional rsitmd
+Loaded cached features for 452 images.
+2260 captions over 452 images (rsitmd); captions/image histogram tail: {5: 452}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |    8.81%  27.92%  43.23%    14 |    9.51%  23.23%  32.74%    28 | 24.24%
+B query-KG aq=0.9        |    8.94%  28.05%  43.01%    14 |    9.51%  23.45%  32.74%    28 | 24.28%
+C gallery-cap ag=0.9     |    7.52%  25.00%  39.56%    15 |    9.07%  22.79%  32.08%    27 | 22.67%
+D both                   |    7.79%  24.87%  39.47%    15 |    9.07%  22.79%  33.19%    27 | 22.86%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.13 pts, 95% CI [-0.22, +0.53], p(delta<=0)=0.2787
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): +0.00 pts, 95% CI [+0.00, +0.00], p(delta<=0)=1.0000
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): -1.29 pts, 95% CI [-2.30, -0.27], p(delta<=0)=0.9941
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): -0.44 pts, 95% CI [-2.43, +1.55], p(delta<=0)=0.7097
+bootstrap D both vs A, t2i R@1 (paired over captions): -1.02 pts, 95% CI [-2.08, +0.04], p(delta<=0)=0.9737
+bootstrap D both vs A, i2t R@1 (paired over images): -0.44 pts, 95% CI [-2.21, +1.33], p(delta<=0)=0.7189
+
+wrote results/bidirectional_rsitmd_452_5.json
+
+### 17:02 bidirectional ucm
+Loaded cached features for 210 images.
+1050 captions over 210 images (ucm); captions/image histogram tail: {5: 210}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |    8.67%  36.38%  60.29%     8 |   22.38%  42.86%  56.19%     8 | 37.79%
+B query-KG aq=0.9        |    8.86%  36.38%  60.29%     8 |   22.38%  45.24%  55.71%     7 | 38.14%
+C gallery-cap ag=0.9     |    8.00%  38.48%  63.24%     7 |   24.29%  45.24%  58.57%     7 | 39.63%
+D both                   |    7.71%  38.38%  63.05%     7 |   26.19%  45.24%  60.48%     7 | 40.17%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.19 pts, 95% CI [-0.19, +0.57], p(delta<=0)=0.2224
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): -0.01 pts, 95% CI [-2.86, +2.86], p(delta<=0)=0.5664
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): -0.68 pts, 95% CI [-2.38, +1.05], p(delta<=0)=0.8016
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): +1.86 pts, 95% CI [-2.86, +6.19], p(delta<=0)=0.2428
+bootstrap D both vs A, t2i R@1 (paired over captions): -0.96 pts, 95% CI [-2.67, +0.76], p(delta<=0)=0.8809
+bootstrap D both vs A, i2t R@1 (paired over images): +3.79 pts, 95% CI [-0.48, +8.10], p(delta<=0)=0.0548
+
+wrote results/bidirectional_ucm_210_5.json
+
+### 17:02 bidirectional nwpu
+Loaded cached features for 3150 images.
+15750 captions over 3150 images (nwpu); captions/image histogram tail: {5: 3150}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |    2.37%   9.90%  16.86%    49 |    4.67%  13.21%  21.75%    46 | 11.46%
+B query-KG aq=0.9        |    2.42%   9.87%  16.91%    49 |    4.63%  13.65%  22.03%    45 | 11.59%
+C gallery-cap ag=0.9     |    2.33%   8.71%  14.98%    58 |    4.67%  13.43%  21.46%    45 | 10.93%
+D both                   |    2.28%   8.79%  14.96%    58 |    4.76%  13.68%  21.97%    45 | 11.07%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.05 pts, 95% CI [-0.03, +0.13], p(delta<=0)=0.1068
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): -0.03 pts, 95% CI [-0.38, +0.32], p(delta<=0)=0.6005
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): -0.04 pts, 95% CI [-0.29, +0.22], p(delta<=0)=0.6266
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): +0.00 pts, 95% CI [-0.60, +0.60], p(delta<=0)=0.5162
+bootstrap D both vs A, t2i R@1 (paired over captions): -0.09 pts, 95% CI [-0.34, +0.16], p(delta<=0)=0.7630
+bootstrap D both vs A, i2t R@1 (paired over images): +0.10 pts, 95% CI [-0.51, +0.70], p(delta<=0)=0.3930
+
+wrote results/bidirectional_nwpu_3150_5.json
+
+### 17:03 rsicd captioner dose-response (Table V)
+Loaded cached features for 1093 images.
+5465 queries over 1093 images (rsicd)
+Loaded cached captions: blip_captions_rsicd_1093_5_aerial.json
+Loaded cached captions: blip_captions_rsicd_1093_5_satellite.json
+sample captions (first 3 images):
+  [uncond] a large field with a soccer field in the middle | an aerial view of the stadium | the stadium in the middle of the city
+  [aerial] an aerial photograph of the football field | an aerial photograph of the stadium | an aerial photograph of the stadium
+  [satellite] a satellite image of the football field at the university of notre - lou | a satellite image of the stadium in the city of london | a satellite image of the stadium
+
+KG expansion on best caption set: B aerial a=0.95
+
+config                            R@1      R@5     R@10   dR@1
+A baseline                      5.40%   17.73%   27.94%   +0.00
+B uncond a=0.9                  4.61%   15.65%   25.51%   -0.79
+B uncond a=0.95                 5.27%   17.04%   26.99%   -0.13
+B aerial a=0.9                  5.40%   17.33%   27.54%   +0.00
+B aerial a=0.95                 5.56%   17.90%   27.69%   +0.16
+B satellite a=0.9               5.09%   16.76%   27.83%   -0.31
+B satellite a=0.95              5.32%   17.15%   27.96%   -0.07
+C KG channel g=0.8 (n=995)      5.51%   17.97%   27.69%   +0.11
+C KG channel g=0.9 (n=995)      5.54%   17.90%   27.65%   +0.15
+C KG replace                    5.40%   18.02%   27.90%   +0.00
+
+Paired bootstrap C KG channel g=0.9 (n=995) vs B aerial a=0.95 (KG increment), R@1:
+  mean delta -0.02 pts, 95% CI [-0.09, +0.05], p(delta<=0) = 0.7547
+
+Paired bootstrap C KG channel g=0.9 (n=995) vs A baseline, R@1:
+  mean delta +0.15 pts, 95% CI [-0.16, +0.46], p(delta<=0) = 0.1912
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd)
+Loaded cached captions: blip_captions_rsicd_1093_5_large_aerial.json
+example caption: an aerial photograph of a soccer field in a city
+
+config                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR
+--------------------------------------------------------------------------------------
+A baseline             |    5.40%  17.73%  27.94% |    5.40%  16.01%  26.17% | 16.44%
+C large-cap ag=0.9     |    5.87%  17.79%  29.17% |    6.50%  18.02%  26.99% | 17.39%
+D both ag=0.9          |    6.06%  17.73%  28.82% |    6.13%  17.47%  26.26% | 17.08%
+C large-cap ag=0.95    |    5.71%  17.99%  28.55% |    5.95%  16.93%  26.99% | 17.02%
+D both ag=0.95         |    5.82%  18.30%  28.42% |    5.86%  17.47%  26.72% | 17.10%
+bootstrap C large-cap ag=0.9 vs A, t2i R@1: +0.48 [+0.04, +0.93], p=0.0202
+bootstrap D both ag=0.9 vs A, t2i R@1: +0.66 [+0.20, +1.12], p=0.0025
+bootstrap C large-cap ag=0.95 vs A, t2i R@1: +0.31 [-0.02, +0.64], p=0.0332
+bootstrap D both ag=0.95 vs A, t2i R@1: +0.42 [+0.09, +0.75], p=0.0076
+bootstrap KG increment (D both ag=0.9 vs C large-cap ag=0.9), t2i R@1: +0.18 [+0.00, +0.37], p=0.0272
+
+wrote results/rsicd_blip_large.json
+
+### 17:03 pooled RS test (Table IV)
+Loaded cached features for 1093 images.
+rsicd: 5465 q, dR@1=+0.183, dR@5=+0.293
+Loaded cached features for 452 images.
+rsitmd: 2260 q, dR@1=+0.133, dR@5=+0.133
+Loaded cached features for 210 images.
+ucm: 1050 q, dR@1=+0.190, dR@5=+0.000
+Loaded cached features for 3150 images.
+nwpu: 15750 q, dR@1=+0.051, dR@5=-0.025
+POOLED R@1: +0.094 pts, 95% CI [+0.016, +0.167], p(delta<=0) = 0.0084 (24,525 queries, stratified)
+POOLED R@5: +0.061 pts, 95% CI [-0.065, +0.188], p(delta<=0) = 0.1634 (24,525 queries, stratified)
+POOLED R@10: +0.065 pts, 95% CI [-0.069, +0.204], p(delta<=0) = 0.1679 (24,525 queries, stratified)
+
+### 17:04 selection parity (Table VI)
+
+### 17:04 parity flickr30k_k1k fusion
+Loaded cached features for 1000 images.
+5000 captions over 1000 images (flickr30k_k1k)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |   58.86%  83.48%  89.94% |   78.80%  94.90%  98.20% | 84.03% |     -
+random (KTIR-style)      |   59.20%  83.76%  90.10% |   78.70%  95.20%  98.50% | 84.24% |  3967
+original priors          |   59.28%  83.66%  90.14% |   78.80%  95.00%  98.30% | 84.20% |  3967
+wordnet synonyms         |   59.10%  83.66%  90.16% |   79.00%  94.90%  98.40% | 84.20% |  4138
+relation-aware (ours)    |   59.24%  83.74%  90.12% |   78.70%  95.00%  98.30% | 84.18% |  3967
+bootstrap random (KTIR-style) vs baseline, t2i R@1: +0.34 [+0.06, +0.64], p=0.0092
+bootstrap original priors vs baseline, t2i R@1: +0.42 [+0.14, +0.72], p=0.0034
+bootstrap wordnet synonyms vs baseline, t2i R@1: +0.24 [-0.02, +0.50], p=0.0375
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.38 [+0.08, +0.68], p=0.0081
+bootstrap ours vs random (KTIR-style), t2i R@1: +0.04 [-0.20, +0.26], p=0.3994
+bootstrap ours vs original priors, t2i R@1: -0.04 [-0.12, +0.04], p=0.9113
+bootstrap ours vs wordnet synonyms, t2i R@1: +0.14 [-0.12, +0.42], p=0.1758
+
+wrote results/baselines_flickr30k_k1k_1000_5.json
+
+### 17:04 parity flickr30k_k1k text
+Loaded cached features for 1000 images.
+5000 captions over 1000 images (flickr30k_k1k)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |   58.86%  83.48%  89.94% |   78.80%  94.90%  98.20% | 84.03% |     -
+random (KTIR-style)      |   55.90%  80.96%  88.72% |   76.90%  95.00%  98.10% | 82.60% |  3967
+original priors          |   56.54%  81.38%  88.80% |   77.40%  94.10%  97.90% | 82.69% |  3967
+wordnet synonyms         |   56.68%  81.88%  88.76% |   77.70%  94.30%  97.10% | 82.74% |  4138
+relation-aware (ours)    |   56.58%  81.30%  88.80% |   77.30%  94.30%  97.50% | 82.63% |  3967
+bootstrap random (KTIR-style) vs baseline, t2i R@1: -2.96 [-3.82, -2.10], p=1.0000
+bootstrap original priors vs baseline, t2i R@1: -2.32 [-3.14, -1.48], p=1.0000
+bootstrap wordnet synonyms vs baseline, t2i R@1: -2.18 [-3.00, -1.38], p=1.0000
+bootstrap relation-aware (ours) vs baseline, t2i R@1: -2.28 [-3.10, -1.46], p=1.0000
+bootstrap ours vs random (KTIR-style), t2i R@1: +0.68 [-0.04, +1.40], p=0.0330
+bootstrap ours vs original priors, t2i R@1: +0.04 [-0.20, +0.28], p=0.4082
+bootstrap ours vs wordnet synonyms, t2i R@1: -0.10 [-0.94, +0.74], p=0.5965
+
+wrote results/baselines_flickr30k_k1k_1000_5_text.json
+
+### 17:05 parity rsicd fusion
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |    5.40%  17.73%  27.94% |    5.40%  16.01%  26.17% | 16.44% |     -
+random (KTIR-style)      |    5.53%  18.24%  28.01% |    5.58%  15.92%  25.25% | 16.42% |  5433
+original priors          |    5.58%  18.01%  28.25% |    6.04%  16.10%  25.98% | 16.66% |  5433
+wordnet synonyms         |    5.36%  17.75%  28.09% |    5.58%  16.10%  25.43% | 16.39% |  5340
+relation-aware (ours)    |    5.58%  18.02%  28.16% |    6.04%  16.10%  25.71% | 16.60% |  5433
+bootstrap random (KTIR-style) vs baseline, t2i R@1: +0.13 [-0.07, +0.33], p=0.1146
+bootstrap original priors vs baseline, t2i R@1: +0.18 [-0.02, +0.38], p=0.0476
+bootstrap wordnet synonyms vs baseline, t2i R@1: -0.04 [-0.20, +0.13], p=0.7167
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.18 [-0.02, +0.40], p=0.0481
+bootstrap ours vs random (KTIR-style), t2i R@1: +0.06 [-0.11, +0.24], p=0.3010
+bootstrap ours vs original priors, t2i R@1: +0.00 [-0.09, +0.09], p=0.5774
+bootstrap ours vs wordnet synonyms, t2i R@1: +0.22 [+0.02, +0.44], p=0.0247
+
+wrote results/baselines_rsicd_1093_5.json
+
+### 17:05 parity rsicd text
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |    5.40%  17.73%  27.94% |    5.40%  16.01%  26.17% | 16.44% |     -
+random (KTIR-style)      |    4.65%  15.70%  25.25% |    4.67%  14.73%  24.79% | 14.96% |  5433
+original priors          |    4.72%  16.25%  25.65% |    4.30%  14.91%  22.87% | 14.78% |  5433
+wordnet synonyms         |    4.57%  14.88%  25.14% |    4.48%  14.18%  23.70% | 14.49% |  5340
+relation-aware (ours)    |    4.45%  15.90%  25.60% |    4.30%  15.00%  22.42% | 14.61% |  5433
+bootstrap random (KTIR-style) vs baseline, t2i R@1: -0.74 [-1.32, -0.18], p=0.9952
+bootstrap original priors vs baseline, t2i R@1: -0.67 [-1.23, -0.13], p=0.9925
+bootstrap wordnet synonyms vs baseline, t2i R@1: -0.82 [-1.35, -0.29], p=0.9986
+bootstrap relation-aware (ours) vs baseline, t2i R@1: -0.95 [-1.50, -0.40], p=0.9997
+bootstrap ours vs random (KTIR-style), t2i R@1: -0.20 [-0.64, +0.24], p=0.8311
+bootstrap ours vs original priors, t2i R@1: -0.27 [-0.46, -0.09], p=0.9992
+bootstrap ours vs wordnet synonyms, t2i R@1: -0.13 [-0.64, +0.38], p=0.7047
+
+wrote results/baselines_rsicd_1093_5_text.json
+
+### 17:06 parity coco5k fusion
+Loaded cached features for 5000 images.
+25000 captions over 5000 images (coco5k)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |   30.45%  55.95%  66.87% |   50.14%  74.98%  83.52% | 60.32% |     -
+random (KTIR-style)      |   30.52%  55.98%  66.86% |   50.32%  75.44%  83.44% | 60.43% | 23083
+original priors          |   30.51%  56.00%  66.90% |   50.56%  75.52%  83.24% | 60.45% | 23083
+wordnet synonyms         |   30.58%  56.03%  66.97% |   50.38%  75.10%  83.62% | 60.45% | 22536
+relation-aware (ours)    |   30.49%  55.99%  66.90% |   50.56%  75.50%  83.28% | 60.45% | 23083
+bootstrap random (KTIR-style) vs baseline, t2i R@1: +0.07 [-0.04, +0.19], p=0.1208
+bootstrap original priors vs baseline, t2i R@1: +0.06 [-0.06, +0.18], p=0.1910
+bootstrap wordnet synonyms vs baseline, t2i R@1: +0.13 [+0.02, +0.24], p=0.0104
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.04 [-0.08, +0.16], p=0.2706
+bootstrap ours vs random (KTIR-style), t2i R@1: -0.03 [-0.13, +0.06], p=0.7561
+bootstrap ours vs original priors, t2i R@1: -0.02 [-0.06, +0.02], p=0.8052
+bootstrap ours vs wordnet synonyms, t2i R@1: -0.09 [-0.21, +0.02], p=0.9408
+
+wrote results/baselines_coco5k_5000_5.json
+
+### 17:07 parity rsitmd fusion
+Loaded cached features for 452 images.
+2260 captions over 452 images (rsitmd)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |    8.81%  27.92%  43.23% |    9.51%  23.23%  32.74% | 24.24% |     -
+random (KTIR-style)      |    8.58%  28.19%  43.19% |    9.73%  23.23%  32.52% | 24.24% |  2255
+original priors          |    8.98%  28.19%  43.05% |    9.51%  23.45%  32.30% | 24.25% |  2255
+wordnet synonyms         |    8.63%  28.01%  43.14% |    9.51%  23.01%  31.86% | 24.03% |  2191
+relation-aware (ours)    |    8.94%  28.05%  43.01% |    9.51%  23.45%  32.74% | 24.28% |  2255
+bootstrap random (KTIR-style) vs baseline, t2i R@1: -0.22 [-0.62, +0.18], p=0.8761
+bootstrap original priors vs baseline, t2i R@1: +0.18 [-0.18, +0.53], p=0.2014
+bootstrap wordnet synonyms vs baseline, t2i R@1: -0.18 [-0.53, +0.18], p=0.8707
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.13 [-0.22, +0.53], p=0.2787
+bootstrap ours vs random (KTIR-style), t2i R@1: +0.35 [+0.00, +0.71], p=0.0261
+bootstrap ours vs original priors, t2i R@1: -0.04 [-0.13, +0.00], p=1.0000
+bootstrap ours vs wordnet synonyms, t2i R@1: +0.31 [-0.09, +0.75], p=0.0851
+
+wrote results/baselines_rsitmd_452_5.json
+
+### 17:07 parity ucm fusion
+Loaded cached features for 210 images.
+1050 captions over 210 images (ucm)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |    8.67%  36.38%  60.29% |   22.38%  42.86%  56.19% | 37.79% |     -
+random (KTIR-style)      |    8.86%  36.38%  60.48% |   10.00%  31.90%  54.29% | 33.65% |  1049
+original priors          |    8.76%  36.19%  60.10% |   22.38%  44.29%  54.76% | 37.75% |  1049
+wordnet synonyms         |    8.76%  36.95%  60.00% |   23.81%  45.24%  58.10% | 38.81% |  1038
+relation-aware (ours)    |    8.86%  36.38%  60.29% |   22.38%  45.24%  55.71% | 38.14% |  1049
+bootstrap random (KTIR-style) vs baseline, t2i R@1: +0.19 [-0.29, +0.67], p=0.2690
+bootstrap original priors vs baseline, t2i R@1: +0.10 [-0.19, +0.48], p=0.3932
+bootstrap wordnet synonyms vs baseline, t2i R@1: +0.09 [-0.38, +0.57], p=0.4272
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.19 [-0.19, +0.57], p=0.2224
+bootstrap ours vs random (KTIR-style), t2i R@1: -0.00 [-0.48, +0.48], p=0.5885
+bootstrap ours vs original priors, t2i R@1: +0.09 [+0.00, +0.29], p=0.3833
+bootstrap ours vs wordnet synonyms, t2i R@1: +0.10 [-0.38, +0.57], p=0.4245
+
+wrote results/baselines_ucm_210_5.json
+
+### 17:08 parity nwpu fusion
+Loaded cached features for 3150 images.
+15750 captions over 3150 images (nwpu)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |    2.37%   9.90%  16.86% |    4.67%  13.21%  21.75% | 11.46% |     -
+random (KTIR-style)      |    2.44%   9.86%  16.95% |    2.98%  11.24%  20.16% | 10.61% | 15649
+original priors          |    2.41%   9.80%  16.90% |    4.57%  13.75%  22.13% | 11.59% | 15649
+wordnet synonyms         |    2.42%   9.93%  16.90% |    4.54%  13.65%  22.13% | 11.59% | 15033
+relation-aware (ours)    |    2.42%   9.87%  16.91% |    4.63%  13.65%  22.03% | 11.59% | 15649
+bootstrap random (KTIR-style) vs baseline, t2i R@1: +0.08 [-0.01, +0.16], p=0.0381
+bootstrap original priors vs baseline, t2i R@1: +0.04 [-0.03, +0.11], p=0.1744
+bootstrap wordnet synonyms vs baseline, t2i R@1: +0.05 [-0.03, +0.13], p=0.1262
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.05 [-0.03, +0.13], p=0.1068
+bootstrap ours vs random (KTIR-style), t2i R@1: -0.03 [-0.10, +0.05], p=0.7838
+bootstrap ours vs original priors, t2i R@1: +0.01 [-0.02, +0.04], p=0.2991
+bootstrap ours vs wordnet synonyms, t2i R@1: -0.00 [-0.07, +0.07], p=0.5384
+
+wrote results/baselines_nwpu_3150_5.json
+
+### 17:09 LLM rewriting (Table VII)
+Loaded cached features for 1000 images.
+5000 captions over 1000 images (flickr30k_k1k)
+Loaded cached rewrites (llm_rewrites_flickr30k_k1k_1000_5.json)
+example: The man with pierced ears is wearing glasses and an orange hat. -> The man with piercings has clear vision through his glasses and sports an orange baseball cap.
+
+config                     |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR
+------------------------------------------------------------------------------------------
+A baseline                 |   58.86%  83.48%  89.94% |   78.80%  94.90%  98.20% | 84.03%
+L-replace (LLM rewrite)    |   50.72%  78.14%  85.84% |   70.10%  92.00%  95.90% | 78.78%
+L-fused aq=0.9             |   59.38%  84.28%  90.32% |   78.90%  94.60%  98.60% | 84.35%
+B relation-KG aq=0.9       |   59.24%  83.74%  90.12% |   78.70%  95.00%  98.30% | 84.18%
+bootstrap L-replace (LLM rewrite) vs A, t2i R@1: -8.15 [-9.40, -6.92], p=1.0000
+bootstrap L-fused aq=0.9 vs A, t2i R@1: +0.52 [+0.14, +0.90], p=0.0042
+bootstrap B relation-KG aq=0.9 vs A, t2i R@1: +0.38 [+0.08, +0.68], p=0.0081
+bootstrap KG vs L-replace (LLM rewrite), t2i R@1: +8.53 [+7.28, +9.76], p=0.0000
+bootstrap KG vs L-fused aq=0.9, t2i R@1: -0.14 [-0.56, +0.28], p=0.7644
+
+wrote results/llm_baseline_flickr30k_k1k_1000_5.json
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd)
+Loaded cached rewrites (llm_rewrites_rsicd_1093_5.json)
+example: The airport is very large. -> The expansive airport boasts vast expanses of terminal space and bustling activity.
+
+config                     |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR
+------------------------------------------------------------------------------------------
+A baseline                 |    5.40%  17.73%  27.94% |    5.40%  16.01%  26.17% | 16.44%
+L-replace (LLM rewrite)    |    4.79%  16.10%  26.11% |    4.67%  15.28%  22.05% | 14.83%
+L-fused aq=0.9             |    5.56%  18.19%  28.66% |    5.67%  18.02%  27.17% | 17.21%
+B relation-KG aq=0.9       |    5.58%  18.02%  28.16% |    6.04%  16.10%  25.71% | 16.60%
+bootstrap L-replace (LLM rewrite) vs A, t2i R@1: -0.60 [-1.26, +0.04], p=0.9674
+bootstrap L-fused aq=0.9 vs A, t2i R@1: +0.16 [-0.07, +0.40], p=0.0974
+bootstrap B relation-KG aq=0.9 vs A, t2i R@1: +0.18 [-0.02, +0.40], p=0.0481
+bootstrap KG vs L-replace (LLM rewrite), t2i R@1: +0.79 [+0.13, +1.45], p=0.0096
+bootstrap KG vs L-fused aq=0.9, t2i R@1: +0.02 [-0.22, +0.26], p=0.4633
+
+wrote results/llm_baseline_rsicd_1093_5.json
+
+### 17:09 backbone ViT-L/14 (IV-F4)
+ViT-L/14 loaded on cuda
+Loaded cached features for 1000 images.
+
+===== flickr30k: 5000 queries / 1000 images (ViT-L/14) =====
+config                      R@1      R@5     R@10   dR@1
+A baseline               65.60%   88.66%   93.38%   +0.00
+B query-KG aq=0.9        65.88%   88.72%   93.34%   +0.28
+C gallery-cap ag=0.8     65.20%   87.54%   92.96%   -0.40
+D both ag=0.8            65.02%   87.78%   92.90%   -0.58
+C gallery-cap ag=0.9     67.94%   90.04%   94.30%   +2.34
+D both ag=0.9            68.04%   90.08%   94.26%   +2.44
+bootstrap B query-KG aq=0.9 vs A: +0.28 [+0.02,+0.54] p=0.0186
+bootstrap D both ag=0.9 vs A: +2.44 [+1.58,+3.30] p=0.0000
+Loaded cached features for 5000 images.
+
+===== coco5k: 5000 queries / 5000 images (ViT-L/14) =====
+config                      R@1      R@5     R@10   dR@1
+A baseline               34.76%   59.34%   69.48%   +0.00
+B query-KG aq=0.9        34.74%   59.42%   69.56%   -0.02
+C gallery-cap ag=0.8     36.60%   62.30%   72.14%   +1.84
+D both ag=0.8            36.48%   61.94%   71.84%   +1.72
+C gallery-cap ag=0.9     37.32%   62.74%   71.96%   +2.56
+D both ag=0.9            37.50%   62.64%   72.10%   +2.74
+bootstrap B query-KG aq=0.9 vs A: -0.02 [-0.30,+0.26] p=0.5755
+bootstrap D both ag=0.9 vs A: +2.74 [+1.88,+3.60] p=0.0000
+Loaded cached features for 1093 images.
+
+===== rsicd: 5465 queries / 1093 images (ViT-L/14) =====
+config                      R@1      R@5     R@10   dR@1
+A baseline                5.01%   19.54%   30.72%   +0.00
+B query-KG aq=0.9         5.18%   19.45%   30.87%   +0.16
+C gallery-cap ag=0.8      4.92%   17.16%   28.23%   -0.09
+D both ag=0.8             4.92%   16.98%   28.03%   -0.09
+C gallery-cap ag=0.9      5.18%   18.35%   29.44%   +0.16
+D both ag=0.9             5.09%   18.33%   29.62%   +0.07
+bootstrap B query-KG aq=0.9 vs A: +0.17 [-0.04,+0.37] p=0.0691
+bootstrap C gallery-cap ag=0.9 vs A: +0.17 [-0.29,+0.62] p=0.2501
+
+### 17:10 RemoteCLIP (Table III, IV-F4)
+WARNING:root:No pretrained weights loaded for model 'ViT-B-32'. Model initialized randomly.
+RemoteCLIP ViT-B-32 loaded on cuda (<All keys matched successfully>)
+Loaded cached features for 1093 images.
+
+===== rsicd: 5465 q / 1093 imgs =====
+A baseline (RemoteCLIP): R@1 10.50%  R@5 32.31%  R@10 48.58%
+B query-KG a=0.9:        R@1 10.69%  dR@1 +0.183
+bootstrap B vs A: +0.182 [-0.037,+0.403] p=0.0513
+Loaded cached features for 452 images.
+
+===== rsitmd: 2260 q / 452 imgs =====
+A baseline (RemoteCLIP): R@1 20.00%  R@5 52.52%  R@10 71.24%
+B query-KG a=0.9:        R@1 20.04%  dR@1 +0.044
+bootstrap B vs A: +0.044 [-0.310,+0.442] p=0.4609
+Loaded cached features for 210 images.
+
+===== ucm: 1050 q / 210 imgs =====
+A baseline (RemoteCLIP): R@1 17.52%  R@5 61.14%  R@10 94.10%
+B query-KG a=0.9:        R@1 17.62%  dR@1 +0.095
+bootstrap B vs A: +0.096 [-0.571,+0.762] p=0.4461
+Loaded cached features for 3150 images.
+
+===== nwpu: 15750 q / 3150 imgs =====
+A baseline (RemoteCLIP): R@1 3.66%  R@5 13.11%  R@10 21.80%
+B query-KG a=0.9:        R@1 3.58%  dR@1 -0.083
+bootstrap B vs A: -0.083 [-0.171,+0.006] p=0.9745
+
+===== POOLED (stratified, 24,525 queries) =====
+POOLED R@1: -0.004 pts, 95% CI [-0.090, +0.082], p = 0.5452
+POOLED R@5: -0.061 pts, 95% CI [-0.179, +0.061], p = 0.8475
+POOLED R@10: -0.126 pts, 95% CI [-0.249, -0.004], p = 0.9770
+
+### 17:11 tau sensitivity (Fig 8)
+/home/usama/miniconda3/envs/rakg/bin/python: can't open file '/home/usama/RA-KG-T2I/src/tau_sensitivity.py': [Errno 2] No such file or directory
+/home/usama/miniconda3/envs/rakg/bin/python: can't open file '/home/usama/RA-KG-T2I/src/tau_sensitivity.py': [Errno 2] No such file or directory
+
+### 17:11 multi-hop (IV-F3)
+Loaded cached features for 1093 images.
+5465 queries over 1093 images (rsicd)
+Loaded cached multihop pools.
+11867 unique candidate concepts (pool avg 66.0/query)
+
+fusion a=0.9, min_sim=0.55, keep=2
+config                                  R@1      R@5     R@10  dR@1(A)  dR@1(B)
+A baseline                            5.40%   17.73%   27.94%  +0.00   -0.13
+B 1-hop (E7 ref) (n=5446,h2=0)        5.53%   17.95%   27.83%  +0.13   +0.00
+C 1+2-hop pooled (n=5453,h2=23)       5.53%   17.97%   27.83%  +0.13   +0.00
+D 2-hop backoff (n=5453,h2=7)         5.53%   17.95%   27.83%  +0.13   +0.00
+E 2-hop if short (n=5446,h2=0)        5.53%   17.95%   27.83%  +0.13   +0.00
+
+Paired bootstrap C 1+2-hop pooled (n=5453,h2=23) vs B 1-hop (E7 ref) (n=5446,h2=0) (multi-hop increment), R@1:
+  mean delta +0.00 pts, 95% CI [+0.00, +0.00], p(delta<=0) = 1.0000
+
+Paired bootstrap C 1+2-hop pooled (n=5453,h2=23) vs A baseline, R@1:
+  mean delta +0.13 pts, 95% CI [-0.07, +0.35], p(delta<=0) = 0.1328
+Loaded cached features for 1000 images.
+5000 queries over 1000 images (flickr30k)
+Loaded cached multihop pools.
+23857 unique candidate concepts (pool avg 66.1/query)
+
+fusion a=0.9, min_sim=0.55, keep=2
+config                                  R@1      R@5     R@10  dR@1(A)  dR@1(B)
+A baseline                           59.22%   84.50%   90.60%  +0.00   -0.26
+B 1-hop (E7 ref) (n=4051,h2=0)       59.48%   84.64%   90.72%  +0.26   +0.00
+C 1+2-hop pooled (n=4113,h2=226)     59.46%   84.64%   90.74%  +0.24   -0.02
+D 2-hop backoff (n=4113,h2=62)       59.48%   84.64%   90.72%  +0.26   +0.00
+E 2-hop if short (n=4061,h2=63)      59.48%   84.64%   90.72%  +0.26   +0.00
+
+Paired bootstrap D 2-hop backoff (n=4113,h2=62) vs B 1-hop (E7 ref) (n=4051,h2=0) (multi-hop increment), R@1:
+  mean delta -0.00 pts, 95% CI [-0.06, +0.06], p(delta<=0) = 0.6577
+
+Paired bootstrap D 2-hop backoff (n=4113,h2=62) vs A baseline, R@1:
+  mean delta +0.26 pts, 95% CI [-0.02, +0.54], p(delta<=0) = 0.0391
+
+### 17:12 gallery KG rerank (IV-F2)
+Loaded cached features for 1000 images.
+5000 queries, 1000 images, BLIP captions loaded
+Loaded cached expansion pools.
+
+image-side fusion a=0.9
+config                          R@1      R@5     R@10   dR@1(A)  dR@1(B)
+A baseline                   59.22%   84.50%   90.60%   +0.00   -2.36
+B cap-only                   61.58%   86.50%   91.90%   +2.36   +0.00
+C naive KG                   60.68%   85.68%   91.50%   +1.46   -0.90
+D reweighted (n=986)         61.08%   85.86%   91.54%   +1.86   -0.50
+E channel g=0.8              61.58%   86.46%   91.86%   +2.36   +0.00
+E channel g=0.9              61.56%   86.42%   91.88%   +2.34   -0.02
+F selective t=0.55 (n=84)    61.50%   86.46%   91.86%   +2.28   -0.08
+F selective t=0.65 (n=68)    61.54%   86.52%   91.90%   +2.32   -0.04
+
+Paired bootstrap E channel g=0.8 vs B cap-only (KG increment), R@1:
+  mean delta +0.00 pts, 95% CI [-0.22, +0.24], p(delta<=0) = 0.5346
+
+Paired bootstrap E channel g=0.8 vs A baseline, R@1:
+  mean delta +2.36 pts, 95% CI [+1.54, +3.14], p(delta<=0) = 0.0000
+
+### 17:12 RS scale (Table VIII)
+  d = torch.from_numpy(np.ascontiguousarray(pool[:n])).float().to(
+Loaded cached features for 1093 images.
+5465 RSICD queries, 1093 true gallery images
+in-domain pool: distractors_millionaid_100000_raw_v2.fp16.npy (100,000)
+web pool: distractors_datacomp_1000000.fp16.npy (1,000,000)
+
+pool         N dist.  base R@1   KG R@1    dR@1       p   base/KG R@5
+in-domain          0     5.40%    5.58%   +0.18  0.0481   17.73%/18.02%
+in-domain     10,000     2.63%    2.58%   -0.05  0.8840   7.70%/8.00%
+in-domain     50,000     1.67%    1.63%   -0.04  0.7872   5.23%/5.36%
+in-domain    100,000     1.67%    1.63%   -0.04  0.7872   5.23%/5.34%
+web           10,000     4.67%    4.83%   +0.16  0.0470   16.27%/16.56%
+web           50,000     3.64%    3.70%   +0.05  0.2869   13.47%/13.72%
+web          100,000     3.24%    3.33%   +0.09  0.1194   12.50%/12.75%
+
+### 17:13 reviewer baselines (E29 rerun on fp32 footing)
+
+### 17:13 reviewer flickr30k_k1k
+Loaded cached features for 1000 images.
+5000 queries over 1000 images (flickr30k_k1k)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 3967 expanded) R@1 0.5924  R@5 0.8374  R@10 0.9012 | vs base +0.38 CI[+0.08,+0.68] p=0.0081
+  DCKF-Q beta=0.5 k=2                    R@1 0.5842  R@5 0.8362  R@10 0.8978 | vs base -0.44 CI[-1.04,+0.16] p=0.9266
+  DCKF-Q beta=0.7 k=2                    R@1 0.5894  R@5 0.8370  R@10 0.9010 | vs base +0.08 CI[-0.40,+0.56] p=0.3876
+  DCKF-Q beta=0.8 k=2                    R@1 0.5910  R@5 0.8368  R@10 0.9010 | vs base +0.24 CI[-0.16,+0.62] p=0.1247
+  DCKF-Q beta=0.95 k=2                   R@1 0.5914  R@5 0.8368  R@10 0.9012 | vs base +0.28 CI[+0.08,+0.50] p=0.0058
+  DCKF-Q beta=1.0 k=2                    R@1 0.5886  R@5 0.8348  R@10 0.8994 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (3967 expanded)    R@1 0.5932  R@5 0.8374  R@10 0.9008 | vs base +0.46 CI[+0.18,+0.74] p=0.0009
+  DCKF-Q beta=0.9 k=3 (3967 expanded)    R@1 0.5920  R@5 0.8382  R@10 0.9022 | vs base +0.34 CI[+0.02,+0.66] p=0.0206
+  DCKF-Q beta=0.9 k=4 (3967 expanded)    R@1 0.5922  R@5 0.8376  R@10 0.9010 | vs base +0.36 CI[+0.04,+0.68] p=0.0151
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.5886  R@5 0.8254  R@10 0.8892 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.38 p=0.9946
+  PRF k=3 beta=0.7                       R@1 0.5536  R@5 0.8156  R@10 0.8664 | vs base -3.50 CI[-4.36,-2.66] p=1.0000 | vs DCKF-Q -3.88 p=1.0000
+  PRF k=3 beta=0.8                       R@1 0.5672  R@5 0.8220  R@10 0.8796 | vs base -2.14 CI[-2.84,-1.44] p=1.0000 | vs DCKF-Q -2.52 p=1.0000
+  PRF k=3 beta=0.9                       R@1 0.5818  R@5 0.8302  R@10 0.8906 | vs base -0.68 CI[-1.20,-0.16] p=0.9947 | vs DCKF-Q -1.06 p=0.9999
+  PRF k=3 beta=0.95                      R@1 0.5862  R@5 0.8352  R@10 0.8976 | vs base -0.24 CI[-0.60,+0.10] p=0.9198 | vs DCKF-Q -0.62 p=0.9997
+  PRF k=5 beta=0.9                       R@1 0.5782  R@5 0.8346  R@10 0.8922 | vs base -1.04 CI[-1.60,-0.48] p=0.9999 | vs DCKF-Q -1.42 p=1.0000
+  PRF k=10 beta=0.9                      R@1 0.5738  R@5 0.8258  R@10 0.8950 | vs base -1.48 CI[-2.06,-0.88] p=1.0000 | vs DCKF-Q -1.86 p=1.0000
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.5824  R@5 0.8324  R@10 0.8920 | vs base -0.62 CI[-1.14,-0.12] p=0.9927 | vs DCKF-Q -1.00 p=1.0000
+
+[CAP] gallery channel with blip_captions_flickr30k_k1k_1000_5.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.2574  R@5 0.4446  R@10 0.5296 | vs base -33.13 CI[-34.78,-31.50] p=1.0000
+  gallery alpha=0.3                      R@1 0.3422  R@5 0.5766  R@10 0.6674 | vs base -24.65 CI[-26.22,-23.04] p=1.0000
+  gallery alpha=0.5                      R@1 0.4510  R@5 0.6986  R@10 0.7766 | vs base -13.77 CI[-15.24,-12.30] p=1.0000
+  gallery alpha=0.7                      R@1 0.5544  R@5 0.7944  R@10 0.8658 | vs base -3.43 CI[-4.66,-2.20] p=1.0000
+  gallery alpha=0.8                      R@1 0.5908  R@5 0.8324  R@10 0.8952 | vs base +0.21 CI[-0.86,+1.30] p=0.3545
+  gallery alpha=0.9                      R@1 0.6112  R@5 0.8492  R@10 0.9042 | vs base +2.26 CI[+1.48,+3.04] p=0.0000
+  gallery alpha=0.95                     R@1 0.6024  R@5 0.8446  R@10 0.9064 | vs base +1.38 CI[+0.82,+1.94] p=0.0000
+  gallery alpha=1.0                      R@1 0.5886  R@5 0.8348  R@10 0.8994 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.275  quantiles 10/25/50/75% = 0.226/0.248/0.278/0.303
+  caption gate: drop lowest 10% (thr 0.226) alpha=0.9 R@1 0.5810  R@5 0.8016  R@10 0.8562 | vs base -0.77 CI[-1.68,+0.16] p=0.9512 | vs C-ungated -3.02 p=1.0000
+    + DCKF-Q (D gated 10%)               R@1 0.5812  R@5 0.8020  R@10 0.8578 | vs base -0.74 CI[-1.66,+0.16] p=0.9467 | vs C-ungated -3.00 p=1.0000
+  caption gate: drop lowest 25% (thr 0.248) alpha=0.9 R@1 0.5270  R@5 0.7286  R@10 0.7884 | vs base -6.17 CI[-7.24,-5.08] p=1.0000 | vs C-ungated -8.42 p=1.0000
+    + DCKF-Q (D gated 25%)               R@1 0.5272  R@5 0.7292  R@10 0.7878 | vs base -6.14 CI[-7.22,-5.06] p=1.0000 | vs C-ungated -8.40 p=1.0000
+  caption gate: drop lowest 50% (thr 0.278) alpha=0.9 R@1 0.4342  R@5 0.6166  R@10 0.6870 | vs base -15.44 CI[-16.72,-14.16] p=1.0000 | vs C-ungated -17.70 p=1.0000
+    + DCKF-Q (D gated 50%)               R@1 0.4328  R@5 0.6164  R@10 0.6872 | vs base -15.58 CI[-16.84,-14.30] p=1.0000 | vs C-ungated -17.84 p=1.0000
+  caption gate: drop lowest 75% (thr 0.303) alpha=0.9 R@1 0.3364  R@5 0.5564  R@10 0.6746 | vs base -25.22 CI[-26.58,-23.88] p=1.0000 | vs C-ungated -27.48 p=1.0000
+    + DCKF-Q (D gated 75%)               R@1 0.3346  R@5 0.5580  R@10 0.6752 | vs base -25.40 CI[-26.78,-24.06] p=1.0000 | vs C-ungated -27.66 p=1.0000
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.6110  R@5 0.8496  R@10 0.9066 | vs base +2.24 CI[+1.46,+3.02] p=0.0000 | vs C-ungated -0.02 p=0.5790
+
+wrote results/reviewer_flickr30k_k1k_1000_5.json
+
+### 17:14 reviewer coco5k
+Loaded cached features for 5000 images.
+25000 queries over 5000 images (coco5k)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 23083 expanded) R@1 0.3049  R@5 0.5599  R@10 0.6690 | vs base +0.04 CI[-0.08,+0.16] p=0.2706
+  DCKF-Q beta=0.5 k=2                    R@1 0.3000  R@5 0.5542  R@10 0.6652 | vs base -0.45 CI[-0.72,-0.18] p=0.9995
+  DCKF-Q beta=0.7 k=2                    R@1 0.3044  R@5 0.5587  R@10 0.6691 | vs base -0.01 CI[-0.22,+0.20] p=0.5346
+  DCKF-Q beta=0.8 k=2                    R@1 0.3055  R@5 0.5598  R@10 0.6690 | vs base +0.10 CI[-0.07,+0.26] p=0.1333
+  DCKF-Q beta=0.95 k=2                   R@1 0.3046  R@5 0.5600  R@10 0.6695 | vs base +0.01 CI[-0.07,+0.10] p=0.4112
+  DCKF-Q beta=1.0 k=2                    R@1 0.3045  R@5 0.5595  R@10 0.6687 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (23083 expanded)   R@1 0.3050  R@5 0.5590  R@10 0.6694 | vs base +0.04 CI[-0.06,+0.15] p=0.2157
+  DCKF-Q beta=0.9 k=3 (23083 expanded)   R@1 0.3058  R@5 0.5600  R@10 0.6697 | vs base +0.13 CI[+0.00,+0.26] p=0.0257
+  DCKF-Q beta=0.9 k=4 (23083 expanded)   R@1 0.3056  R@5 0.5611  R@10 0.6699 | vs base +0.11 CI[-0.02,+0.24] p=0.0508
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.3045  R@5 0.5415  R@10 0.6545 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.04 p=0.7518
+  PRF k=3 beta=0.7                       R@1 0.2796  R@5 0.5315  R@10 0.6198 | vs base -2.50 CI[-2.84,-2.14] p=1.0000 | vs DCKF-Q -2.54 p=1.0000
+  PRF k=3 beta=0.8                       R@1 0.2927  R@5 0.5397  R@10 0.6372 | vs base -1.19 CI[-1.47,-0.90] p=1.0000 | vs DCKF-Q -1.22 p=1.0000
+  PRF k=3 beta=0.9                       R@1 0.3007  R@5 0.5496  R@10 0.6562 | vs base -0.38 CI[-0.58,-0.18] p=1.0000 | vs DCKF-Q -0.42 p=1.0000
+  PRF k=3 beta=0.95                      R@1 0.3025  R@5 0.5547  R@10 0.6642 | vs base -0.20 CI[-0.34,-0.06] p=0.9985 | vs DCKF-Q -0.24 p=0.9995
+  PRF k=5 beta=0.9                       R@1 0.2967  R@5 0.5581  R@10 0.6590 | vs base -0.78 CI[-1.02,-0.55] p=1.0000 | vs DCKF-Q -0.82 p=1.0000
+  PRF k=10 beta=0.9                      R@1 0.2930  R@5 0.5462  R@10 0.6610 | vs base -1.16 CI[-1.42,-0.89] p=1.0000 | vs DCKF-Q -1.20 p=1.0000
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.3018  R@5 0.5485  R@10 0.6563 | vs base -0.28 CI[-0.49,-0.07] p=0.9958 | vs DCKF-Q -0.32 p=0.9993
+
+[CAP] gallery channel with blip_captions_coco5k_5000_5.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.1987  R@5 0.3789  R@10 0.4744 | vs base -10.58 CI[-11.26,-9.91] p=1.0000
+  gallery alpha=0.3                      R@1 0.2336  R@5 0.4464  R@10 0.5511 | vs base -7.09 CI[-7.73,-6.46] p=1.0000
+  gallery alpha=0.5                      R@1 0.2846  R@5 0.5201  R@10 0.6259 | vs base -1.99 CI[-2.60,-1.38] p=1.0000
+  gallery alpha=0.7                      R@1 0.3270  R@5 0.5839  R@10 0.6894 | vs base +2.24 CI[+1.72,+2.76] p=0.0000
+  gallery alpha=0.8                      R@1 0.3369  R@5 0.5994  R@10 0.7043 | vs base +3.24 CI[+2.78,+3.69] p=0.0000
+  gallery alpha=0.9                      R@1 0.3326  R@5 0.5936  R@10 0.7011 | vs base +2.81 CI[+2.46,+3.16] p=0.0000
+  gallery alpha=0.95                     R@1 0.3225  R@5 0.5814  R@10 0.6892 | vs base +1.80 CI[+1.54,+2.06] p=0.0000
+  gallery alpha=1.0                      R@1 0.3045  R@5 0.5595  R@10 0.6687 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.289  quantiles 10/25/50/75% = 0.245/0.268/0.290/0.313
+  caption gate: drop lowest 10% (thr 0.245) alpha=0.9 R@1 0.3152  R@5 0.5590  R@10 0.6588 | vs base +1.06 CI[+0.68,+1.45] p=0.0000 | vs C-ungated -1.74 p=1.0000
+    + DCKF-Q (D gated 10%)               R@1 0.3164  R@5 0.5599  R@10 0.6589 | vs base +1.19 CI[+0.80,+1.58] p=0.0000 | vs C-ungated -1.62 p=1.0000
+  caption gate: drop lowest 25% (thr 0.268) alpha=0.9 R@1 0.2884  R@5 0.5024  R@10 0.5882 | vs base -1.62 CI[-2.05,-1.20] p=1.0000 | vs C-ungated -4.42 p=1.0000
+    + DCKF-Q (D gated 25%)               R@1 0.2894  R@5 0.5024  R@10 0.5890 | vs base -1.51 CI[-1.94,-1.08] p=1.0000 | vs C-ungated -4.32 p=1.0000
+  caption gate: drop lowest 50% (thr 0.290) alpha=0.9 R@1 0.2375  R@5 0.3973  R@10 0.4688 | vs base -6.70 CI[-7.19,-6.22] p=1.0000 | vs C-ungated -9.51 p=1.0000
+    + DCKF-Q (D gated 50%)               R@1 0.2382  R@5 0.3974  R@10 0.4694 | vs base -6.63 CI[-7.12,-6.14] p=1.0000 | vs C-ungated -9.44 p=1.0000
+  caption gate: drop lowest 75% (thr 0.313) alpha=0.9 R@1 0.1676  R@5 0.2943  R@10 0.3805 | vs base -13.69 CI[-14.22,-13.16] p=1.0000 | vs C-ungated -16.50 p=1.0000
+    + DCKF-Q (D gated 75%)               R@1 0.1682  R@5 0.2938  R@10 0.3791 | vs base -13.63 CI[-14.15,-13.10] p=1.0000 | vs C-ungated -16.43 p=1.0000
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.3338  R@5 0.5947  R@10 0.7022 | vs base +2.93 CI[+2.57,+3.27] p=0.0000 | vs C-ungated +0.12 p=0.0301
+
+wrote results/reviewer_coco5k_5000_5.json
+
+### 17:18 reviewer rsicd
+Loaded cached features for 1093 images.
+5465 queries over 1093 images (rsicd)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 5433 expanded) R@1 0.0558  R@5 0.1802  R@10 0.2816 | vs base +0.18 CI[-0.02,+0.40] p=0.0481
+  DCKF-Q beta=0.5 k=2                    R@1 0.0549  R@5 0.1771  R@10 0.2822 | vs base +0.09 CI[-0.31,+0.49] p=0.3453
+  DCKF-Q beta=0.7 k=2                    R@1 0.0560  R@5 0.1802  R@10 0.2849 | vs base +0.20 CI[-0.13,+0.53] p=0.1232
+  DCKF-Q beta=0.8 k=2                    R@1 0.0562  R@5 0.1819  R@10 0.2847 | vs base +0.22 CI[-0.05,+0.49] p=0.0675
+  DCKF-Q beta=0.95 k=2                   R@1 0.0547  R@5 0.1797  R@10 0.2823 | vs base +0.07 CI[-0.05,+0.20] p=0.1505
+  DCKF-Q beta=1.0 k=2                    R@1 0.0540  R@5 0.1773  R@10 0.2794 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (5433 expanded)    R@1 0.0543  R@5 0.1797  R@10 0.2811 | vs base +0.04 CI[-0.16,+0.24] p=0.3942
+  DCKF-Q beta=0.9 k=3 (5433 expanded)    R@1 0.0558  R@5 0.1802  R@10 0.2811 | vs base +0.18 CI[-0.04,+0.42] p=0.0659
+  DCKF-Q beta=0.9 k=4 (5433 expanded)    R@1 0.0560  R@5 0.1802  R@10 0.2834 | vs base +0.20 CI[-0.02,+0.44] p=0.0472
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0540  R@5 0.1768  R@10 0.2847 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.18 p=0.9674
+  PRF k=3 beta=0.7                       R@1 0.0529  R@5 0.1775  R@10 0.2847 | vs base -0.11 CI[-0.53,+0.31] p=0.7069 | vs DCKF-Q -0.29 p=0.9195
+  PRF k=3 beta=0.8                       R@1 0.0554  R@5 0.1771  R@10 0.2847 | vs base +0.15 CI[-0.24,+0.53] p=0.2376 | vs DCKF-Q -0.03 p=0.5861
+  PRF k=3 beta=0.9                       R@1 0.0556  R@5 0.1793  R@10 0.2844 | vs base +0.17 CI[-0.11,+0.44] p=0.1307 | vs DCKF-Q -0.02 p=0.5674
+  PRF k=3 beta=0.95                      R@1 0.0542  R@5 0.1786  R@10 0.2860 | vs base +0.02 CI[-0.18,+0.22] p=0.4603 | vs DCKF-Q -0.16 p=0.9464
+  PRF k=5 beta=0.9                       R@1 0.0562  R@5 0.1784  R@10 0.2849 | vs base +0.22 CI[-0.11,+0.55] p=0.1082 | vs DCKF-Q +0.04 p=0.4243
+  PRF k=10 beta=0.9                      R@1 0.0556  R@5 0.1780  R@10 0.2853 | vs base +0.17 CI[-0.20,+0.55] p=0.2005 | vs DCKF-Q -0.02 p=0.5542
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0576  R@5 0.1817  R@10 0.2862 | vs base +0.37 CI[+0.07,+0.68] p=0.0097 | vs DCKF-Q +0.18 p=0.1138
+
+[CAP] gallery channel with blip_captions_rsicd_1093_5.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.0313  R@5 0.0728  R@10 0.1089 | vs base -2.27 CI[-2.98,-1.52] p=1.0000
+  gallery alpha=0.3                      R@1 0.0229  R@5 0.0774  R@10 0.1231 | vs base -3.11 CI[-3.81,-2.43] p=1.0000
+  gallery alpha=0.5                      R@1 0.0274  R@5 0.0955  R@10 0.1489 | vs base -2.65 CI[-3.35,-1.98] p=1.0000
+  gallery alpha=0.7                      R@1 0.0346  R@5 0.1195  R@10 0.1905 | vs base -1.94 CI[-2.58,-1.28] p=1.0000
+  gallery alpha=0.8                      R@1 0.0399  R@5 0.1336  R@10 0.2205 | vs base -1.41 CI[-2.03,-0.77] p=1.0000
+  gallery alpha=0.9                      R@1 0.0461  R@5 0.1565  R@10 0.2551 | vs base -0.79 CI[-1.30,-0.27] p=0.9987
+  gallery alpha=0.95                     R@1 0.0527  R@5 0.1704  R@10 0.2699 | vs base -0.13 CI[-0.55,+0.27] p=0.7407
+  gallery alpha=1.0                      R@1 0.0540  R@5 0.1773  R@10 0.2794 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.295  quantiles 10/25/50/75% = 0.252/0.273/0.298/0.319
+  caption gate: drop lowest 10% (thr 0.252) alpha=0.9 R@1 0.0459  R@5 0.1515  R@10 0.2472 | vs base -0.80 CI[-1.34,-0.27] p=0.9985 | vs C-ungated -0.02 p=0.6077
+    + DCKF-Q (D gated 10%)               R@1 0.0468  R@5 0.1537  R@10 0.2481 | vs base -0.71 CI[-1.24,-0.16] p=0.9958 | vs C-ungated +0.07 p=0.3044
+  caption gate: drop lowest 25% (thr 0.273) alpha=0.9 R@1 0.0439  R@5 0.1414  R@10 0.2285 | vs base -1.00 CI[-1.56,-0.46] p=0.9999 | vs C-ungated -0.22 p=0.9231
+    + DCKF-Q (D gated 25%)               R@1 0.0459  R@5 0.1427  R@10 0.2295 | vs base -0.80 CI[-1.35,-0.26] p=0.9986 | vs C-ungated -0.02 p=0.5619
+  caption gate: drop lowest 50% (thr 0.298) alpha=0.9 R@1 0.0412  R@5 0.1325  R@10 0.2049 | vs base -1.28 CI[-1.85,-0.73] p=1.0000 | vs C-ungated -0.49 p=0.9878
+    + DCKF-Q (D gated 50%)               R@1 0.0412  R@5 0.1328  R@10 0.2044 | vs base -1.28 CI[-1.85,-0.73] p=1.0000 | vs C-ungated -0.49 p=0.9861
+  caption gate: drop lowest 75% (thr 0.319) alpha=0.9 R@1 0.0329  R@5 0.1032  R@10 0.1506 | vs base -2.10 CI[-2.71,-1.50] p=1.0000 | vs C-ungated -1.32 p=1.0000
+    + DCKF-Q (D gated 75%)               R@1 0.0331  R@5 0.1028  R@10 0.1491 | vs base -2.08 CI[-2.69,-1.48] p=1.0000 | vs C-ungated -1.30 p=1.0000
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0468  R@5 0.1577  R@10 0.2554 | vs base -0.71 CI[-1.23,-0.18] p=0.9964 | vs C-ungated +0.07 p=0.1996
+
+wrote results/reviewer_rsicd_1093_5.json
+
+### 17:19 reviewer rsitmd
+Loaded cached features for 452 images.
+2260 queries over 452 images (rsitmd)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 2255 expanded) R@1 0.0894  R@5 0.2805  R@10 0.4301 | vs base +0.13 CI[-0.22,+0.53] p=0.2787
+  DCKF-Q beta=0.5 k=2                    R@1 0.0796  R@5 0.2743  R@10 0.4341 | vs base -0.84 CI[-1.59,-0.09] p=0.9884
+  DCKF-Q beta=0.7 k=2                    R@1 0.0832  R@5 0.2819  R@10 0.4305 | vs base -0.49 CI[-1.11,+0.13] p=0.9455
+  DCKF-Q beta=0.8 k=2                    R@1 0.0885  R@5 0.2783  R@10 0.4314 | vs base +0.05 CI[-0.44,+0.53] p=0.4654
+  DCKF-Q beta=0.95 k=2                   R@1 0.0889  R@5 0.2783  R@10 0.4314 | vs base +0.09 CI[-0.18,+0.35] p=0.3163
+  DCKF-Q beta=1.0 k=2                    R@1 0.0881  R@5 0.2792  R@10 0.4323 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (2255 expanded)    R@1 0.0858  R@5 0.2792  R@10 0.4323 | vs base -0.22 CI[-0.58,+0.09] p=0.9281
+  DCKF-Q beta=0.9 k=3 (2255 expanded)    R@1 0.0872  R@5 0.2814  R@10 0.4310 | vs base -0.09 CI[-0.49,+0.31] p=0.7002
+  DCKF-Q beta=0.9 k=4 (2255 expanded)    R@1 0.0881  R@5 0.2814  R@10 0.4336 | vs base +0.00 CI[-0.40,+0.40] p=0.5472
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0881  R@5 0.2770  R@10 0.4323 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.13 p=0.7910
+  PRF k=3 beta=0.7                       R@1 0.0783  R@5 0.2752  R@10 0.4195 | vs base -0.97 CI[-1.81,-0.18] p=0.9915 | vs DCKF-Q -1.11 p=0.9962
+  PRF k=3 beta=0.8                       R@1 0.0836  R@5 0.2810  R@10 0.4248 | vs base -0.44 CI[-1.15,+0.27] p=0.9014 | vs DCKF-Q -0.58 p=0.9495
+  PRF k=3 beta=0.9                       R@1 0.0881  R@5 0.2774  R@10 0.4345 | vs base -0.00 CI[-0.53,+0.53] p=0.5317 | vs DCKF-Q -0.14 p=0.7025
+  PRF k=3 beta=0.95                      R@1 0.0867  R@5 0.2779  R@10 0.4323 | vs base -0.13 CI[-0.49,+0.22] p=0.8062 | vs DCKF-Q -0.27 p=0.8767
+  PRF k=5 beta=0.9                       R@1 0.0872  R@5 0.2827  R@10 0.4358 | vs base -0.09 CI[-0.66,+0.49] p=0.6436 | vs DCKF-Q -0.22 p=0.7821
+  PRF k=10 beta=0.9                      R@1 0.0867  R@5 0.2761  R@10 0.4376 | vs base -0.14 CI[-0.75,+0.49] p=0.6891 | vs DCKF-Q -0.27 p=0.8172
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0885  R@5 0.2779  R@10 0.4367 | vs base +0.05 CI[-0.49,+0.58] p=0.4694 | vs DCKF-Q -0.09 p=0.6599
+
+[CAP] gallery channel with blip_captions_rsitmd_452_5.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.0332  R@5 0.0788  R@10 0.1243 | vs base -5.49 CI[-6.86,-4.12] p=1.0000
+  gallery alpha=0.3                      R@1 0.0292  R@5 0.0942  R@10 0.1491 | vs base -5.89 CI[-7.26,-4.60] p=1.0000
+  gallery alpha=0.5                      R@1 0.0354  R@5 0.1212  R@10 0.1925 | vs base -5.27 CI[-6.59,-3.98] p=1.0000
+  gallery alpha=0.7                      R@1 0.0527  R@5 0.1712  R@10 0.2783 | vs base -3.55 CI[-4.82,-2.30] p=1.0000
+  gallery alpha=0.8                      R@1 0.0637  R@5 0.2058  R@10 0.3332 | vs base -2.44 CI[-3.63,-1.24] p=1.0000
+  gallery alpha=0.9                      R@1 0.0752  R@5 0.2500  R@10 0.3956 | vs base -1.29 CI[-2.30,-0.27] p=0.9941
+  gallery alpha=0.95                     R@1 0.0854  R@5 0.2726  R@10 0.4221 | vs base -0.27 CI[-0.97,+0.44] p=0.7934
+  gallery alpha=1.0                      R@1 0.0881  R@5 0.2792  R@10 0.4323 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.295  quantiles 10/25/50/75% = 0.246/0.275/0.298/0.318
+  caption gate: drop lowest 10% (thr 0.246) alpha=0.9 R@1 0.0748  R@5 0.2434  R@10 0.3765 | vs base -1.33 CI[-2.39,-0.27] p=0.9933 | vs C-ungated -0.05 p=0.5827
+    + DCKF-Q (D gated 10%)               R@1 0.0765  R@5 0.2425  R@10 0.3783 | vs base -1.16 CI[-2.26,-0.04] p=0.9810 | vs C-ungated +0.13 p=0.3774
+  caption gate: drop lowest 25% (thr 0.275) alpha=0.9 R@1 0.0721  R@5 0.2288  R@10 0.3509 | vs base -1.60 CI[-2.70,-0.49] p=0.9981 | vs C-ungated -0.31 p=0.7993
+    + DCKF-Q (D gated 25%)               R@1 0.0748  R@5 0.2279  R@10 0.3504 | vs base -1.33 CI[-2.43,-0.22] p=0.9910 | vs C-ungated -0.04 p=0.5609
+  caption gate: drop lowest 50% (thr 0.298) alpha=0.9 R@1 0.0686  R@5 0.1894  R@10 0.2969 | vs base -1.96 CI[-3.14,-0.80] p=0.9996 | vs C-ungated -0.67 p=0.8825
+    + DCKF-Q (D gated 50%)               R@1 0.0681  R@5 0.1876  R@10 0.2978 | vs base -2.00 CI[-3.19,-0.84] p=0.9996 | vs C-ungated -0.71 p=0.8970
+  caption gate: drop lowest 75% (thr 0.318) alpha=0.9 R@1 0.0513  R@5 0.1518  R@10 0.2102 | vs base -3.68 CI[-4.96,-2.43] p=1.0000 | vs C-ungated -2.39 p=0.9999
+    + DCKF-Q (D gated 75%)               R@1 0.0522  R@5 0.1513  R@10 0.2115 | vs base -3.59 CI[-4.87,-2.35] p=1.0000 | vs C-ungated -2.30 p=0.9997
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0779  R@5 0.2487  R@10 0.3947 | vs base -1.02 CI[-2.08,+0.04] p=0.9737 | vs C-ungated +0.27 p=0.0582
+
+wrote results/reviewer_rsitmd_452_5.json
+
+### 17:20 reviewer ucm
+Loaded cached features for 210 images.
+1050 queries over 210 images (ucm)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 1049 expanded) R@1 0.0886  R@5 0.3638  R@10 0.6029 | vs base +0.19 CI[-0.19,+0.57] p=0.2224
+  DCKF-Q beta=0.5 k=2                    R@1 0.0886  R@5 0.3724  R@10 0.6124 | vs base +0.20 CI[-0.86,+1.33] p=0.3943
+  DCKF-Q beta=0.7 k=2                    R@1 0.0895  R@5 0.3733  R@10 0.6114 | vs base +0.29 CI[-0.57,+1.14] p=0.2876
+  DCKF-Q beta=0.8 k=2                    R@1 0.0914  R@5 0.3638  R@10 0.6086 | vs base +0.48 CI[-0.19,+1.14] p=0.0937
+  DCKF-Q beta=0.95 k=2                   R@1 0.0867  R@5 0.3638  R@10 0.6029 | vs base +0.00 CI[-0.29,+0.29] p=0.6540
+  DCKF-Q beta=1.0 k=2                    R@1 0.0867  R@5 0.3638  R@10 0.6029 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (1049 expanded)    R@1 0.0886  R@5 0.3648  R@10 0.6057 | vs base +0.19 CI[-0.19,+0.57] p=0.2163
+  DCKF-Q beta=0.9 k=3 (1049 expanded)    R@1 0.0886  R@5 0.3657  R@10 0.6048 | vs base +0.19 CI[-0.29,+0.67] p=0.2676
+  DCKF-Q beta=0.9 k=4 (1049 expanded)    R@1 0.0867  R@5 0.3629  R@10 0.6095 | vs base +0.00 CI[-0.48,+0.57] p=0.5673
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0867  R@5 0.3629  R@10 0.6057 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.19 p=0.9056
+  PRF k=3 beta=0.7                       R@1 0.0867  R@5 0.3724  R@10 0.6257 | vs base +0.01 CI[-1.14,+1.14] p=0.5254 | vs DCKF-Q -0.18 p=0.6469
+  PRF k=3 beta=0.8                       R@1 0.0857  R@5 0.3743  R@10 0.6219 | vs base -0.09 CI[-1.14,+0.95] p=0.6035 | vs DCKF-Q -0.28 p=0.7355
+  PRF k=3 beta=0.9                       R@1 0.0838  R@5 0.3724  R@10 0.6114 | vs base -0.28 CI[-1.05,+0.48] p=0.7941 | vs DCKF-Q -0.47 p=0.9092
+  PRF k=3 beta=0.95                      R@1 0.0848  R@5 0.3724  R@10 0.6057 | vs base -0.19 CI[-0.67,+0.29] p=0.8455 | vs DCKF-Q -0.38 p=0.9492
+  PRF k=5 beta=0.9                       R@1 0.0857  R@5 0.3590  R@10 0.6057 | vs base -0.10 CI[-0.95,+0.76] p=0.6415 | vs DCKF-Q -0.29 p=0.7759
+  PRF k=10 beta=0.9                      R@1 0.0924  R@5 0.3533  R@10 0.6048 | vs base +0.57 CI[-0.29,+1.43] p=0.1024 | vs DCKF-Q +0.38 p=0.2119
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0848  R@5 0.3762  R@10 0.6162 | vs base -0.19 CI[-1.05,+0.67] p=0.7097 | vs DCKF-Q -0.38 p=0.8572
+
+[CAP] gallery channel with blip_captions_ucm_210_5.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.1029  R@5 0.2790  R@10 0.3610 | vs base +1.62 CI[-0.86,+4.10] p=0.1109
+  gallery alpha=0.3                      R@1 0.0714  R@5 0.2790  R@10 0.4038 | vs base -1.52 CI[-3.81,+0.67] p=0.9148
+  gallery alpha=0.5                      R@1 0.0733  R@5 0.3057  R@10 0.4600 | vs base -1.33 CI[-3.52,+0.76] p=0.8968
+  gallery alpha=0.7                      R@1 0.0848  R@5 0.3362  R@10 0.5400 | vs base -0.20 CI[-2.29,+1.90] p=0.5950
+  gallery alpha=0.8                      R@1 0.0838  R@5 0.3552  R@10 0.5990 | vs base -0.29 CI[-2.29,+1.71] p=0.6318
+  gallery alpha=0.9                      R@1 0.0800  R@5 0.3848  R@10 0.6324 | vs base -0.68 CI[-2.38,+1.05] p=0.8016
+  gallery alpha=0.95                     R@1 0.0829  R@5 0.3857  R@10 0.6286 | vs base -0.39 CI[-1.81,+1.05] p=0.7300
+  gallery alpha=1.0                      R@1 0.0867  R@5 0.3638  R@10 0.6029 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.288  quantiles 10/25/50/75% = 0.244/0.265/0.287/0.310
+  caption gate: drop lowest 10% (thr 0.244) alpha=0.9 R@1 0.0752  R@5 0.3724  R@10 0.5857 | vs base -1.15 CI[-2.95,+0.57] p=0.9075 | vs C-ungated -0.48 p=0.9421
+    + DCKF-Q (D gated 10%)               R@1 0.0733  R@5 0.3705  R@10 0.5838 | vs base -1.34 CI[-3.14,+0.38] p=0.9350 | vs C-ungated -0.67 p=0.9629
+  caption gate: drop lowest 25% (thr 0.265) alpha=0.9 R@1 0.0762  R@5 0.3552  R@10 0.5362 | vs base -1.06 CI[-2.86,+0.76] p=0.8823 | vs C-ungated -0.38 p=0.8311
+    + DCKF-Q (D gated 25%)               R@1 0.0752  R@5 0.3533  R@10 0.5343 | vs base -1.15 CI[-2.95,+0.67] p=0.8970 | vs C-ungated -0.48 p=0.8438
+  caption gate: drop lowest 50% (thr 0.287) alpha=0.9 R@1 0.0781  R@5 0.3086  R@10 0.4210 | vs base -0.86 CI[-2.67,+0.86] p=0.8443 | vs C-ungated -0.18 p=0.6226
+    + DCKF-Q (D gated 50%)               R@1 0.0771  R@5 0.3095  R@10 0.4190 | vs base -0.95 CI[-2.76,+0.76] p=0.8657 | vs C-ungated -0.28 p=0.6605
+  caption gate: drop lowest 75% (thr 0.310) alpha=0.9 R@1 0.0571  R@5 0.2143  R@10 0.3124 | vs base -2.96 CI[-4.67,-1.33] p=0.9997 | vs C-ungated -2.28 p=0.9941
+    + DCKF-Q (D gated 75%)               R@1 0.0581  R@5 0.2152  R@10 0.3133 | vs base -2.86 CI[-4.57,-1.24] p=0.9996 | vs C-ungated -2.18 p=0.9910
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0771  R@5 0.3838  R@10 0.6305 | vs base -0.96 CI[-2.67,+0.76] p=0.8809 | vs C-ungated -0.28 p=0.9094
+
+wrote results/reviewer_ucm_210_5.json
+
+### 17:20 reviewer nwpu
+Loaded cached features for 3150 images.
+15750 queries over 3150 images (nwpu)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 15649 expanded) R@1 0.0242  R@5 0.0987  R@10 0.1691 | vs base +0.05 CI[-0.03,+0.13] p=0.1068
+  DCKF-Q beta=0.5 k=2                    R@1 0.0250  R@5 0.0987  R@10 0.1686 | vs base +0.13 CI[-0.06,+0.32] p=0.0934
+  DCKF-Q beta=0.7 k=2                    R@1 0.0253  R@5 0.1002  R@10 0.1690 | vs base +0.16 CI[+0.01,+0.31] p=0.0208
+  DCKF-Q beta=0.8 k=2                    R@1 0.0244  R@5 0.1001  R@10 0.1693 | vs base +0.07 CI[-0.05,+0.19] p=0.1366
+  DCKF-Q beta=0.95 k=2                   R@1 0.0237  R@5 0.0987  R@10 0.1686 | vs base +0.01 CI[-0.04,+0.06] p=0.4612
+  DCKF-Q beta=1.0 k=2                    R@1 0.0237  R@5 0.0990  R@10 0.1686 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (15649 expanded)   R@1 0.0246  R@5 0.0992  R@10 0.1686 | vs base +0.09 CI[+0.01,+0.17] p=0.0137
+  DCKF-Q beta=0.9 k=3 (15649 expanded)   R@1 0.0243  R@5 0.0988  R@10 0.1695 | vs base +0.06 CI[-0.03,+0.15] p=0.0907
+  DCKF-Q beta=0.9 k=4 (15649 expanded)   R@1 0.0244  R@5 0.0990  R@10 0.1707 | vs base +0.07 CI[-0.03,+0.17] p=0.0971
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0237  R@5 0.0971  R@10 0.1712 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.05 p=0.9197
+  PRF k=3 beta=0.7                       R@1 0.0249  R@5 0.0989  R@10 0.1685 | vs base +0.12 CI[-0.08,+0.32] p=0.1238 | vs DCKF-Q +0.07 p=0.2527
+  PRF k=3 beta=0.8                       R@1 0.0255  R@5 0.1001  R@10 0.1691 | vs base +0.18 CI[+0.02,+0.34] p=0.0167 | vs DCKF-Q +0.13 p=0.0632
+  PRF k=3 beta=0.9                       R@1 0.0248  R@5 0.0987  R@10 0.1723 | vs base +0.11 CI[-0.01,+0.22] p=0.0367 | vs DCKF-Q +0.06 p=0.1774
+  PRF k=3 beta=0.95                      R@1 0.0241  R@5 0.0997  R@10 0.1717 | vs base +0.04 CI[-0.04,+0.13] p=0.1665 | vs DCKF-Q -0.01 p=0.5856
+  PRF k=5 beta=0.9                       R@1 0.0252  R@5 0.1002  R@10 0.1719 | vs base +0.15 CI[+0.02,+0.29] p=0.0140 | vs DCKF-Q +0.10 p=0.0716
+  PRF k=10 beta=0.9                      R@1 0.0246  R@5 0.0997  R@10 0.1714 | vs base +0.09 CI[-0.05,+0.24] p=0.1063 | vs DCKF-Q +0.04 p=0.2803
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0248  R@5 0.0999  R@10 0.1722 | vs base +0.11 CI[-0.01,+0.23] p=0.0435 | vs DCKF-Q +0.06 p=0.1662
+
+[CAP] gallery channel with blip_captions_nwpu_3150_5.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.0145  R@5 0.0398  R@10 0.0644 | vs base -0.92 CI[-1.21,-0.62] p=1.0000
+  gallery alpha=0.3                      R@1 0.0123  R@5 0.0426  R@10 0.0697 | vs base -1.14 CI[-1.43,-0.86] p=1.0000
+  gallery alpha=0.5                      R@1 0.0159  R@5 0.0521  R@10 0.0853 | vs base -0.78 CI[-1.07,-0.48] p=1.0000
+  gallery alpha=0.7                      R@1 0.0184  R@5 0.0653  R@10 0.1087 | vs base -0.53 CI[-0.81,-0.24] p=0.9999
+  gallery alpha=0.8                      R@1 0.0197  R@5 0.0742  R@10 0.1296 | vs base -0.39 CI[-0.68,-0.11] p=0.9973
+  gallery alpha=0.9                      R@1 0.0233  R@5 0.0871  R@10 0.1498 | vs base -0.04 CI[-0.29,+0.22] p=0.6266
+  gallery alpha=0.95                     R@1 0.0246  R@5 0.0944  R@10 0.1617 | vs base +0.09 CI[-0.11,+0.29] p=0.2006
+  gallery alpha=1.0                      R@1 0.0237  R@5 0.0990  R@10 0.1686 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.290  quantiles 10/25/50/75% = 0.246/0.269/0.291/0.312
+  caption gate: drop lowest 10% (thr 0.246) alpha=0.9 R@1 0.0224  R@5 0.0861  R@10 0.1463 | vs base -0.13 CI[-0.37,+0.13] p=0.8432 | vs C-ungated -0.09 p=0.9890
+    + DCKF-Q (D gated 10%)               R@1 0.0221  R@5 0.0866  R@10 0.1462 | vs base -0.16 CI[-0.41,+0.10] p=0.8953 | vs C-ungated -0.12 p=0.9886
+  caption gate: drop lowest 25% (thr 0.269) alpha=0.9 R@1 0.0217  R@5 0.0819  R@10 0.1399 | vs base -0.20 CI[-0.45,+0.06] p=0.9361 | vs C-ungated -0.16 p=0.9947
+    + DCKF-Q (D gated 25%)               R@1 0.0217  R@5 0.0820  R@10 0.1400 | vs base -0.20 CI[-0.46,+0.05] p=0.9437 | vs C-ungated -0.17 p=0.9919
+  caption gate: drop lowest 50% (thr 0.291) alpha=0.9 R@1 0.0197  R@5 0.0729  R@10 0.1234 | vs base -0.40 CI[-0.66,-0.15] p=0.9991 | vs C-ungated -0.36 p=0.9998
+    + DCKF-Q (D gated 50%)               R@1 0.0195  R@5 0.0730  R@10 0.1234 | vs base -0.42 CI[-0.68,-0.17] p=0.9993 | vs C-ungated -0.38 p=1.0000
+  caption gate: drop lowest 75% (thr 0.312) alpha=0.9 R@1 0.0169  R@5 0.0600  R@10 0.0972 | vs base -0.68 CI[-0.95,-0.41] p=1.0000 | vs C-ungated -0.64 p=1.0000
+    + DCKF-Q (D gated 75%)               R@1 0.0173  R@5 0.0599  R@10 0.0978 | vs base -0.64 CI[-0.91,-0.37] p=1.0000 | vs C-ungated -0.60 p=1.0000
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0228  R@5 0.0879  R@10 0.1496 | vs base -0.09 CI[-0.34,+0.16] p=0.7630 | vs C-ungated -0.05 p=0.9268
+
+wrote results/reviewer_nwpu_3150_5.json
+
+### 17:23 reviewer rsicd large_aerial
+Loaded cached features for 1093 images.
+5465 queries over 1093 images (rsicd)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 5433 expanded) R@1 0.0558  R@5 0.1802  R@10 0.2816 | vs base +0.18 CI[-0.02,+0.40] p=0.0481
+  DCKF-Q beta=0.5 k=2                    R@1 0.0549  R@5 0.1771  R@10 0.2822 | vs base +0.09 CI[-0.31,+0.49] p=0.3453
+  DCKF-Q beta=0.7 k=2                    R@1 0.0560  R@5 0.1802  R@10 0.2849 | vs base +0.20 CI[-0.13,+0.53] p=0.1232
+  DCKF-Q beta=0.8 k=2                    R@1 0.0562  R@5 0.1819  R@10 0.2847 | vs base +0.22 CI[-0.05,+0.49] p=0.0675
+  DCKF-Q beta=0.95 k=2                   R@1 0.0547  R@5 0.1797  R@10 0.2823 | vs base +0.07 CI[-0.05,+0.20] p=0.1505
+  DCKF-Q beta=1.0 k=2                    R@1 0.0540  R@5 0.1773  R@10 0.2794 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (5433 expanded)    R@1 0.0543  R@5 0.1797  R@10 0.2811 | vs base +0.04 CI[-0.16,+0.24] p=0.3942
+  DCKF-Q beta=0.9 k=3 (5433 expanded)    R@1 0.0558  R@5 0.1802  R@10 0.2811 | vs base +0.18 CI[-0.04,+0.42] p=0.0659
+  DCKF-Q beta=0.9 k=4 (5433 expanded)    R@1 0.0560  R@5 0.1802  R@10 0.2834 | vs base +0.20 CI[-0.02,+0.44] p=0.0472
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0540  R@5 0.1768  R@10 0.2847 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.18 p=0.9674
+  PRF k=3 beta=0.7                       R@1 0.0529  R@5 0.1775  R@10 0.2847 | vs base -0.11 CI[-0.53,+0.31] p=0.7069 | vs DCKF-Q -0.29 p=0.9195
+  PRF k=3 beta=0.8                       R@1 0.0554  R@5 0.1771  R@10 0.2847 | vs base +0.15 CI[-0.24,+0.53] p=0.2376 | vs DCKF-Q -0.03 p=0.5861
+  PRF k=3 beta=0.9                       R@1 0.0556  R@5 0.1793  R@10 0.2844 | vs base +0.17 CI[-0.11,+0.44] p=0.1307 | vs DCKF-Q -0.02 p=0.5674
+  PRF k=3 beta=0.95                      R@1 0.0542  R@5 0.1786  R@10 0.2860 | vs base +0.02 CI[-0.18,+0.22] p=0.4603 | vs DCKF-Q -0.16 p=0.9464
+  PRF k=5 beta=0.9                       R@1 0.0562  R@5 0.1784  R@10 0.2849 | vs base +0.22 CI[-0.11,+0.55] p=0.1082 | vs DCKF-Q +0.04 p=0.4243
+  PRF k=10 beta=0.9                      R@1 0.0556  R@5 0.1780  R@10 0.2853 | vs base +0.17 CI[-0.20,+0.55] p=0.2005 | vs DCKF-Q -0.02 p=0.5542
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0576  R@5 0.1817  R@10 0.2862 | vs base +0.37 CI[+0.07,+0.68] p=0.0097 | vs DCKF-Q +0.18 p=0.1138
+
+[CAP] gallery channel with blip_captions_rsicd_1093_5_large_aerial.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.0225  R@5 0.0920  R@10 0.1449 | vs base -3.14 CI[-3.86,-2.42] p=1.0000
+  gallery alpha=0.3                      R@1 0.0201  R@5 0.0937  R@10 0.1656 | vs base -3.38 CI[-4.06,-2.69] p=1.0000
+  gallery alpha=0.5                      R@1 0.0304  R@5 0.1255  R@10 0.2071 | vs base -2.35 CI[-3.02,-1.68] p=1.0000
+  gallery alpha=0.7                      R@1 0.0439  R@5 0.1555  R@10 0.2496 | vs base -1.00 CI[-1.63,-0.37] p=0.9995
+  gallery alpha=0.8                      R@1 0.0543  R@5 0.1678  R@10 0.2747 | vs base +0.04 CI[-0.53,+0.60] p=0.4572
+  gallery alpha=0.9                      R@1 0.0587  R@5 0.1779  R@10 0.2917 | vs base +0.48 CI[+0.04,+0.93] p=0.0202
+  gallery alpha=0.95                     R@1 0.0571  R@5 0.1799  R@10 0.2855 | vs base +0.31 CI[-0.02,+0.64] p=0.0332
+  gallery alpha=1.0                      R@1 0.0540  R@5 0.1773  R@10 0.2794 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.305  quantiles 10/25/50/75% = 0.262/0.284/0.307/0.327
+  caption gate: drop lowest 10% (thr 0.262) alpha=0.9 R@1 0.0564  R@5 0.1744  R@10 0.2823 | vs base +0.24 CI[-0.22,+0.70] p=0.1634 | vs C-ungated -0.24 p=0.9997
+    + DCKF-Q (D gated 10%)               R@1 0.0580  R@5 0.1744  R@10 0.2794 | vs base +0.40 CI[-0.05,+0.86] p=0.0477 | vs C-ungated -0.07 p=0.7578
+  caption gate: drop lowest 25% (thr 0.284) alpha=0.9 R@1 0.0536  R@5 0.1636  R@10 0.2659 | vs base -0.03 CI[-0.51,+0.44] p=0.5699 | vs C-ungated -0.51 p=0.9998
+    + DCKF-Q (D gated 25%)               R@1 0.0554  R@5 0.1647  R@10 0.2640 | vs base +0.15 CI[-0.33,+0.62] p=0.2818 | vs C-ungated -0.33 p=0.9835
+  caption gate: drop lowest 50% (thr 0.307) alpha=0.9 R@1 0.0503  R@5 0.1460  R@10 0.2296 | vs base -0.36 CI[-0.90,+0.16] p=0.9179 | vs C-ungated -0.84 p=0.9998
+    + DCKF-Q (D gated 50%)               R@1 0.0522  R@5 0.1469  R@10 0.2276 | vs base -0.18 CI[-0.71,+0.33] p=0.7635 | vs C-ungated -0.66 p=0.9977
+  caption gate: drop lowest 75% (thr 0.327) alpha=0.9 R@1 0.0370  R@5 0.1063  R@10 0.1608 | vs base -1.70 CI[-2.27,-1.13] p=1.0000 | vs C-ungated -2.18 p=1.0000
+    + DCKF-Q (D gated 75%)               R@1 0.0384  R@5 0.1069  R@10 0.1608 | vs base -1.55 CI[-2.14,-0.99] p=1.0000 | vs C-ungated -2.03 p=1.0000
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0606  R@5 0.1773  R@10 0.2882 | vs base +0.66 CI[+0.20,+1.12] p=0.0025 | vs C-ungated +0.18 p=0.0272
+
+wrote results/reviewer_rsicd_1093_5_large_aerial.json
+
+### 17:24 reviewer rsicd aerial
+Loaded cached features for 1093 images.
+5465 queries over 1093 images (rsicd)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 5433 expanded) R@1 0.0558  R@5 0.1802  R@10 0.2816 | vs base +0.18 CI[-0.02,+0.40] p=0.0481
+  DCKF-Q beta=0.5 k=2                    R@1 0.0549  R@5 0.1771  R@10 0.2822 | vs base +0.09 CI[-0.31,+0.49] p=0.3453
+  DCKF-Q beta=0.7 k=2                    R@1 0.0560  R@5 0.1802  R@10 0.2849 | vs base +0.20 CI[-0.13,+0.53] p=0.1232
+  DCKF-Q beta=0.8 k=2                    R@1 0.0562  R@5 0.1819  R@10 0.2847 | vs base +0.22 CI[-0.05,+0.49] p=0.0675
+  DCKF-Q beta=0.95 k=2                   R@1 0.0547  R@5 0.1797  R@10 0.2823 | vs base +0.07 CI[-0.05,+0.20] p=0.1505
+  DCKF-Q beta=1.0 k=2                    R@1 0.0540  R@5 0.1773  R@10 0.2794 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (5433 expanded)    R@1 0.0543  R@5 0.1797  R@10 0.2811 | vs base +0.04 CI[-0.16,+0.24] p=0.3942
+  DCKF-Q beta=0.9 k=3 (5433 expanded)    R@1 0.0558  R@5 0.1802  R@10 0.2811 | vs base +0.18 CI[-0.04,+0.42] p=0.0659
+  DCKF-Q beta=0.9 k=4 (5433 expanded)    R@1 0.0560  R@5 0.1802  R@10 0.2834 | vs base +0.20 CI[-0.02,+0.44] p=0.0472
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0540  R@5 0.1768  R@10 0.2847 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.18 p=0.9674
+  PRF k=3 beta=0.7                       R@1 0.0529  R@5 0.1775  R@10 0.2847 | vs base -0.11 CI[-0.53,+0.31] p=0.7069 | vs DCKF-Q -0.29 p=0.9195
+  PRF k=3 beta=0.8                       R@1 0.0554  R@5 0.1771  R@10 0.2847 | vs base +0.15 CI[-0.24,+0.53] p=0.2376 | vs DCKF-Q -0.03 p=0.5861
+  PRF k=3 beta=0.9                       R@1 0.0556  R@5 0.1793  R@10 0.2844 | vs base +0.17 CI[-0.11,+0.44] p=0.1307 | vs DCKF-Q -0.02 p=0.5674
+  PRF k=3 beta=0.95                      R@1 0.0542  R@5 0.1786  R@10 0.2860 | vs base +0.02 CI[-0.18,+0.22] p=0.4603 | vs DCKF-Q -0.16 p=0.9464
+  PRF k=5 beta=0.9                       R@1 0.0562  R@5 0.1784  R@10 0.2849 | vs base +0.22 CI[-0.11,+0.55] p=0.1082 | vs DCKF-Q +0.04 p=0.4243
+  PRF k=10 beta=0.9                      R@1 0.0556  R@5 0.1780  R@10 0.2853 | vs base +0.17 CI[-0.20,+0.55] p=0.2005 | vs DCKF-Q -0.02 p=0.5542
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0576  R@5 0.1817  R@10 0.2862 | vs base +0.37 CI[+0.07,+0.68] p=0.0097 | vs DCKF-Q +0.18 p=0.1138
+
+[CAP] gallery channel with blip_captions_rsicd_1093_5_aerial.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.0661  R@5 0.1352  R@10 0.1726 | vs base +1.21 CI[+0.35,+2.07] p=0.0036
+  gallery alpha=0.3                      R@1 0.0269  R@5 0.1016  R@10 0.1649 | vs base -2.70 CI[-3.39,-2.03] p=1.0000
+  gallery alpha=0.5                      R@1 0.0368  R@5 0.1231  R@10 0.2013 | vs base -1.71 CI[-2.36,-1.08] p=1.0000
+  gallery alpha=0.7                      R@1 0.0445  R@5 0.1495  R@10 0.2368 | vs base -0.95 CI[-1.52,-0.38] p=0.9997
+  gallery alpha=0.8                      R@1 0.0492  R@5 0.1612  R@10 0.2560 | vs base -0.47 CI[-1.01,+0.04] p=0.9667
+  gallery alpha=0.9                      R@1 0.0540  R@5 0.1733  R@10 0.2754 | vs base +0.01 CI[-0.40,+0.40] p=0.5036
+  gallery alpha=0.95                     R@1 0.0556  R@5 0.1790  R@10 0.2769 | vs base +0.17 CI[-0.15,+0.48] p=0.1565
+  gallery alpha=1.0                      R@1 0.0540  R@5 0.1773  R@10 0.2794 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.304  quantiles 10/25/50/75% = 0.266/0.286/0.306/0.323
+  caption gate: drop lowest 10% (thr 0.266) alpha=0.9 R@1 0.0542  R@5 0.1683  R@10 0.2677 | vs base +0.02 CI[-0.40,+0.44] p=0.4714 | vs C-ungated +0.02 p=0.4646
+    + DCKF-Q (D gated 10%)               R@1 0.0549  R@5 0.1671  R@10 0.2675 | vs base +0.09 CI[-0.33,+0.51] p=0.3405 | vs C-ungated +0.09 p=0.2351
+  caption gate: drop lowest 25% (thr 0.286) alpha=0.9 R@1 0.0512  R@5 0.1605  R@10 0.2554 | vs base -0.27 CI[-0.71,+0.16] p=0.8977 | vs C-ungated -0.28 p=0.9893
+    + DCKF-Q (D gated 25%)               R@1 0.0514  R@5 0.1618  R@10 0.2540 | vs base -0.25 CI[-0.70,+0.18] p=0.8798 | vs C-ungated -0.26 p=0.9709
+  caption gate: drop lowest 50% (thr 0.306) alpha=0.9 R@1 0.0472  R@5 0.1438  R@10 0.2181 | vs base -0.67 CI[-1.19,-0.16] p=0.9960 | vs C-ungated -0.68 p=0.9998
+    + DCKF-Q (D gated 50%)               R@1 0.0470  R@5 0.1442  R@10 0.2177 | vs base -0.69 CI[-1.21,-0.18] p=0.9971 | vs C-ungated -0.70 p=0.9995
+  caption gate: drop lowest 75% (thr 0.323) alpha=0.9 R@1 0.0377  R@5 0.1050  R@10 0.1489 | vs base -1.62 CI[-2.20,-1.06] p=1.0000 | vs C-ungated -1.63 p=1.0000
+    + DCKF-Q (D gated 75%)               R@1 0.0373  R@5 0.1045  R@10 0.1477 | vs base -1.66 CI[-2.25,-1.10] p=1.0000 | vs C-ungated -1.67 p=1.0000
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0549  R@5 0.1724  R@10 0.2765 | vs base +0.10 CI[-0.31,+0.49] p=0.3356 | vs C-ungated +0.09 p=0.1212
+
+wrote results/reviewer_rsicd_1093_5_aerial.json
+
+E32_DONE 2026年 09月 05日 星期六 17:26:06 CST

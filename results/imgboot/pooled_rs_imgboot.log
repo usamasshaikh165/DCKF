@@ -1,0 +1,11 @@
+Loaded cached features for 1093 images.
+rsicd: 5465 q, dR@1=+0.183, dR@5=+0.293
+Loaded cached features for 452 images.
+rsitmd: 2260 q, dR@1=+0.133, dR@5=+0.133
+Loaded cached features for 210 images.
+ucm: 1050 q, dR@1=+0.190, dR@5=+0.000
+Loaded cached features for 3150 images.
+nwpu: 15750 q, dR@1=+0.051, dR@5=-0.025
+POOLED R@1: +0.094 pts, 95% CI [+0.012, +0.175], p(delta<=0) = 0.0131 (24,525 queries, stratified)
+POOLED R@5: +0.061 pts, 95% CI [-0.065, +0.188], p(delta<=0) = 0.1813 (24,525 queries, stratified)
+POOLED R@10: +0.065 pts, 95% CI [-0.073, +0.208], p(delta<=0) = 0.1775 (24,525 queries, stratified)

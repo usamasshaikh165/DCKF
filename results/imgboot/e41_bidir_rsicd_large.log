@@ -1,0 +1,17 @@
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd); captions/image histogram tail: {5: 1093}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |    5.40%  17.73%  27.94%    26 |    5.40%  16.01%  26.17%    40 | 16.44%
+B query-KG aq=0.9        |    5.58%  18.02%  28.16%    26 |    6.04%  16.10%  25.71%    39 | 16.60%
+C gallery-cap ag=0.9     |    5.87%  17.79%  29.17%    26 |    6.50%  18.02%  26.99%    34 | 17.39%
+D both                   |    6.06%  17.73%  28.82%    26 |    6.13%  17.47%  26.26%    33 | 17.08%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.18 pts, 95% CI [-0.05, +0.42], p(delta<=0)=0.0786
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): +0.64 pts, 95% CI [+0.00, +1.28], p(delta<=0)=0.0298
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): +0.47 pts, 95% CI [-0.11, +1.06], p(delta<=0)=0.0590
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): +1.09 pts, 95% CI [-0.09, +2.29], p(delta<=0)=0.0359
+bootstrap D both vs A, t2i R@1 (paired over captions): +0.66 pts, 95% CI [+0.07, +1.24], p(delta<=0)=0.0149
+bootstrap D both vs A, i2t R@1 (paired over images): +0.73 pts, 95% CI [-0.46, +1.92], p(delta<=0)=0.1331
+
+wrote results/bidirectional_rsicd_1093_5_large_aerial.json

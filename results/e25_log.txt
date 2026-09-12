@@ -1,0 +1,497 @@
++ source /home/usama/miniconda3/etc/profile.d/conda.sh
+++ export CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ export _CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ _CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/home/usama/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/usama/miniconda3/bin/python
+++ export _CONDA_ROOT=/home/usama/miniconda3
+++ _CONDA_ROOT=/home/usama/miniconda3
+++ '[' -z '' ']'
+++ export CONDA_SHLVL=0
+++ CONDA_SHLVL=0
+++ '[' -n '' ']'
+++++ dirname /home/usama/miniconda3/bin/conda
++++ dirname /home/usama/miniconda3/bin
+++ PATH=/home/usama/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export PATH
+++ '[' -z '' ']'
+++ PS1=
++ conda activate rakg
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate rakg
++ '[' -n '' ']'
++ local ask_conda
+++ PS1=
+++ __conda_exe shell.posix activate rakg
+++ '[' -n '' ']'
+++ /home/usama/miniconda3/bin/conda shell.posix activate rakg
++ ask_conda='export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(rakg) '\''
+export PATH='\''/home/usama/miniconda3/envs/rakg/bin:/home/usama/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_PREFIX='\''/home/usama/miniconda3/envs/rakg'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''rakg'\''
+export CONDA_PROMPT_MODIFIER='\''(rakg) '\''
+export CONDA_EXE='\''/home/usama/miniconda3/bin/conda'\''
+export _CONDA_EXE='\''/home/usama/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/home/usama/miniconda3/bin/python'\''
+export _CONDA_ROOT='\''/home/usama/miniconda3'\''
+. "/home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libglib_activate.sh"
+. "/home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libxml2-split_activate.sh"'
++ eval 'export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(rakg) '\''
+export PATH='\''/home/usama/miniconda3/envs/rakg/bin:/home/usama/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_PREFIX='\''/home/usama/miniconda3/envs/rakg'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''rakg'\''
+export CONDA_PROMPT_MODIFIER='\''(rakg) '\''
+export CONDA_EXE='\''/home/usama/miniconda3/bin/conda'\''
+export _CONDA_EXE='\''/home/usama/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/home/usama/miniconda3/bin/python'\''
+export _CONDA_ROOT='\''/home/usama/miniconda3'\''
+. "/home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libglib_activate.sh"
+. "/home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libxml2-split_activate.sh"'
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ PS1='(rakg) '
+++ export PATH=/home/usama/miniconda3/envs/rakg/bin:/home/usama/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ PATH=/home/usama/miniconda3/envs/rakg/bin:/home/usama/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export CONDA_PREFIX=/home/usama/miniconda3/envs/rakg
+++ CONDA_PREFIX=/home/usama/miniconda3/envs/rakg
+++ export CONDA_SHLVL=1
+++ CONDA_SHLVL=1
+++ export CONDA_DEFAULT_ENV=rakg
+++ CONDA_DEFAULT_ENV=rakg
+++ export 'CONDA_PROMPT_MODIFIER=(rakg) '
+++ CONDA_PROMPT_MODIFIER='(rakg) '
+++ export CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ export _CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ _CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ export CONDA_PYTHON_EXE=/home/usama/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/usama/miniconda3/bin/python
+++ export _CONDA_ROOT=/home/usama/miniconda3
+++ _CONDA_ROOT=/home/usama/miniconda3
+++ . /home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libglib_activate.sh
++++ export GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
++++ GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
++++ export GSETTINGS_SCHEMA_DIR=/home/usama/miniconda3/envs/rakg/share/glib-2.0/schemas
++++ GSETTINGS_SCHEMA_DIR=/home/usama/miniconda3/envs/rakg/share/glib-2.0/schemas
+++ . /home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libxml2-split_activate.sh
++++ test -n ''
++++ xml_catalog_files_libxml2=
++++ XML_CATALOG_FILES=
++++ conda_catalog_files=
++++ ifs_libxml2=' 	
+'
++++ IFS=' '
++++ rem=/home/usama/miniconda3/envs/rakg
++++ for pre in ${rem}
++++ test '' = /home/usama/miniconda3/envs/rakg
++++ conda_catalog_files=/home/usama/miniconda3/envs/rakg
++++ rem=
++++ IFS=' 	
+'
++++ conda_catalog_files='file:///home/usama/miniconda3/envs/rakg/etc/xml/catalog file:///etc/xml/catalog'
++++ export 'XML_CATALOG_FILES=file:///home/usama/miniconda3/envs/rakg/etc/xml/catalog file:///etc/xml/catalog'
++++ XML_CATALOG_FILES='file:///home/usama/miniconda3/envs/rakg/etc/xml/catalog file:///etc/xml/catalog'
++++ unset conda_catalog_files ifs_libxml2 rem
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /home/usama/RA-KG-T2I
++ export CUDA_VISIBLE_DEVICES=0
++ CUDA_VISIBLE_DEVICES=0
++ pip install -q nltk
++ tail -1
++ python -c 'import nltk; nltk.download('\''wordnet'\'', quiet=True); from nltk.corpus import wordnet as wn; wn.synsets('\''dog'\''); print('\''WORDNET OK'\'')'
+WORDNET OK
++ python -
+Encoding 1000 images on cuda ...
+  64/1000
+  128/1000
+  192/1000
+  256/1000
+  320/1000
+  384/1000
+  448/1000
+  512/1000
+  576/1000
+  640/1000
+  704/1000
+  768/1000
+  832/1000
+  896/1000
+  960/1000
+  1000/1000
+=== expansions for flickr30k_k1k_1000_5: 5000 queries
+  expanded 1000/5000 (44 ms/q)
+  expanded 2000/5000 (30 ms/q)
+  expanded 3000/5000 (25 ms/q)
+  expanded 4000/5000 (22 ms/q)
+  expanded 5000/5000 (21 ms/q)
+Expansion pass done (21 ms/q), cached.
+Loaded cached features for 5000 images.
+=== expansions for coco5k_5000_5: 25000 queries
+  expanded 1000/25000 (14 ms/q)
+  expanded 2000/25000 (14 ms/q)
+  expanded 3000/25000 (14 ms/q)
+  expanded 4000/25000 (14 ms/q)
+  expanded 5000/25000 (14 ms/q)
+  expanded 6000/25000 (14 ms/q)
+  expanded 7000/25000 (14 ms/q)
+  expanded 8000/25000 (14 ms/q)
+  expanded 9000/25000 (14 ms/q)
+  expanded 10000/25000 (14 ms/q)
+  expanded 11000/25000 (14 ms/q)
+  expanded 12000/25000 (14 ms/q)
+  expanded 13000/25000 (14 ms/q)
+  expanded 14000/25000 (14 ms/q)
+  expanded 15000/25000 (14 ms/q)
+  expanded 16000/25000 (14 ms/q)
+  expanded 17000/25000 (14 ms/q)
+  expanded 18000/25000 (14 ms/q)
+  expanded 19000/25000 (13 ms/q)
+  expanded 20000/25000 (13 ms/q)
+  expanded 21000/25000 (13 ms/q)
+  expanded 22000/25000 (13 ms/q)
+  expanded 23000/25000 (13 ms/q)
+  expanded 24000/25000 (13 ms/q)
+  expanded 25000/25000 (13 ms/q)
+Expansion pass done (13 ms/q), cached.
++ python -
+'[Errno 101] Network is unreachable' thrown while requesting HEAD https://huggingface.co/Salesforce/blip-image-captioning-base/resolve/main/processor_config.json
+Retrying in 1s [Retry 1/5].
+=== BLIP captions for 1000 k1k images
+Traceback (most recent call last):
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/transformers/processing_utils.py", line 1281, in get_processor_dict
+    resolved_processor_file = cached_file(
+                              ^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/transformers/utils/hub.py", line 293, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/transformers/utils/hub.py", line 527, in cached_files
+    raise e
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/transformers/utils/hub.py", line 437, in cached_files
+    hf_hub_download(
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1013, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1147, in _hf_hub_download_to_cache_dir
+    _get_metadata_or_catch_error(
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1707, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1615, in get_hf_file_metadata
+    response = _httpx_follow_relative_redirects_with_backoff(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 719, in _httpx_follow_relative_redirects_with_backoff
+    response = http_backoff(
+               ^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 596, in http_backoff
+    return next(
+           ^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 504, in _http_backoff_base
+    response = client.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/httpx/_client.py", line 901, in send
+    raise RuntimeError("Cannot send a request, as the client has been closed.")
+RuntimeError: Cannot send a request, as the client has been closed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/RA-KG-T2I/src/gallery_caption_expansion.py", line 53, in blip_captions
+    proc = BlipProcessor.from_pretrained(BLIP_ID)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/transformers/processing_utils.py", line 1717, in from_pretrained
+    processor_dict, instantiation_kwargs = cls.get_processor_dict(pretrained_model_name_or_path, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/usama/miniconda3/envs/rakg/lib/python3.12/site-packages/transformers/processing_utils.py", line 1361, in get_processor_dict
+    raise OSError(
+OSError: Can't load processor for 'Salesforce/blip-image-captioning-base'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'Salesforce/blip-image-captioning-base' is the correct path to a directory containing a processor_config.json file
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== bidirectional flickr30k_k1k ==='
+=== bidirectional flickr30k_k1k ===
++ python src/bidirectional_eval.py --dataset flickr30k_k1k --limit 0 --captions-per-image 5
+Loaded cached features for 1000 images.
+5000 captions over 1000 images (flickr30k_k1k); captions/image histogram tail: {5: 1000}
+NOTE: blip_captions_flickr30k_k1k_1000_5.json missing — configs C/D skipped
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |   58.70%  83.50%  89.98%     1 |   78.80%  94.90%  98.20%     1 | 84.01%
+B query-KG aq=0.9        |   59.16%  83.72%  90.14%     1 |   78.70%  95.00%  98.30%     1 | 84.17%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.46 pts, 95% CI [+0.16, +0.76], p(delta<=0)=0.0023
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): -0.10 pts, 95% CI [-0.60, +0.40], p(delta<=0)=0.7120
+
+wrote results/bidirectional_flickr30k_k1k_1000_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== bidirectional coco5k ==='
+=== bidirectional coco5k ===
++ python src/bidirectional_eval.py --dataset coco5k --limit 0 --captions-per-image 5
+Loaded cached features for 5000 images.
+25000 captions over 5000 images (coco5k); captions/image histogram tail: {5: 5000}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |   30.45%  55.97%  66.88%     4 |   50.12%  74.96%  83.54%     1 | 60.32%
+B query-KG aq=0.9        |   30.48%  56.00%  66.91%     4 |   50.56%  75.46%  83.28%     1 | 60.45%
+C gallery-cap ag=0.9     |   33.27%  59.39%  70.09%     3 |   50.80%  74.94%  83.92%     1 | 62.07%
+D both                   |   33.38%  59.49%  70.21%     3 |   50.86%  75.18%  83.74%     1 | 62.14%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.03 pts, 95% CI [-0.09, +0.15], p(delta<=0)=0.3207
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): +0.44 pts, 95% CI [+0.06, +0.82], p(delta<=0)=0.0125
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): +2.82 pts, 95% CI [+2.47, +3.17], p(delta<=0)=0.0000
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): +0.68 pts, 95% CI [-0.32, +1.68], p(delta<=0)=0.0971
+bootstrap D both vs A, t2i R@1 (paired over captions): +2.93 pts, 95% CI [+2.58, +3.28], p(delta<=0)=0.0000
+bootstrap D both vs A, i2t R@1 (paired over images): +0.73 pts, 95% CI [-0.28, +1.76], p(delta<=0)=0.0822
+
+wrote results/bidirectional_coco5k_5000_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== bidirectional rsicd ==='
+=== bidirectional rsicd ===
++ python src/bidirectional_eval.py --dataset rsicd --limit 0 --captions-per-image 5
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd); captions/image histogram tail: {5: 1093}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |    5.45%  17.79%  27.98%    26 |    5.40%  16.10%  25.98%    40 | 16.45%
+B query-KG aq=0.9        |    5.56%  17.99%  28.22%    26 |    5.95%  16.01%  25.71%    40 | 16.57%
+C gallery-cap ag=0.9     |    4.61%  15.63%  25.51%    29 |    5.58%  17.02%  25.07%    37 | 15.57%
+D both                   |    4.70%  15.75%  25.54%    29 |    5.40%  17.20%  25.16%    36 | 15.63%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.11 pts, 95% CI [-0.11, +0.33], p(delta<=0)=0.1751
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): +0.55 pts, 95% CI [-0.09, +1.28], p(delta<=0)=0.0685
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): -0.84 pts, 95% CI [-1.35, -0.33], p(delta<=0)=0.9997
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): +0.18 pts, 95% CI [-0.64, +1.01], p(delta<=0)=0.3703
+bootstrap D both vs A, t2i R@1 (paired over captions): -0.75 pts, 95% CI [-1.26, -0.22], p(delta<=0)=0.9984
+bootstrap D both vs A, i2t R@1 (paired over images): -0.00 pts, 95% CI [-0.91, +0.91], p(delta<=0)=0.5472
+
+wrote results/bidirectional_rsicd_1093_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== bidirectional rsitmd ==='
+=== bidirectional rsitmd ===
++ python src/bidirectional_eval.py --dataset rsitmd --limit 0 --captions-per-image 5
+Loaded cached features for 452 images.
+2260 captions over 452 images (rsitmd); captions/image histogram tail: {5: 452}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |    8.81%  27.88%  43.14%    14 |    9.51%  23.01%  32.52%    28 | 24.14%
+B query-KG aq=0.9        |    8.94%  28.01%  43.10%    14 |    9.51%  23.45%  32.74%    28 | 24.29%
+C gallery-cap ag=0.9     |    7.57%  24.91%  39.60%    15 |    9.07%  23.01%  32.08%    27 | 22.71%
+D both                   |    7.74%  24.91%  39.47%    15 |    9.07%  22.79%  33.19%    27 | 22.86%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.14 pts, 95% CI [-0.27, +0.58], p(delta<=0)=0.3009
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): +0.00 pts, 95% CI [+0.00, +0.00], p(delta<=0)=1.0000
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): -1.24 pts, 95% CI [-2.30, -0.22], p(delta<=0)=0.9919
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): -0.44 pts, 95% CI [-2.43, +1.55], p(delta<=0)=0.7097
+bootstrap D both vs A, t2i R@1 (paired over captions): -1.07 pts, 95% CI [-2.08, +0.00], p(delta<=0)=0.9792
+bootstrap D both vs A, i2t R@1 (paired over images): -0.44 pts, 95% CI [-2.21, +1.33], p(delta<=0)=0.7189
+
+wrote results/bidirectional_rsitmd_452_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== bidirectional ucm ==='
+=== bidirectional ucm ===
++ python src/bidirectional_eval.py --dataset ucm --limit 0 --captions-per-image 5
+Loaded cached features for 210 images.
+1050 captions over 210 images (ucm); captions/image histogram tail: {5: 210}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |    8.67%  36.38%  60.19%     8 |   22.38%  43.33%  56.19%     8 | 37.86%
+B query-KG aq=0.9        |    8.86%  36.38%  60.29%     8 |   22.38%  45.24%  55.71%     7 | 38.14%
+C gallery-cap ag=0.9     |    8.00%  38.57%  63.24%     7 |   24.29%  45.71%  58.57%     7 | 39.73%
+D both                   |    7.71%  38.38%  63.05%     7 |   26.19%  45.24%  60.48%     7 | 40.17%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.19 pts, 95% CI [-0.19, +0.57], p(delta<=0)=0.2224
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): -0.01 pts, 95% CI [-2.86, +2.86], p(delta<=0)=0.5664
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): -0.68 pts, 95% CI [-2.38, +1.05], p(delta<=0)=0.8016
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): +1.86 pts, 95% CI [-2.86, +6.19], p(delta<=0)=0.2428
+bootstrap D both vs A, t2i R@1 (paired over captions): -0.96 pts, 95% CI [-2.67, +0.76], p(delta<=0)=0.8809
+bootstrap D both vs A, i2t R@1 (paired over images): +3.79 pts, 95% CI [-0.48, +8.10], p(delta<=0)=0.0548
+
+wrote results/bidirectional_ucm_210_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== bidirectional nwpu ==='
+=== bidirectional nwpu ===
++ python src/bidirectional_eval.py --dataset nwpu --limit 0 --captions-per-image 5
+Loaded cached features for 3150 images.
+15750 captions over 3150 images (nwpu); captions/image histogram tail: {5: 3150}
+
+config                   |  t2i R@1     R@5    R@10  MedR |  i2t R@1     R@5    R@10  MedR |     mR
+----------------------------------------------------------------------------------------------------
+A baseline               |    2.38%   9.90%  16.86%    49 |    4.70%  13.21%  21.75%    46 | 11.47%
+B query-KG aq=0.9        |    2.43%   9.87%  16.91%    49 |    4.63%  13.65%  21.97%    45 | 11.58%
+C gallery-cap ag=0.9     |    2.33%   8.73%  14.98%    58 |    4.63%  13.46%  21.59%    45 | 10.95%
+D both                   |    2.28%   8.79%  14.98%    58 |    4.76%  13.68%  21.97%    45 | 11.08%
+bootstrap B query-KG aq=0.9 vs A, t2i R@1 (paired over captions): +0.05 pts, 95% CI [-0.03, +0.13], p(delta<=0)=0.1073
+bootstrap B query-KG aq=0.9 vs A, i2t R@1 (paired over images): -0.06 pts, 95% CI [-0.41, +0.29], p(delta<=0)=0.6761
+bootstrap C gallery-cap ag=0.9 vs A, t2i R@1 (paired over captions): -0.05 pts, 95% CI [-0.30, +0.20], p(delta<=0)=0.6633
+bootstrap C gallery-cap ag=0.9 vs A, i2t R@1 (paired over images): -0.06 pts, 95% CI [-0.67, +0.54], p(delta<=0)=0.5971
+bootstrap D both vs A, t2i R@1 (paired over captions): -0.10 pts, 95% CI [-0.35, +0.15], p(delta<=0)=0.7952
+bootstrap D both vs A, i2t R@1 (paired over images): +0.07 pts, 95% CI [-0.54, +0.67], p(delta<=0)=0.4320
+
+wrote results/bidirectional_nwpu_3150_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== baselines flickr30k_k1k ==='
+=== baselines flickr30k_k1k ===
++ python src/knowledge_baselines.py --dataset flickr30k_k1k --limit 0 --captions-per-image 5
+Loaded cached features for 1000 images.
+5000 captions over 1000 images (flickr30k_k1k)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |   58.70%  83.50%  89.98% |   78.80%  94.90%  98.20% | 84.01% |     -
+random (KTIR-style)      |   59.18%  83.76%  90.12% |   78.70%  95.20%  98.50% | 84.24% |  3967
+original priors          |   59.18%  83.66%  90.16% |   78.80%  95.00%  98.30% | 84.18% |  3967
+wordnet synonyms         |   59.02%  83.76%  90.16% |   79.10%  94.90%  98.40% | 84.22% |  4138
+relation-aware (ours)    |   59.16%  83.72%  90.14% |   78.70%  95.00%  98.30% | 84.17% |  3967
+bootstrap random (KTIR-style) vs baseline, t2i R@1: +0.48 [+0.20, +0.78], p=0.0009
+bootstrap original priors vs baseline, t2i R@1: +0.48 [+0.18, +0.78], p=0.0011
+bootstrap wordnet synonyms vs baseline, t2i R@1: +0.32 [+0.04, +0.60], p=0.0137
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.46 [+0.16, +0.76], p=0.0023
+bootstrap ours vs random (KTIR-style), t2i R@1: -0.02 [-0.26, +0.22], p=0.5926
+bootstrap ours vs original priors, t2i R@1: -0.02 [-0.10, +0.04], p=0.8227
+bootstrap ours vs wordnet synonyms, t2i R@1: +0.14 [-0.14, +0.42], p=0.1813
+
+wrote results/baselines_flickr30k_k1k_1000_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== baselines coco5k ==='
+=== baselines coco5k ===
++ python src/knowledge_baselines.py --dataset coco5k --limit 0 --captions-per-image 5
+Loaded cached features for 5000 images.
+25000 captions over 5000 images (coco5k)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |   30.45%  55.97%  66.88% |   50.12%  74.96%  83.54% | 60.32% |     -
+random (KTIR-style)      |   30.49%  55.96%  66.87% |   50.30%  75.46%  83.46% | 60.42% | 23083
+original priors          |   30.50%  55.99%  66.90% |   50.56%  75.50%  83.24% | 60.45% | 23083
+wordnet synonyms         |   30.58%  56.04%  66.96% |   50.38%  75.10%  83.64% | 60.45% | 22536
+relation-aware (ours)    |   30.48%  56.00%  66.91% |   50.56%  75.46%  83.28% | 60.45% | 23083
+bootstrap random (KTIR-style) vs baseline, t2i R@1: +0.04 [-0.07, +0.16], p=0.2433
+bootstrap original priors vs baseline, t2i R@1: +0.05 [-0.07, +0.16], p=0.2286
+bootstrap wordnet synonyms vs baseline, t2i R@1: +0.13 [+0.02, +0.24], p=0.0110
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.03 [-0.09, +0.15], p=0.3207
+bootstrap ours vs random (KTIR-style), t2i R@1: -0.01 [-0.11, +0.08], p=0.6108
+bootstrap ours vs original priors, t2i R@1: -0.02 [-0.06, +0.02], p=0.8052
+bootstrap ours vs wordnet synonyms, t2i R@1: -0.10 [-0.22, +0.02], p=0.9554
+
+wrote results/baselines_coco5k_5000_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== baselines rsicd ==='
+=== baselines rsicd ===
++ python src/knowledge_baselines.py --dataset rsicd --limit 0 --captions-per-image 5
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |    5.45%  17.79%  27.98% |    5.40%  16.10%  25.98% | 16.45% |     -
+random (KTIR-style)      |    5.53%  18.17%  27.98% |    5.67%  15.83%  25.25% | 16.40% |  5433
+original priors          |    5.54%  17.99%  28.33% |    5.95%  16.01%  25.98% | 16.63% |  5433
+wordnet synonyms         |    5.42%  17.79%  28.18% |    5.58%  16.01%  25.43% | 16.40% |  5340
+relation-aware (ours)    |    5.56%  17.99%  28.22% |    5.95%  16.01%  25.71% | 16.57% |  5433
+bootstrap random (KTIR-style) vs baseline, t2i R@1: +0.07 [-0.13, +0.27], p=0.2660
+bootstrap original priors vs baseline, t2i R@1: +0.09 [-0.13, +0.29], p=0.2236
+bootstrap wordnet synonyms vs baseline, t2i R@1: -0.04 [-0.22, +0.15], p=0.6882
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.11 [-0.11, +0.33], p=0.1751
+bootstrap ours vs random (KTIR-style), t2i R@1: +0.04 [-0.13, +0.20], p=0.3670
+bootstrap ours vs original priors, t2i R@1: +0.02 [-0.05, +0.11], p=0.4005
+bootstrap ours vs wordnet synonyms, t2i R@1: +0.15 [-0.05, +0.35], p=0.0880
+
+wrote results/baselines_rsicd_1093_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== baselines rsitmd ==='
+=== baselines rsitmd ===
++ python src/knowledge_baselines.py --dataset rsitmd --limit 0 --captions-per-image 5
+Loaded cached features for 452 images.
+2260 captions over 452 images (rsitmd)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |    8.81%  27.88%  43.14% |    9.51%  23.01%  32.52% | 24.14% |     -
+random (KTIR-style)      |    8.58%  28.27%  43.23% |    9.73%  23.45%  32.52% | 24.30% |  2255
+original priors          |    8.89%  28.10%  43.14% |    9.51%  23.45%  32.30% | 24.23% |  2255
+wordnet synonyms         |    8.67%  28.01%  43.19% |    9.51%  23.01%  31.86% | 24.04% |  2191
+relation-aware (ours)    |    8.94%  28.01%  43.10% |    9.51%  23.45%  32.74% | 24.29% |  2255
+bootstrap random (KTIR-style) vs baseline, t2i R@1: -0.22 [-0.62, +0.18], p=0.8761
+bootstrap original priors vs baseline, t2i R@1: +0.09 [-0.31, +0.49], p=0.3653
+bootstrap wordnet synonyms vs baseline, t2i R@1: -0.13 [-0.53, +0.22], p=0.7914
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.14 [-0.27, +0.58], p=0.3009
+bootstrap ours vs random (KTIR-style), t2i R@1: +0.36 [-0.04, +0.75], p=0.0421
+bootstrap ours vs original priors, t2i R@1: +0.04 [-0.09, +0.22], p=0.3985
+bootstrap ours vs wordnet synonyms, t2i R@1: +0.27 [-0.13, +0.66], p=0.1088
+
+wrote results/baselines_rsitmd_452_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== baselines ucm ==='
+=== baselines ucm ===
++ python src/knowledge_baselines.py --dataset ucm --limit 0 --captions-per-image 5
+Loaded cached features for 210 images.
+1050 captions over 210 images (ucm)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |    8.67%  36.38%  60.19% |   22.38%  43.33%  56.19% | 37.86% |     -
+random (KTIR-style)      |    8.86%  36.38%  60.19% |   10.00%  31.90%  54.29% | 33.60% |  1049
+original priors          |    8.76%  36.19%  60.19% |   22.38%  44.29%  54.76% | 37.76% |  1049
+wordnet synonyms         |    8.76%  36.86%  60.10% |   23.33%  45.24%  58.10% | 38.73% |  1038
+relation-aware (ours)    |    8.86%  36.38%  60.29% |   22.38%  45.24%  55.71% | 38.14% |  1049
+bootstrap random (KTIR-style) vs baseline, t2i R@1: +0.19 [-0.29, +0.67], p=0.2690
+bootstrap original priors vs baseline, t2i R@1: +0.10 [-0.19, +0.48], p=0.3932
+bootstrap wordnet synonyms vs baseline, t2i R@1: +0.09 [-0.38, +0.57], p=0.4272
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.19 [-0.19, +0.57], p=0.2224
+bootstrap ours vs random (KTIR-style), t2i R@1: -0.00 [-0.48, +0.48], p=0.5885
+bootstrap ours vs original priors, t2i R@1: +0.09 [+0.00, +0.29], p=0.3833
+bootstrap ours vs wordnet synonyms, t2i R@1: +0.10 [-0.38, +0.57], p=0.4245
+
+wrote results/baselines_ucm_210_5.json
++ for ds in flickr30k_k1k coco5k rsicd rsitmd ucm nwpu
++ echo '=== baselines nwpu ==='
+=== baselines nwpu ===
++ python src/knowledge_baselines.py --dataset nwpu --limit 0 --captions-per-image 5
+Loaded cached features for 3150 images.
+15750 captions over 3150 images (nwpu)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |    2.38%   9.90%  16.86% |    4.70%  13.21%  21.75% | 11.47% |     -
+random (KTIR-style)      |    2.42%   9.89%  16.98% |    2.98%  11.24%  20.13% | 10.61% | 15649
+original priors          |    2.41%   9.83%  16.92% |    4.57%  13.75%  22.10% | 11.60% | 15649
+wordnet synonyms         |    2.43%   9.90%  16.92% |    4.54%  13.65%  22.22% | 11.61% | 15033
+relation-aware (ours)    |    2.43%   9.87%  16.91% |    4.63%  13.65%  21.97% | 11.58% | 15649
+bootstrap random (KTIR-style) vs baseline, t2i R@1: +0.04 [-0.04, +0.11], p=0.1934
+bootstrap original priors vs baseline, t2i R@1: +0.03 [-0.04, +0.10], p=0.2762
+bootstrap wordnet synonyms vs baseline, t2i R@1: +0.05 [-0.03, +0.13], p=0.1308
+bootstrap relation-aware (ours) vs baseline, t2i R@1: +0.05 [-0.03, +0.13], p=0.1073
+bootstrap ours vs random (KTIR-style), t2i R@1: +0.01 [-0.06, +0.08], p=0.4011
+bootstrap ours vs original priors, t2i R@1: +0.03 [-0.01, +0.06], p=0.1025
+bootstrap ours vs wordnet synonyms, t2i R@1: +0.00 [-0.07, +0.07], p=0.5314
+
+wrote results/baselines_nwpu_3150_5.json
++ echo '=== E25 RUN COMPLETE ==='
+=== E25 RUN COMPLETE ===

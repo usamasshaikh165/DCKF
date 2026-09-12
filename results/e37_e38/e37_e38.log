@@ -1,0 +1,892 @@
+
+### 19:30 E37 gate ablation flickr30k_k1k
+Loaded cached features for 1000 images.
+5000 queries over 1000 images (flickr30k_k1k)
+  expanded 1000/5000 (15 ms/q)
+  expanded 2000/5000 (15 ms/q)
+  expanded 3000/5000 (15 ms/q)
+  expanded 4000/5000 (15 ms/q)
+  expanded 5000/5000 (14 ms/q)
+No-floor pool built (14 ms/q), cached.
+pool: mean 24.0 cands/query; 32446 of 120203 candidates below the old 0.5 floor
+parity with paper cache: identical tau=0.55 selection for 100.0% of queries
+
+baseline R@1 58.86
+
+[A] typed scoring, fusion b=0.9, gate sweep (tau=0 is gate OFF)
+  typed tau=0.0  fusion n_exp=4999  R@1  58.92 | vs base +0.06 CI[-0.28,+0.40] p=0.3748
+  typed tau=0.3  fusion n_exp=4941  R@1  58.92 | vs base +0.06 CI[-0.28,+0.40] p=0.3748
+  typed tau=0.4  fusion n_exp=4775  R@1  58.94 | vs base +0.08 CI[-0.24,+0.42] p=0.3296
+  typed tau=0.45 fusion n_exp=4582  R@1  58.90 | vs base +0.04 CI[-0.28,+0.38] p=0.4212
+  typed tau=0.5  fusion n_exp=4366  R@1  58.94 | vs base +0.08 CI[-0.24,+0.40] p=0.3273
+  typed tau=0.55 fusion n_exp=4038  R@1  59.00 | vs base +0.14 CI[-0.18,+0.46] p=0.1987
+  typed tau=0.6  fusion n_exp=3571  R@1  59.04 | vs base +0.18 CI[-0.10,+0.46] p=0.1140
+  typed tau=0.65 fusion n_exp=2958  R@1  59.04 | vs base +0.18 CI[-0.06,+0.44] p=0.0883
+
+[A'] gate-off fusion vs gate-on fusion (the missing cell)
+  typed tau=0.0  fusion n_exp=4999  R@1  58.92 | vs base +0.06 CI[-0.28,+0.40] p=0.3748 | vs tau=.55 -0.08 CI[-0.26,+0.10] p=0.8281
+
+[B] typed scoring, raw text, gate on/off
+  typed tau=0.55 text   n_exp=4038  R@1  55.54 | vs base -3.32 CI[-4.22,-2.44] p=1.0000
+  typed tau=0.0  text   n_exp=4999  R@1  54.30 | vs base -4.56 CI[-5.56,-3.56] p=1.0000
+
+[C] prior-only scoring (cos removed from the score), fusion and raw text, gate on/off
+  prior tau=0.55 fusion n_exp=4038  R@1  59.00 | vs base +0.14 CI[-0.18,+0.46] p=0.2047 | vs typed,tau=.55 -0.00 CI[-0.14,+0.14] p=0.5590
+  prior tau=0.0  fusion n_exp=4999  R@1  58.96 | vs base +0.10 CI[-0.24,+0.44] p=0.2921 | vs typed,tau=.55 -0.04 CI[-0.26,+0.18] p=0.6650
+  prior tau=0.55 text   n_exp=4038  R@1  55.12 | vs base -3.74 CI[-4.66,-2.84] p=1.0000
+  prior tau=0.0  text   n_exp=4999  R@1  53.60 | vs base -5.26 CI[-6.28,-4.24] p=1.0000
+
+gate changes the k=2 selection for 1795 of 5000 queries (35.9%)
+wrote results/gate_ablation_flickr30k_k1k_1000_5.json
+
+### 19:32 E37 gate ablation rsicd
+Loaded cached features for 1093 images.
+5465 queries over 1093 images (rsicd)
+  expanded 1000/5465 (13 ms/q)
+  expanded 2000/5465 (13 ms/q)
+  expanded 3000/5465 (12 ms/q)
+  expanded 4000/5465 (12 ms/q)
+  expanded 5000/5465 (12 ms/q)
+No-floor pool built (12 ms/q), cached.
+pool: mean 23.7 cands/query; 1925 of 129786 candidates below the old 0.5 floor
+parity with paper cache: identical tau=0.55 selection for 98.9% of queries
+
+baseline R@1 5.40
+
+[A] typed scoring, fusion b=0.9, gate sweep (tau=0 is gate OFF)
+  typed tau=0.0  fusion n_exp=5465  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  typed tau=0.3  fusion n_exp=5464  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  typed tau=0.4  fusion n_exp=5463  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  typed tau=0.45 fusion n_exp=5460  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  typed tau=0.5  fusion n_exp=5458  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  typed tau=0.55 fusion n_exp=5441  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  typed tau=0.6  fusion n_exp=5404  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4624
+  typed tau=0.65 fusion n_exp=5285  R@1   5.36 | vs base -0.04 CI[-0.24,+0.16] p=0.6776
+
+[A'] gate-off fusion vs gate-on fusion (the missing cell)
+  typed tau=0.0  fusion n_exp=5465  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629 | vs tau=.55 +0.00 CI[+0.00,+0.00] p=1.0000
+
+[B] typed scoring, raw text, gate on/off
+  typed tau=0.55 text   n_exp=5441  R@1   4.21 | vs base -1.19 CI[-1.74,-0.64] p=1.0000
+  typed tau=0.0  text   n_exp=5465  R@1   4.17 | vs base -1.22 CI[-1.76,-0.68] p=1.0000
+
+[C] prior-only scoring (cos removed from the score), fusion and raw text, gate on/off
+  prior tau=0.55 fusion n_exp=5441  R@1   5.45 | vs base +0.06 CI[-0.15,+0.27] p=0.3351 | vs typed,tau=.55 +0.04 CI[+0.00,+0.09] p=0.1355
+  prior tau=0.0  fusion n_exp=5465  R@1   5.45 | vs base +0.06 CI[-0.15,+0.27] p=0.3351 | vs typed,tau=.55 +0.04 CI[+0.00,+0.09] p=0.1355
+  prior tau=0.55 text   n_exp=5441  R@1   4.25 | vs base -1.15 CI[-1.70,-0.59] p=1.0000
+  prior tau=0.0  text   n_exp=5465  R@1   4.21 | vs base -1.18 CI[-1.74,-0.62] p=1.0000
+
+gate changes the k=2 selection for 148 of 5465 queries (2.7%)
+wrote results/gate_ablation_rsicd_1093_5.json
+
+### 19:34 E38 captions rsitmd base aerial
+Loaded cached features for 452 images.
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  66%|██████▌   | 310/473 [00:00<00:00, 3089.69it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3061.93it/s]
+  captioned 16/452
+  captioned 32/452
+  captioned 48/452
+  captioned 64/452
+  captioned 80/452
+  captioned 96/452
+  captioned 112/452
+  captioned 128/452
+  captioned 144/452
+  captioned 160/452
+  captioned 176/452
+  captioned 192/452
+  captioned 208/452
+  captioned 224/452
+  captioned 240/452
+  captioned 256/452
+  captioned 272/452
+  captioned 288/452
+  captioned 304/452
+  captioned 320/452
+  captioned 336/452
+  captioned 352/452
+  captioned 368/452
+  captioned 384/452
+  captioned 400/452
+  captioned 416/452
+  captioned 432/452
+  captioned 448/452
+  captioned 452/452
+conditional captioning [an aerial photograph of]: 24 ms/image
+rsitmd: 452 captions with Salesforce/blip-image-captioning-base -> blip_captions_rsitmd_452_5_aerial.json
+examples: an aerial photograph of a large airport | an aerial photograph of a parking lot | an aerial photograph of a roundabout in the city
+
+### 19:34 E38 captions rsitmd large aerial
+Loaded cached features for 452 images.
+Loading weights:   0%|          | 0/616 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 197/616 [00:00<00:00, 1948.24it/s]Loading weights:  64%|██████▎   | 392/616 [00:00<00:00, 1883.81it/s]Loading weights:  94%|█████████▍| 581/616 [00:00<00:00, 1824.57it/s]Loading weights: 100%|██████████| 616/616 [00:00<00:00, 1855.00it/s]
+  captioned 16/452
+  captioned 32/452
+  captioned 48/452
+  captioned 64/452
+  captioned 80/452
+  captioned 96/452
+  captioned 112/452
+  captioned 128/452
+  captioned 144/452
+  captioned 160/452
+  captioned 176/452
+  captioned 192/452
+  captioned 208/452
+  captioned 224/452
+  captioned 240/452
+  captioned 256/452
+  captioned 272/452
+  captioned 288/452
+  captioned 304/452
+  captioned 320/452
+  captioned 336/452
+  captioned 352/452
+  captioned 368/452
+  captioned 384/452
+  captioned 400/452
+  captioned 416/452
+  captioned 432/452
+  captioned 448/452
+  captioned 452/452
+conditional captioning [an aerial photograph of]: 25 ms/image
+rsitmd: 452 captions with Salesforce/blip-image-captioning-large -> blip_captions_rsitmd_452_5_large_aerial.json
+examples: an aerial photograph of a large airport with a plane on the runway | an aerial photograph of a parking lot with many cars parked | an aerial photograph of a city intersection with a lot of traffic
+
+### 19:35 E38 captions ucm base aerial
+Loaded cached features for 210 images.
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  67%|██████▋   | 319/473 [00:00<00:00, 3034.33it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3191.15it/s]
+  captioned 16/210
+  captioned 32/210
+  captioned 48/210
+  captioned 64/210
+  captioned 80/210
+  captioned 96/210
+  captioned 112/210
+  captioned 128/210
+  captioned 144/210
+  captioned 160/210
+  captioned 176/210
+  captioned 192/210
+  captioned 208/210
+  captioned 210/210
+conditional captioning [an aerial photograph of]: 23 ms/image
+ucm: 210 captions with Salesforce/blip-image-captioning-base -> blip_captions_ucm_210_5_aerial.json
+examples: an aerial photograph of a herd of sheep grazing in a field | an aerial photograph of a parking lot with a clock | an aerial photograph of a golf course
+
+### 19:35 E38 captions ucm large aerial
+Loaded cached features for 210 images.
+Loading weights:   0%|          | 0/616 [00:00<?, ?it/s]Loading weights:  36%|███▌      | 223/616 [00:00<00:00, 2221.47it/s]Loading weights:  72%|███████▏  | 446/616 [00:00<00:00, 1963.63it/s]Loading weights: 100%|██████████| 616/616 [00:00<00:00, 1888.98it/s]
+  captioned 16/210
+  captioned 32/210
+  captioned 48/210
+  captioned 64/210
+  captioned 80/210
+  captioned 96/210
+  captioned 112/210
+  captioned 128/210
+  captioned 144/210
+  captioned 160/210
+  captioned 176/210
+  captioned 192/210
+  captioned 208/210
+  captioned 210/210
+conditional captioning [an aerial photograph of]: 27 ms/image
+ucm: 210 captions with Salesforce/blip-image-captioning-large -> blip_captions_ucm_210_5_large_aerial.json
+examples: an aerial photograph of a golf course with a green and a white ball | an aerial photograph of a large black tank with a blue circle | an aerial photograph of a golf course with a green and a white tee
+
+### 19:36 E38 captions nwpu base aerial
+Loaded cached features for 3150 images.
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  67%|██████▋   | 319/473 [00:00<00:00, 3013.53it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3198.18it/s]
+  captioned 16/3150
+  captioned 32/3150
+  captioned 48/3150
+  captioned 64/3150
+  captioned 80/3150
+  captioned 96/3150
+  captioned 112/3150
+  captioned 128/3150
+  captioned 144/3150
+  captioned 160/3150
+  captioned 176/3150
+  captioned 192/3150
+  captioned 208/3150
+  captioned 224/3150
+  captioned 240/3150
+  captioned 256/3150
+  captioned 272/3150
+  captioned 288/3150
+  captioned 304/3150
+  captioned 320/3150
+  captioned 336/3150
+  captioned 352/3150
+  captioned 368/3150
+  captioned 384/3150
+  captioned 400/3150
+  captioned 416/3150
+  captioned 432/3150
+  captioned 448/3150
+  captioned 464/3150
+  captioned 480/3150
+  captioned 496/3150
+  captioned 512/3150
+  captioned 528/3150
+  captioned 544/3150
+  captioned 560/3150
+  captioned 576/3150
+  captioned 592/3150
+  captioned 608/3150
+  captioned 624/3150
+  captioned 640/3150
+  captioned 656/3150
+  captioned 672/3150
+  captioned 688/3150
+  captioned 704/3150
+  captioned 720/3150
+  captioned 736/3150
+  captioned 752/3150
+  captioned 768/3150
+  captioned 784/3150
+  captioned 800/3150
+  captioned 816/3150
+  captioned 832/3150
+  captioned 848/3150
+  captioned 864/3150
+  captioned 880/3150
+  captioned 896/3150
+  captioned 912/3150
+  captioned 928/3150
+  captioned 944/3150
+  captioned 960/3150
+  captioned 976/3150
+  captioned 992/3150
+  captioned 1008/3150
+  captioned 1024/3150
+  captioned 1040/3150
+  captioned 1056/3150
+  captioned 1072/3150
+  captioned 1088/3150
+  captioned 1104/3150
+  captioned 1120/3150
+  captioned 1136/3150
+  captioned 1152/3150
+  captioned 1168/3150
+  captioned 1184/3150
+  captioned 1200/3150
+  captioned 1216/3150
+  captioned 1232/3150
+  captioned 1248/3150
+  captioned 1264/3150
+  captioned 1280/3150
+  captioned 1296/3150
+  captioned 1312/3150
+  captioned 1328/3150
+  captioned 1344/3150
+  captioned 1360/3150
+  captioned 1376/3150
+  captioned 1392/3150
+  captioned 1408/3150
+  captioned 1424/3150
+  captioned 1440/3150
+  captioned 1456/3150
+  captioned 1472/3150
+  captioned 1488/3150
+  captioned 1504/3150
+  captioned 1520/3150
+  captioned 1536/3150
+  captioned 1552/3150
+  captioned 1568/3150
+  captioned 1584/3150
+  captioned 1600/3150
+  captioned 1616/3150
+  captioned 1632/3150
+  captioned 1648/3150
+  captioned 1664/3150
+  captioned 1680/3150
+  captioned 1696/3150
+  captioned 1712/3150
+  captioned 1728/3150
+  captioned 1744/3150
+  captioned 1760/3150
+  captioned 1776/3150
+  captioned 1792/3150
+  captioned 1808/3150
+  captioned 1824/3150
+  captioned 1840/3150
+  captioned 1856/3150
+  captioned 1872/3150
+  captioned 1888/3150
+  captioned 1904/3150
+  captioned 1920/3150
+  captioned 1936/3150
+  captioned 1952/3150
+  captioned 1968/3150
+  captioned 1984/3150
+  captioned 2000/3150
+  captioned 2016/3150
+  captioned 2032/3150
+  captioned 2048/3150
+  captioned 2064/3150
+  captioned 2080/3150
+  captioned 2096/3150
+  captioned 2112/3150
+  captioned 2128/3150
+  captioned 2144/3150
+  captioned 2160/3150
+  captioned 2176/3150
+  captioned 2192/3150
+  captioned 2208/3150
+  captioned 2224/3150
+  captioned 2240/3150
+  captioned 2256/3150
+  captioned 2272/3150
+  captioned 2288/3150
+  captioned 2304/3150
+  captioned 2320/3150
+  captioned 2336/3150
+  captioned 2352/3150
+  captioned 2368/3150
+  captioned 2384/3150
+  captioned 2400/3150
+  captioned 2416/3150
+  captioned 2432/3150
+  captioned 2448/3150
+  captioned 2464/3150
+  captioned 2480/3150
+  captioned 2496/3150
+  captioned 2512/3150
+  captioned 2528/3150
+  captioned 2544/3150
+  captioned 2560/3150
+  captioned 2576/3150
+  captioned 2592/3150
+  captioned 2608/3150
+  captioned 2624/3150
+  captioned 2640/3150
+  captioned 2656/3150
+  captioned 2672/3150
+  captioned 2688/3150
+  captioned 2704/3150
+  captioned 2720/3150
+  captioned 2736/3150
+  captioned 2752/3150
+  captioned 2768/3150
+  captioned 2784/3150
+  captioned 2800/3150
+  captioned 2816/3150
+  captioned 2832/3150
+  captioned 2848/3150
+  captioned 2864/3150
+  captioned 2880/3150
+  captioned 2896/3150
+  captioned 2912/3150
+  captioned 2928/3150
+  captioned 2944/3150
+  captioned 2960/3150
+  captioned 2976/3150
+  captioned 2992/3150
+  captioned 3008/3150
+  captioned 3024/3150
+  captioned 3040/3150
+  captioned 3056/3150
+  captioned 3072/3150
+  captioned 3088/3150
+  captioned 3104/3150
+  captioned 3120/3150
+  captioned 3136/3150
+  captioned 3150/3150
+conditional captioning [an aerial photograph of]: 24 ms/image
+nwpu: 3150 captions with Salesforce/blip-image-captioning-base -> blip_captions_nwpu_3150_5_aerial.json
+examples: an aerial photograph of a plane landing at an airport | an aerial photograph of a farm in the middle of a rural area | an aerial photograph of the area where the proposed solar farm is located
+
+### 19:37 E38 captions nwpu large aerial
+Loaded cached features for 3150 images.
+Loading weights:   0%|          | 0/616 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 196/616 [00:00<00:00, 1943.99it/s]Loading weights:  63%|██████▎   | 391/616 [00:00<00:00, 1894.84it/s]Loading weights:  94%|█████████▍| 581/616 [00:00<00:00, 1809.57it/s]Loading weights: 100%|██████████| 616/616 [00:00<00:00, 1844.33it/s]
+  captioned 16/3150
+  captioned 32/3150
+  captioned 48/3150
+  captioned 64/3150
+  captioned 80/3150
+  captioned 96/3150
+  captioned 112/3150
+  captioned 128/3150
+  captioned 144/3150
+  captioned 160/3150
+  captioned 176/3150
+  captioned 192/3150
+  captioned 208/3150
+  captioned 224/3150
+  captioned 240/3150
+  captioned 256/3150
+  captioned 272/3150
+  captioned 288/3150
+  captioned 304/3150
+  captioned 320/3150
+  captioned 336/3150
+  captioned 352/3150
+  captioned 368/3150
+  captioned 384/3150
+  captioned 400/3150
+  captioned 416/3150
+  captioned 432/3150
+  captioned 448/3150
+  captioned 464/3150
+  captioned 480/3150
+  captioned 496/3150
+  captioned 512/3150
+  captioned 528/3150
+  captioned 544/3150
+  captioned 560/3150
+  captioned 576/3150
+  captioned 592/3150
+  captioned 608/3150
+  captioned 624/3150
+  captioned 640/3150
+  captioned 656/3150
+  captioned 672/3150
+  captioned 688/3150
+  captioned 704/3150
+  captioned 720/3150
+  captioned 736/3150
+  captioned 752/3150
+  captioned 768/3150
+  captioned 784/3150
+  captioned 800/3150
+  captioned 816/3150
+  captioned 832/3150
+  captioned 848/3150
+  captioned 864/3150
+  captioned 880/3150
+  captioned 896/3150
+  captioned 912/3150
+  captioned 928/3150
+  captioned 944/3150
+  captioned 960/3150
+  captioned 976/3150
+  captioned 992/3150
+  captioned 1008/3150
+  captioned 1024/3150
+  captioned 1040/3150
+  captioned 1056/3150
+  captioned 1072/3150
+  captioned 1088/3150
+  captioned 1104/3150
+  captioned 1120/3150
+  captioned 1136/3150
+  captioned 1152/3150
+  captioned 1168/3150
+  captioned 1184/3150
+  captioned 1200/3150
+  captioned 1216/3150
+  captioned 1232/3150
+  captioned 1248/3150
+  captioned 1264/3150
+  captioned 1280/3150
+  captioned 1296/3150
+  captioned 1312/3150
+  captioned 1328/3150
+  captioned 1344/3150
+  captioned 1360/3150
+  captioned 1376/3150
+  captioned 1392/3150
+  captioned 1408/3150
+  captioned 1424/3150
+  captioned 1440/3150
+  captioned 1456/3150
+  captioned 1472/3150
+  captioned 1488/3150
+  captioned 1504/3150
+  captioned 1520/3150
+  captioned 1536/3150
+  captioned 1552/3150
+  captioned 1568/3150
+  captioned 1584/3150
+  captioned 1600/3150
+  captioned 1616/3150
+  captioned 1632/3150
+  captioned 1648/3150
+  captioned 1664/3150
+  captioned 1680/3150
+  captioned 1696/3150
+  captioned 1712/3150
+  captioned 1728/3150
+  captioned 1744/3150
+  captioned 1760/3150
+  captioned 1776/3150
+  captioned 1792/3150
+  captioned 1808/3150
+  captioned 1824/3150
+  captioned 1840/3150
+  captioned 1856/3150
+  captioned 1872/3150
+  captioned 1888/3150
+  captioned 1904/3150
+  captioned 1920/3150
+  captioned 1936/3150
+  captioned 1952/3150
+  captioned 1968/3150
+  captioned 1984/3150
+  captioned 2000/3150
+  captioned 2016/3150
+  captioned 2032/3150
+  captioned 2048/3150
+  captioned 2064/3150
+  captioned 2080/3150
+  captioned 2096/3150
+  captioned 2112/3150
+  captioned 2128/3150
+  captioned 2144/3150
+  captioned 2160/3150
+  captioned 2176/3150
+  captioned 2192/3150
+  captioned 2208/3150
+  captioned 2224/3150
+  captioned 2240/3150
+  captioned 2256/3150
+  captioned 2272/3150
+  captioned 2288/3150
+  captioned 2304/3150
+  captioned 2320/3150
+  captioned 2336/3150
+  captioned 2352/3150
+  captioned 2368/3150
+  captioned 2384/3150
+  captioned 2400/3150
+  captioned 2416/3150
+  captioned 2432/3150
+  captioned 2448/3150
+  captioned 2464/3150
+  captioned 2480/3150
+  captioned 2496/3150
+  captioned 2512/3150
+  captioned 2528/3150
+  captioned 2544/3150
+  captioned 2560/3150
+  captioned 2576/3150
+  captioned 2592/3150
+  captioned 2608/3150
+  captioned 2624/3150
+  captioned 2640/3150
+  captioned 2656/3150
+  captioned 2672/3150
+  captioned 2688/3150
+  captioned 2704/3150
+  captioned 2720/3150
+  captioned 2736/3150
+  captioned 2752/3150
+  captioned 2768/3150
+  captioned 2784/3150
+  captioned 2800/3150
+  captioned 2816/3150
+  captioned 2832/3150
+  captioned 2848/3150
+  captioned 2864/3150
+  captioned 2880/3150
+  captioned 2896/3150
+  captioned 2912/3150
+  captioned 2928/3150
+  captioned 2944/3150
+  captioned 2960/3150
+  captioned 2976/3150
+  captioned 2992/3150
+  captioned 3008/3150
+  captioned 3024/3150
+  captioned 3040/3150
+  captioned 3056/3150
+  captioned 3072/3150
+  captioned 3088/3150
+  captioned 3104/3150
+  captioned 3120/3150
+  captioned 3136/3150
+  captioned 3150/3150
+conditional captioning [an aerial photograph of]: 24 ms/image
+nwpu: 3150 captions with Salesforce/blip-image-captioning-large -> blip_captions_nwpu_3150_5_large_aerial.json
+examples: an aerial photograph of a plane on a runway with a field in the background | an aerial photograph of a field with a plane flying over it | an aerial photograph of a large area of land with a lot of water
+
+### 19:39 E38 reviewer rsitmd aerial
+Loaded cached features for 452 images.
+2260 queries over 452 images (rsitmd)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 2255 expanded) R@1 0.0894  R@5 0.2805  R@10 0.4301 | vs base +0.13 CI[-0.22,+0.53] p=0.2787
+  DCKF-Q beta=0.5 k=2                    R@1 0.0796  R@5 0.2743  R@10 0.4341 | vs base -0.84 CI[-1.59,-0.09] p=0.9884
+  DCKF-Q beta=0.7 k=2                    R@1 0.0832  R@5 0.2819  R@10 0.4305 | vs base -0.49 CI[-1.11,+0.13] p=0.9455
+  DCKF-Q beta=0.8 k=2                    R@1 0.0885  R@5 0.2783  R@10 0.4314 | vs base +0.05 CI[-0.44,+0.53] p=0.4654
+  DCKF-Q beta=0.95 k=2                   R@1 0.0889  R@5 0.2783  R@10 0.4314 | vs base +0.09 CI[-0.18,+0.35] p=0.3163
+  DCKF-Q beta=1.0 k=2                    R@1 0.0881  R@5 0.2792  R@10 0.4323 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (2255 expanded)    R@1 0.0858  R@5 0.2792  R@10 0.4323 | vs base -0.22 CI[-0.58,+0.09] p=0.9281
+  DCKF-Q beta=0.9 k=3 (2255 expanded)    R@1 0.0872  R@5 0.2814  R@10 0.4310 | vs base -0.09 CI[-0.49,+0.31] p=0.7002
+  DCKF-Q beta=0.9 k=4 (2255 expanded)    R@1 0.0881  R@5 0.2814  R@10 0.4336 | vs base +0.00 CI[-0.40,+0.40] p=0.5472
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0881  R@5 0.2770  R@10 0.4323 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.13 p=0.7910
+  PRF k=3 beta=0.7                       R@1 0.0783  R@5 0.2752  R@10 0.4195 | vs base -0.97 CI[-1.81,-0.18] p=0.9915 | vs DCKF-Q -1.11 p=0.9962
+  PRF k=3 beta=0.8                       R@1 0.0836  R@5 0.2810  R@10 0.4248 | vs base -0.44 CI[-1.15,+0.27] p=0.9014 | vs DCKF-Q -0.58 p=0.9495
+  PRF k=3 beta=0.9                       R@1 0.0881  R@5 0.2774  R@10 0.4345 | vs base -0.00 CI[-0.53,+0.53] p=0.5317 | vs DCKF-Q -0.14 p=0.7025
+  PRF k=3 beta=0.95                      R@1 0.0867  R@5 0.2779  R@10 0.4323 | vs base -0.13 CI[-0.49,+0.22] p=0.8062 | vs DCKF-Q -0.27 p=0.8767
+  PRF k=5 beta=0.9                       R@1 0.0872  R@5 0.2827  R@10 0.4358 | vs base -0.09 CI[-0.66,+0.49] p=0.6436 | vs DCKF-Q -0.22 p=0.7821
+  PRF k=10 beta=0.9                      R@1 0.0867  R@5 0.2761  R@10 0.4376 | vs base -0.14 CI[-0.75,+0.49] p=0.6891 | vs DCKF-Q -0.27 p=0.8172
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0885  R@5 0.2779  R@10 0.4367 | vs base +0.05 CI[-0.49,+0.58] p=0.4694 | vs DCKF-Q -0.09 p=0.6599
+
+[CAP] gallery channel with blip_captions_rsitmd_452_5_aerial.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.0642  R@5 0.1442  R@10 0.1881 | vs base -2.40 CI[-3.89,-0.88] p=0.9994
+  gallery alpha=0.3                      R@1 0.0434  R@5 0.1478  R@10 0.2217 | vs base -4.48 CI[-5.84,-3.14] p=1.0000
+  gallery alpha=0.5                      R@1 0.0544  R@5 0.1726  R@10 0.2770 | vs base -3.37 CI[-4.69,-2.08] p=1.0000
+  gallery alpha=0.7                      R@1 0.0721  R@5 0.2173  R@10 0.3478 | vs base -1.59 CI[-2.79,-0.40] p=0.9955
+  gallery alpha=0.8                      R@1 0.0810  R@5 0.2469  R@10 0.3774 | vs base -0.71 CI[-1.86,+0.44] p=0.9009
+  gallery alpha=0.9                      R@1 0.0850  R@5 0.2664  R@10 0.4230 | vs base -0.31 CI[-1.24,+0.62] p=0.7668
+  gallery alpha=0.95                     R@1 0.0898  R@5 0.2872  R@10 0.4363 | vs base +0.18 CI[-0.49,+0.84] p=0.3228
+  gallery alpha=1.0                      R@1 0.0881  R@5 0.2792  R@10 0.4323 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.305  quantiles 10/25/50/75% = 0.267/0.286/0.307/0.323
+  caption gate: drop lowest 10% (thr 0.267) alpha=0.9 R@1 0.0863  R@5 0.2637  R@10 0.4027 | vs base -0.18 CI[-1.15,+0.80] p=0.6599 | vs C-ungated +0.13 p=0.3157
+    + DCKF-Q (D gated 10%)               R@1 0.0872  R@5 0.2650  R@10 0.4013 | vs base -0.09 CI[-1.06,+0.88] p=0.5893 | vs C-ungated +0.22 p=0.2608
+  caption gate: drop lowest 25% (thr 0.286) alpha=0.9 R@1 0.0788  R@5 0.2465  R@10 0.3783 | vs base -0.93 CI[-1.95,+0.09] p=0.9671 | vs C-ungated -0.63 p=0.9689
+    + DCKF-Q (D gated 25%)               R@1 0.0783  R@5 0.2522  R@10 0.3796 | vs base -0.98 CI[-2.04,+0.09] p=0.9689 | vs C-ungated -0.67 p=0.9622
+  caption gate: drop lowest 50% (thr 0.307) alpha=0.9 R@1 0.0712  R@5 0.2088  R@10 0.2956 | vs base -1.69 CI[-2.83,-0.58] p=0.9987 | vs C-ungated -1.38 p=0.9979
+    + DCKF-Q (D gated 50%)               R@1 0.0695  R@5 0.2124  R@10 0.2996 | vs base -1.87 CI[-3.01,-0.75] p=0.9996 | vs C-ungated -1.56 p=0.9991
+  caption gate: drop lowest 75% (thr 0.323) alpha=0.9 R@1 0.0549  R@5 0.1447  R@10 0.2230 | vs base -3.33 CI[-4.51,-2.17] p=1.0000 | vs C-ungated -3.02 p=1.0000
+    + DCKF-Q (D gated 75%)               R@1 0.0535  R@5 0.1469  R@10 0.2190 | vs base -3.46 CI[-4.65,-2.30] p=1.0000 | vs C-ungated -3.15 p=1.0000
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0854  R@5 0.2699  R@10 0.4190 | vs base -0.26 CI[-1.19,+0.62] p=0.7329 | vs C-ungated +0.04 p=0.4548
+
+wrote results/reviewer_rsitmd_452_5_aerial.json
+
+### 19:40 E38 reviewer rsitmd large_aerial
+Loaded cached features for 452 images.
+2260 queries over 452 images (rsitmd)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 2255 expanded) R@1 0.0894  R@5 0.2805  R@10 0.4301 | vs base +0.13 CI[-0.22,+0.53] p=0.2787
+  DCKF-Q beta=0.5 k=2                    R@1 0.0796  R@5 0.2743  R@10 0.4341 | vs base -0.84 CI[-1.59,-0.09] p=0.9884
+  DCKF-Q beta=0.7 k=2                    R@1 0.0832  R@5 0.2819  R@10 0.4305 | vs base -0.49 CI[-1.11,+0.13] p=0.9455
+  DCKF-Q beta=0.8 k=2                    R@1 0.0885  R@5 0.2783  R@10 0.4314 | vs base +0.05 CI[-0.44,+0.53] p=0.4654
+  DCKF-Q beta=0.95 k=2                   R@1 0.0889  R@5 0.2783  R@10 0.4314 | vs base +0.09 CI[-0.18,+0.35] p=0.3163
+  DCKF-Q beta=1.0 k=2                    R@1 0.0881  R@5 0.2792  R@10 0.4323 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (2255 expanded)    R@1 0.0858  R@5 0.2792  R@10 0.4323 | vs base -0.22 CI[-0.58,+0.09] p=0.9281
+  DCKF-Q beta=0.9 k=3 (2255 expanded)    R@1 0.0872  R@5 0.2814  R@10 0.4310 | vs base -0.09 CI[-0.49,+0.31] p=0.7002
+  DCKF-Q beta=0.9 k=4 (2255 expanded)    R@1 0.0881  R@5 0.2814  R@10 0.4336 | vs base +0.00 CI[-0.40,+0.40] p=0.5472
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0881  R@5 0.2770  R@10 0.4323 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.13 p=0.7910
+  PRF k=3 beta=0.7                       R@1 0.0783  R@5 0.2752  R@10 0.4195 | vs base -0.97 CI[-1.81,-0.18] p=0.9915 | vs DCKF-Q -1.11 p=0.9962
+  PRF k=3 beta=0.8                       R@1 0.0836  R@5 0.2810  R@10 0.4248 | vs base -0.44 CI[-1.15,+0.27] p=0.9014 | vs DCKF-Q -0.58 p=0.9495
+  PRF k=3 beta=0.9                       R@1 0.0881  R@5 0.2774  R@10 0.4345 | vs base -0.00 CI[-0.53,+0.53] p=0.5317 | vs DCKF-Q -0.14 p=0.7025
+  PRF k=3 beta=0.95                      R@1 0.0867  R@5 0.2779  R@10 0.4323 | vs base -0.13 CI[-0.49,+0.22] p=0.8062 | vs DCKF-Q -0.27 p=0.8767
+  PRF k=5 beta=0.9                       R@1 0.0872  R@5 0.2827  R@10 0.4358 | vs base -0.09 CI[-0.66,+0.49] p=0.6436 | vs DCKF-Q -0.22 p=0.7821
+  PRF k=10 beta=0.9                      R@1 0.0867  R@5 0.2761  R@10 0.4376 | vs base -0.14 CI[-0.75,+0.49] p=0.6891 | vs DCKF-Q -0.27 p=0.8172
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0885  R@5 0.2779  R@10 0.4367 | vs base +0.05 CI[-0.49,+0.58] p=0.4694 | vs DCKF-Q -0.09 p=0.6599
+
+[CAP] gallery channel with blip_captions_rsitmd_452_5_large_aerial.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.0345  R@5 0.1164  R@10 0.1872 | vs base -5.36 CI[-6.64,-4.07] p=1.0000
+  gallery alpha=0.3                      R@1 0.0425  R@5 0.1513  R@10 0.2407 | vs base -4.57 CI[-5.80,-3.32] p=1.0000
+  gallery alpha=0.5                      R@1 0.0540  R@5 0.1925  R@10 0.3080 | vs base -3.42 CI[-4.65,-2.17] p=1.0000
+  gallery alpha=0.7                      R@1 0.0810  R@5 0.2438  R@10 0.3788 | vs base -0.71 CI[-1.86,+0.44] p=0.8895
+  gallery alpha=0.8                      R@1 0.0867  R@5 0.2712  R@10 0.4177 | vs base -0.13 CI[-1.19,+0.97] p=0.6083
+  gallery alpha=0.9                      R@1 0.0898  R@5 0.2819  R@10 0.4350 | vs base +0.18 CI[-0.66,+1.02] p=0.3596
+  gallery alpha=0.95                     R@1 0.0876  R@5 0.2783  R@10 0.4403 | vs base -0.04 CI[-0.66,+0.58] p=0.5760
+  gallery alpha=1.0                      R@1 0.0881  R@5 0.2792  R@10 0.4323 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.307  quantiles 10/25/50/75% = 0.263/0.286/0.307/0.327
+  caption gate: drop lowest 10% (thr 0.263) alpha=0.9 R@1 0.0863  R@5 0.2757  R@10 0.4124 | vs base -0.17 CI[-1.06,+0.71] p=0.6634 | vs C-ungated -0.35 p=0.9736
+    + DCKF-Q (D gated 10%)               R@1 0.0885  R@5 0.2770  R@10 0.4111 | vs base +0.05 CI[-0.88,+0.97] p=0.4758 | vs C-ungated -0.13 p=0.7301
+  caption gate: drop lowest 25% (thr 0.286) alpha=0.9 R@1 0.0801  R@5 0.2531  R@10 0.3796 | vs base -0.79 CI[-1.68,+0.09] p=0.9652 | vs C-ungated -0.97 p=1.0000
+    + DCKF-Q (D gated 25%)               R@1 0.0827  R@5 0.2562  R@10 0.3765 | vs base -0.53 CI[-1.46,+0.40] p=0.8788 | vs C-ungated -0.71 p=0.9912
+  caption gate: drop lowest 50% (thr 0.307) alpha=0.9 R@1 0.0717  R@5 0.2111  R@10 0.3150 | vs base -1.64 CI[-2.66,-0.66] p=0.9997 | vs C-ungated -1.82 p=1.0000
+    + DCKF-Q (D gated 50%)               R@1 0.0721  R@5 0.2106  R@10 0.3111 | vs base -1.60 CI[-2.65,-0.58] p=0.9992 | vs C-ungated -1.78 p=1.0000
+  caption gate: drop lowest 75% (thr 0.327) alpha=0.9 R@1 0.0513  R@5 0.1518  R@10 0.2385 | vs base -3.68 CI[-4.87,-2.52] p=1.0000 | vs C-ungated -3.86 p=1.0000
+    + DCKF-Q (D gated 75%)               R@1 0.0522  R@5 0.1518  R@10 0.2407 | vs base -3.59 CI[-4.78,-2.43] p=1.0000 | vs C-ungated -3.77 p=1.0000
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0907  R@5 0.2814  R@10 0.4345 | vs base +0.26 CI[-0.62,+1.15] p=0.2939 | vs C-ungated +0.08 p=0.3723
+
+wrote results/reviewer_rsitmd_452_5_large_aerial.json
+
+### 19:40 E38 reviewer ucm aerial
+Loaded cached features for 210 images.
+1050 queries over 210 images (ucm)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 1049 expanded) R@1 0.0886  R@5 0.3638  R@10 0.6029 | vs base +0.19 CI[-0.19,+0.57] p=0.2224
+  DCKF-Q beta=0.5 k=2                    R@1 0.0886  R@5 0.3724  R@10 0.6124 | vs base +0.20 CI[-0.86,+1.33] p=0.3943
+  DCKF-Q beta=0.7 k=2                    R@1 0.0895  R@5 0.3733  R@10 0.6114 | vs base +0.29 CI[-0.57,+1.14] p=0.2876
+  DCKF-Q beta=0.8 k=2                    R@1 0.0914  R@5 0.3638  R@10 0.6086 | vs base +0.48 CI[-0.19,+1.14] p=0.0937
+  DCKF-Q beta=0.95 k=2                   R@1 0.0867  R@5 0.3638  R@10 0.6029 | vs base +0.00 CI[-0.29,+0.29] p=0.6540
+  DCKF-Q beta=1.0 k=2                    R@1 0.0867  R@5 0.3638  R@10 0.6029 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (1049 expanded)    R@1 0.0886  R@5 0.3648  R@10 0.6057 | vs base +0.19 CI[-0.19,+0.57] p=0.2163
+  DCKF-Q beta=0.9 k=3 (1049 expanded)    R@1 0.0886  R@5 0.3657  R@10 0.6048 | vs base +0.19 CI[-0.29,+0.67] p=0.2676
+  DCKF-Q beta=0.9 k=4 (1049 expanded)    R@1 0.0867  R@5 0.3629  R@10 0.6095 | vs base +0.00 CI[-0.48,+0.57] p=0.5673
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0867  R@5 0.3629  R@10 0.6057 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.19 p=0.9056
+  PRF k=3 beta=0.7                       R@1 0.0867  R@5 0.3724  R@10 0.6257 | vs base +0.01 CI[-1.14,+1.14] p=0.5254 | vs DCKF-Q -0.18 p=0.6469
+  PRF k=3 beta=0.8                       R@1 0.0857  R@5 0.3743  R@10 0.6219 | vs base -0.09 CI[-1.14,+0.95] p=0.6035 | vs DCKF-Q -0.28 p=0.7355
+  PRF k=3 beta=0.9                       R@1 0.0838  R@5 0.3724  R@10 0.6114 | vs base -0.28 CI[-1.05,+0.48] p=0.7941 | vs DCKF-Q -0.47 p=0.9092
+  PRF k=3 beta=0.95                      R@1 0.0848  R@5 0.3724  R@10 0.6057 | vs base -0.19 CI[-0.67,+0.29] p=0.8455 | vs DCKF-Q -0.38 p=0.9492
+  PRF k=5 beta=0.9                       R@1 0.0857  R@5 0.3590  R@10 0.6057 | vs base -0.10 CI[-0.95,+0.76] p=0.6415 | vs DCKF-Q -0.29 p=0.7759
+  PRF k=10 beta=0.9                      R@1 0.0924  R@5 0.3533  R@10 0.6048 | vs base +0.57 CI[-0.29,+1.43] p=0.1024 | vs DCKF-Q +0.38 p=0.2119
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0848  R@5 0.3762  R@10 0.6162 | vs base -0.19 CI[-1.05,+0.67] p=0.7097 | vs DCKF-Q -0.38 p=0.8572
+
+[CAP] gallery channel with blip_captions_ucm_210_5_aerial.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.2524  R@5 0.3771  R@10 0.4305 | vs base +16.56 CI[+13.52,+19.62] p=0.0000
+  gallery alpha=0.3                      R@1 0.0867  R@5 0.3143  R@10 0.4790 | vs base -0.01 CI[-2.10,+2.19] p=0.5234
+  gallery alpha=0.5                      R@1 0.0905  R@5 0.3333  R@10 0.5248 | vs base +0.36 CI[-1.71,+2.48] p=0.3859
+  gallery alpha=0.7                      R@1 0.0810  R@5 0.3333  R@10 0.5838 | vs base -0.58 CI[-2.38,+1.24] p=0.7529
+  gallery alpha=0.8                      R@1 0.0895  R@5 0.3457  R@10 0.6010 | vs base +0.29 CI[-1.33,+1.90] p=0.3862
+  gallery alpha=0.9                      R@1 0.0895  R@5 0.3648  R@10 0.6057 | vs base +0.28 CI[-0.95,+1.52] p=0.3546
+  gallery alpha=0.95                     R@1 0.0848  R@5 0.3619  R@10 0.6124 | vs base -0.19 CI[-0.76,+0.38] p=0.7907
+  gallery alpha=1.0                      R@1 0.0867  R@5 0.3638  R@10 0.6029 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.320  quantiles 10/25/50/75% = 0.279/0.302/0.324/0.343
+  caption gate: drop lowest 10% (thr 0.279) alpha=0.9 R@1 0.0886  R@5 0.3600  R@10 0.5790 | vs base +0.19 CI[-1.05,+1.43] p=0.4116 | vs C-ungated -0.10 p=1.0000
+    + DCKF-Q (D gated 10%)               R@1 0.0848  R@5 0.3562  R@10 0.5819 | vs base -0.19 CI[-1.52,+1.14] p=0.6417 | vs C-ungated -0.47 p=0.9261
+  caption gate: drop lowest 25% (thr 0.302) alpha=0.9 R@1 0.0781  R@5 0.3362  R@10 0.5371 | vs base -0.86 CI[-2.19,+0.48] p=0.9059 | vs C-ungated -1.15 p=0.9936
+    + DCKF-Q (D gated 25%)               R@1 0.0762  R@5 0.3343  R@10 0.5362 | vs base -1.05 CI[-2.48,+0.38] p=0.9351 | vs C-ungated -1.33 p=0.9884
+  caption gate: drop lowest 50% (thr 0.324) alpha=0.9 R@1 0.0638  R@5 0.2848  R@10 0.4667 | vs base -2.30 CI[-3.90,-0.67] p=0.9981 | vs C-ungated -2.58 p=0.9997
+    + DCKF-Q (D gated 50%)               R@1 0.0648  R@5 0.2867  R@10 0.4724 | vs base -2.20 CI[-3.81,-0.57] p=0.9974 | vs C-ungated -2.48 p=0.9991
+  caption gate: drop lowest 75% (thr 0.343) alpha=0.9 R@1 0.0590  R@5 0.2333  R@10 0.3600 | vs base -2.76 CI[-4.57,-1.05] p=0.9994 | vs C-ungated -3.04 p=0.9998
+    + DCKF-Q (D gated 75%)               R@1 0.0581  R@5 0.2352  R@10 0.3657 | vs base -2.85 CI[-4.67,-1.14] p=0.9996 | vs C-ungated -3.14 p=0.9999
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0857  R@5 0.3648  R@10 0.6105 | vs base -0.09 CI[-1.33,+1.14] p=0.5856 | vs C-ungated -0.38 p=0.8859
+
+wrote results/reviewer_ucm_210_5_aerial.json
+
+### 19:40 E38 reviewer ucm large_aerial
+Loaded cached features for 210 images.
+1050 queries over 210 images (ucm)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 1049 expanded) R@1 0.0886  R@5 0.3638  R@10 0.6029 | vs base +0.19 CI[-0.19,+0.57] p=0.2224
+  DCKF-Q beta=0.5 k=2                    R@1 0.0886  R@5 0.3724  R@10 0.6124 | vs base +0.20 CI[-0.86,+1.33] p=0.3943
+  DCKF-Q beta=0.7 k=2                    R@1 0.0895  R@5 0.3733  R@10 0.6114 | vs base +0.29 CI[-0.57,+1.14] p=0.2876
+  DCKF-Q beta=0.8 k=2                    R@1 0.0914  R@5 0.3638  R@10 0.6086 | vs base +0.48 CI[-0.19,+1.14] p=0.0937
+  DCKF-Q beta=0.95 k=2                   R@1 0.0867  R@5 0.3638  R@10 0.6029 | vs base +0.00 CI[-0.29,+0.29] p=0.6540
+  DCKF-Q beta=1.0 k=2                    R@1 0.0867  R@5 0.3638  R@10 0.6029 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (1049 expanded)    R@1 0.0886  R@5 0.3648  R@10 0.6057 | vs base +0.19 CI[-0.19,+0.57] p=0.2163
+  DCKF-Q beta=0.9 k=3 (1049 expanded)    R@1 0.0886  R@5 0.3657  R@10 0.6048 | vs base +0.19 CI[-0.29,+0.67] p=0.2676
+  DCKF-Q beta=0.9 k=4 (1049 expanded)    R@1 0.0867  R@5 0.3629  R@10 0.6095 | vs base +0.00 CI[-0.48,+0.57] p=0.5673
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0867  R@5 0.3629  R@10 0.6057 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.19 p=0.9056
+  PRF k=3 beta=0.7                       R@1 0.0867  R@5 0.3724  R@10 0.6257 | vs base +0.01 CI[-1.14,+1.14] p=0.5254 | vs DCKF-Q -0.18 p=0.6469
+  PRF k=3 beta=0.8                       R@1 0.0857  R@5 0.3743  R@10 0.6219 | vs base -0.09 CI[-1.14,+0.95] p=0.6035 | vs DCKF-Q -0.28 p=0.7355
+  PRF k=3 beta=0.9                       R@1 0.0838  R@5 0.3724  R@10 0.6114 | vs base -0.28 CI[-1.05,+0.48] p=0.7941 | vs DCKF-Q -0.47 p=0.9092
+  PRF k=3 beta=0.95                      R@1 0.0848  R@5 0.3724  R@10 0.6057 | vs base -0.19 CI[-0.67,+0.29] p=0.8455 | vs DCKF-Q -0.38 p=0.9492
+  PRF k=5 beta=0.9                       R@1 0.0857  R@5 0.3590  R@10 0.6057 | vs base -0.10 CI[-0.95,+0.76] p=0.6415 | vs DCKF-Q -0.29 p=0.7759
+  PRF k=10 beta=0.9                      R@1 0.0924  R@5 0.3533  R@10 0.6048 | vs base +0.57 CI[-0.29,+1.43] p=0.1024 | vs DCKF-Q +0.38 p=0.2119
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0848  R@5 0.3762  R@10 0.6162 | vs base -0.19 CI[-1.05,+0.67] p=0.7097 | vs DCKF-Q -0.38 p=0.8572
+
+[CAP] gallery channel with blip_captions_ucm_210_5_large_aerial.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.0867  R@5 0.2429  R@10 0.3819 | vs base -0.02 CI[-2.38,+2.38] p=0.5233
+  gallery alpha=0.3                      R@1 0.0848  R@5 0.2752  R@10 0.4657 | vs base -0.22 CI[-2.48,+2.00] p=0.5886
+  gallery alpha=0.5                      R@1 0.0895  R@5 0.3171  R@10 0.5362 | vs base +0.26 CI[-1.90,+2.48] p=0.4220
+  gallery alpha=0.7                      R@1 0.0933  R@5 0.3629  R@10 0.5981 | vs base +0.63 CI[-1.24,+2.48] p=0.2689
+  gallery alpha=0.8                      R@1 0.0905  R@5 0.3724  R@10 0.6143 | vs base +0.36 CI[-1.24,+2.00] p=0.3557
+  gallery alpha=0.9                      R@1 0.0905  R@5 0.3762  R@10 0.6286 | vs base +0.38 CI[-0.86,+1.62] p=0.3016
+  gallery alpha=0.95                     R@1 0.0943  R@5 0.3657  R@10 0.6171 | vs base +0.76 CI[-0.19,+1.71] p=0.0741
+  gallery alpha=1.0                      R@1 0.0867  R@5 0.3638  R@10 0.6029 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.319  quantiles 10/25/50/75% = 0.277/0.306/0.321/0.340
+  caption gate: drop lowest 10% (thr 0.277) alpha=0.9 R@1 0.0914  R@5 0.3762  R@10 0.6181 | vs base +0.47 CI[-0.76,+1.81] p=0.2624 | vs C-ungated +0.09 p=0.3930
+    + DCKF-Q (D gated 10%)               R@1 0.0876  R@5 0.3733  R@10 0.6181 | vs base +0.09 CI[-1.24,+1.43] p=0.4738 | vs C-ungated -0.29 p=0.9115
+  caption gate: drop lowest 25% (thr 0.306) alpha=0.9 R@1 0.0848  R@5 0.3610  R@10 0.5714 | vs base -0.19 CI[-1.52,+1.14] p=0.6375 | vs C-ungated -0.57 p=0.9750
+    + DCKF-Q (D gated 25%)               R@1 0.0810  R@5 0.3590  R@10 0.5714 | vs base -0.57 CI[-1.90,+0.76] p=0.8170 | vs C-ungated -0.95 p=0.9978
+  caption gate: drop lowest 50% (thr 0.321) alpha=0.9 R@1 0.0781  R@5 0.3248  R@10 0.4952 | vs base -0.86 CI[-2.29,+0.67] p=0.8849 | vs C-ungated -1.23 p=0.9898
+    + DCKF-Q (D gated 50%)               R@1 0.0771  R@5 0.3257  R@10 0.4943 | vs base -0.95 CI[-2.38,+0.48] p=0.9101 | vs C-ungated -1.33 p=0.9948
+  caption gate: drop lowest 75% (thr 0.340) alpha=0.9 R@1 0.0724  R@5 0.2571  R@10 0.4124 | vs base -1.43 CI[-3.33,+0.48] p=0.9316 | vs C-ungated -1.80 p=0.9709
+    + DCKF-Q (D gated 75%)               R@1 0.0714  R@5 0.2571  R@10 0.4143 | vs base -1.52 CI[-3.43,+0.38] p=0.9466 | vs C-ungated -1.90 p=0.9770
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0867  R@5 0.3743  R@10 0.6295 | vs base -0.00 CI[-1.24,+1.33] p=0.5299 | vs C-ungated -0.38 p=0.9771
+
+wrote results/reviewer_ucm_210_5_large_aerial.json
+
+### 19:41 E38 reviewer nwpu aerial
+Loaded cached features for 3150 images.
+15750 queries over 3150 images (nwpu)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 15649 expanded) R@1 0.0242  R@5 0.0987  R@10 0.1691 | vs base +0.05 CI[-0.03,+0.13] p=0.1068
+  DCKF-Q beta=0.5 k=2                    R@1 0.0250  R@5 0.0987  R@10 0.1686 | vs base +0.13 CI[-0.06,+0.32] p=0.0934
+  DCKF-Q beta=0.7 k=2                    R@1 0.0253  R@5 0.1002  R@10 0.1690 | vs base +0.16 CI[+0.01,+0.31] p=0.0208
+  DCKF-Q beta=0.8 k=2                    R@1 0.0244  R@5 0.1001  R@10 0.1693 | vs base +0.07 CI[-0.05,+0.19] p=0.1366
+  DCKF-Q beta=0.95 k=2                   R@1 0.0237  R@5 0.0987  R@10 0.1686 | vs base +0.01 CI[-0.04,+0.06] p=0.4612
+  DCKF-Q beta=1.0 k=2                    R@1 0.0237  R@5 0.0990  R@10 0.1686 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (15649 expanded)   R@1 0.0246  R@5 0.0992  R@10 0.1686 | vs base +0.09 CI[+0.01,+0.17] p=0.0137
+  DCKF-Q beta=0.9 k=3 (15649 expanded)   R@1 0.0243  R@5 0.0988  R@10 0.1695 | vs base +0.06 CI[-0.03,+0.15] p=0.0907
+  DCKF-Q beta=0.9 k=4 (15649 expanded)   R@1 0.0244  R@5 0.0990  R@10 0.1707 | vs base +0.07 CI[-0.03,+0.17] p=0.0971
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0237  R@5 0.0971  R@10 0.1712 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.05 p=0.9197
+  PRF k=3 beta=0.7                       R@1 0.0249  R@5 0.0989  R@10 0.1685 | vs base +0.12 CI[-0.08,+0.32] p=0.1238 | vs DCKF-Q +0.07 p=0.2527
+  PRF k=3 beta=0.8                       R@1 0.0255  R@5 0.1001  R@10 0.1691 | vs base +0.18 CI[+0.02,+0.34] p=0.0167 | vs DCKF-Q +0.13 p=0.0632
+  PRF k=3 beta=0.9                       R@1 0.0248  R@5 0.0987  R@10 0.1723 | vs base +0.11 CI[-0.01,+0.22] p=0.0367 | vs DCKF-Q +0.06 p=0.1774
+  PRF k=3 beta=0.95                      R@1 0.0241  R@5 0.0997  R@10 0.1717 | vs base +0.04 CI[-0.04,+0.13] p=0.1665 | vs DCKF-Q -0.01 p=0.5856
+  PRF k=5 beta=0.9                       R@1 0.0252  R@5 0.1002  R@10 0.1719 | vs base +0.15 CI[+0.02,+0.29] p=0.0140 | vs DCKF-Q +0.10 p=0.0716
+  PRF k=10 beta=0.9                      R@1 0.0246  R@5 0.0997  R@10 0.1714 | vs base +0.09 CI[-0.05,+0.24] p=0.1063 | vs DCKF-Q +0.04 p=0.2803
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0248  R@5 0.0999  R@10 0.1722 | vs base +0.11 CI[-0.01,+0.23] p=0.0435 | vs DCKF-Q +0.06 p=0.1662
+
+[CAP] gallery channel with blip_captions_nwpu_3150_5_aerial.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.0306  R@5 0.0762  R@10 0.1034 | vs base +0.69 CI[+0.34,+1.05] p=0.0000
+  gallery alpha=0.3                      R@1 0.0120  R@5 0.0533  R@10 0.0935 | vs base -1.17 CI[-1.45,-0.89] p=1.0000
+  gallery alpha=0.5                      R@1 0.0166  R@5 0.0651  R@10 0.1140 | vs base -0.70 CI[-0.98,-0.43] p=1.0000
+  gallery alpha=0.7                      R@1 0.0221  R@5 0.0792  R@10 0.1370 | vs base -0.16 CI[-0.43,+0.11] p=0.8784
+  gallery alpha=0.8                      R@1 0.0239  R@5 0.0863  R@10 0.1483 | vs base +0.03 CI[-0.23,+0.29] p=0.4283
+  gallery alpha=0.9                      R@1 0.0243  R@5 0.0933  R@10 0.1617 | vs base +0.06 CI[-0.17,+0.28] p=0.3186
+  gallery alpha=0.95                     R@1 0.0239  R@5 0.0963  R@10 0.1693 | vs base +0.02 CI[-0.16,+0.20] p=0.4269
+  gallery alpha=1.0                      R@1 0.0237  R@5 0.0990  R@10 0.1686 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.298  quantiles 10/25/50/75% = 0.264/0.281/0.298/0.317
+  caption gate: drop lowest 10% (thr 0.264) alpha=0.9 R@1 0.0239  R@5 0.0912  R@10 0.1590 | vs base +0.02 CI[-0.20,+0.24] p=0.4480 | vs C-ungated -0.04 p=0.9296
+    + DCKF-Q (D gated 10%)               R@1 0.0246  R@5 0.0911  R@10 0.1593 | vs base +0.09 CI[-0.14,+0.32] p=0.2311 | vs C-ungated +0.03 p=0.2703
+  caption gate: drop lowest 25% (thr 0.281) alpha=0.9 R@1 0.0232  R@5 0.0875  R@10 0.1531 | vs base -0.05 CI[-0.27,+0.19] p=0.6652 | vs C-ungated -0.10 p=0.9572
+    + DCKF-Q (D gated 25%)               R@1 0.0236  R@5 0.0881  R@10 0.1533 | vs base -0.01 CI[-0.24,+0.23] p=0.5380 | vs C-ungated -0.06 p=0.8326
+  caption gate: drop lowest 50% (thr 0.298) alpha=0.9 R@1 0.0210  R@5 0.0801  R@10 0.1343 | vs base -0.27 CI[-0.50,-0.03] p=0.9863 | vs C-ungated -0.32 p=0.9998
+    + DCKF-Q (D gated 50%)               R@1 0.0213  R@5 0.0796  R@10 0.1344 | vs base -0.23 CI[-0.48,+0.01] p=0.9729 | vs C-ungated -0.29 p=0.9996
+  caption gate: drop lowest 75% (thr 0.317) alpha=0.9 R@1 0.0175  R@5 0.0632  R@10 0.1053 | vs base -0.62 CI[-0.88,-0.37] p=1.0000 | vs C-ungated -0.68 p=1.0000
+    + DCKF-Q (D gated 75%)               R@1 0.0177  R@5 0.0632  R@10 0.1052 | vs base -0.60 CI[-0.87,-0.35] p=1.0000 | vs C-ungated -0.66 p=1.0000
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0250  R@5 0.0930  R@10 0.1621 | vs base +0.13 CI[-0.10,+0.36] p=0.1367 | vs C-ungated +0.07 p=0.0336
+
+wrote results/reviewer_nwpu_3150_5_aerial.json
+
+### 19:43 E38 reviewer nwpu large_aerial
+Loaded cached features for 3150 images.
+15750 queries over 3150 images (nwpu)
+
+[Q] DCKF-Q reference and beta / k sweeps
+  DCKF-Q beta=0.9 k=2 (ref; 15649 expanded) R@1 0.0242  R@5 0.0987  R@10 0.1691 | vs base +0.05 CI[-0.03,+0.13] p=0.1068
+  DCKF-Q beta=0.5 k=2                    R@1 0.0250  R@5 0.0987  R@10 0.1686 | vs base +0.13 CI[-0.06,+0.32] p=0.0934
+  DCKF-Q beta=0.7 k=2                    R@1 0.0253  R@5 0.1002  R@10 0.1690 | vs base +0.16 CI[+0.01,+0.31] p=0.0208
+  DCKF-Q beta=0.8 k=2                    R@1 0.0244  R@5 0.1001  R@10 0.1693 | vs base +0.07 CI[-0.05,+0.19] p=0.1366
+  DCKF-Q beta=0.95 k=2                   R@1 0.0237  R@5 0.0987  R@10 0.1686 | vs base +0.01 CI[-0.04,+0.06] p=0.4612
+  DCKF-Q beta=1.0 k=2                    R@1 0.0237  R@5 0.0990  R@10 0.1686 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+  DCKF-Q beta=0.9 k=1 (15649 expanded)   R@1 0.0246  R@5 0.0992  R@10 0.1686 | vs base +0.09 CI[+0.01,+0.17] p=0.0137
+  DCKF-Q beta=0.9 k=3 (15649 expanded)   R@1 0.0243  R@5 0.0988  R@10 0.1695 | vs base +0.06 CI[-0.03,+0.15] p=0.0907
+  DCKF-Q beta=0.9 k=4 (15649 expanded)   R@1 0.0244  R@5 0.0990  R@10 0.1707 | vs base +0.07 CI[-0.03,+0.17] p=0.0971
+
+[PRF] pseudo-relevance feedback: query fused with centroid of top-k baseline images
+  PRF k=1 beta=0.9                       R@1 0.0237  R@5 0.0971  R@10 0.1712 | vs base +0.00 CI[+0.00,+0.00] p=1.0000 | vs DCKF-Q -0.05 p=0.9197
+  PRF k=3 beta=0.7                       R@1 0.0249  R@5 0.0989  R@10 0.1685 | vs base +0.12 CI[-0.08,+0.32] p=0.1238 | vs DCKF-Q +0.07 p=0.2527
+  PRF k=3 beta=0.8                       R@1 0.0255  R@5 0.1001  R@10 0.1691 | vs base +0.18 CI[+0.02,+0.34] p=0.0167 | vs DCKF-Q +0.13 p=0.0632
+  PRF k=3 beta=0.9                       R@1 0.0248  R@5 0.0987  R@10 0.1723 | vs base +0.11 CI[-0.01,+0.22] p=0.0367 | vs DCKF-Q +0.06 p=0.1774
+  PRF k=3 beta=0.95                      R@1 0.0241  R@5 0.0997  R@10 0.1717 | vs base +0.04 CI[-0.04,+0.13] p=0.1665 | vs DCKF-Q -0.01 p=0.5856
+  PRF k=5 beta=0.9                       R@1 0.0252  R@5 0.1002  R@10 0.1719 | vs base +0.15 CI[+0.02,+0.29] p=0.0140 | vs DCKF-Q +0.10 p=0.0716
+  PRF k=10 beta=0.9                      R@1 0.0246  R@5 0.0997  R@10 0.1714 | vs base +0.09 CI[-0.05,+0.24] p=0.1063 | vs DCKF-Q +0.04 p=0.2803
+  DCKF-Q + PRF k=3 beta=0.9              R@1 0.0248  R@5 0.0999  R@10 0.1722 | vs base +0.11 CI[-0.01,+0.23] p=0.0435 | vs DCKF-Q +0.06 p=0.1662
+
+[CAP] gallery channel with blip_captions_nwpu_3150_5_large_aerial.json; alpha sweep (alpha=0 is caption-only, 1.0 is baseline)
+  gallery alpha=0.0  (caption-only)      R@1 0.0172  R@5 0.0556  R@10 0.0983 | vs base -0.65 CI[-0.95,-0.34] p=1.0000
+  gallery alpha=0.3                      R@1 0.0122  R@5 0.0519  R@10 0.0943 | vs base -1.15 CI[-1.43,-0.88] p=1.0000
+  gallery alpha=0.5                      R@1 0.0171  R@5 0.0688  R@10 0.1220 | vs base -0.65 CI[-0.93,-0.38] p=1.0000
+  gallery alpha=0.7                      R@1 0.0219  R@5 0.0875  R@10 0.1543 | vs base -0.18 CI[-0.44,+0.08] p=0.9093
+  gallery alpha=0.8                      R@1 0.0244  R@5 0.0961  R@10 0.1663 | vs base +0.08 CI[-0.17,+0.32] p=0.2807
+  gallery alpha=0.9                      R@1 0.0266  R@5 0.1023  R@10 0.1746 | vs base +0.29 CI[+0.10,+0.49] p=0.0017
+  gallery alpha=0.95                     R@1 0.0253  R@5 0.1018  R@10 0.1742 | vs base +0.16 CI[+0.01,+0.32] p=0.0239
+  gallery alpha=1.0                      R@1 0.0237  R@5 0.0990  R@10 0.1686 | vs base +0.00 CI[+0.00,+0.00] p=1.0000
+
+[GATE] cos(I_k, C_k): mean 0.300  quantiles 10/25/50/75% = 0.264/0.282/0.300/0.319
+  caption gate: drop lowest 10% (thr 0.264) alpha=0.9 R@1 0.0267  R@5 0.1001  R@10 0.1709 | vs base +0.30 CI[+0.10,+0.51] p=0.0021 | vs C-ungated +0.01 p=0.3929
+    + DCKF-Q (D gated 10%)               R@1 0.0265  R@5 0.1010  R@10 0.1726 | vs base +0.28 CI[+0.08,+0.48] p=0.0047 | vs C-ungated -0.01 p=0.6120
+  caption gate: drop lowest 25% (thr 0.282) alpha=0.9 R@1 0.0255  R@5 0.0973  R@10 0.1650 | vs base +0.18 CI[-0.03,+0.39] p=0.0414 | vs C-ungated -0.11 p=0.9883
+    + DCKF-Q (D gated 25%)               R@1 0.0255  R@5 0.0981  R@10 0.1655 | vs base +0.18 CI[-0.03,+0.39] p=0.0405 | vs C-ungated -0.11 p=0.9569
+  caption gate: drop lowest 50% (thr 0.300) alpha=0.9 R@1 0.0243  R@5 0.0884  R@10 0.1477 | vs base +0.06 CI[-0.16,+0.29] p=0.2954 | vs C-ungated -0.23 p=0.9984
+    + DCKF-Q (D gated 50%)               R@1 0.0243  R@5 0.0885  R@10 0.1482 | vs base +0.06 CI[-0.16,+0.29] p=0.2968 | vs C-ungated -0.23 p=0.9967
+  caption gate: drop lowest 75% (thr 0.319) alpha=0.9 R@1 0.0203  R@5 0.0713  R@10 0.1107 | vs base -0.34 CI[-0.58,-0.10] p=0.9971 | vs C-ungated -0.63 p=1.0000
+    + DCKF-Q (D gated 75%)               R@1 0.0206  R@5 0.0708  R@10 0.1105 | vs base -0.30 CI[-0.56,-0.06] p=0.9926 | vs C-ungated -0.60 p=1.0000
+  D = DCKF-Q + gallery alpha=0.9 (ungated) R@1 0.0265  R@5 0.1032  R@10 0.1756 | vs base +0.28 CI[+0.08,+0.48] p=0.0030 | vs C-ungated -0.01 p=0.6360
+
+wrote results/reviewer_nwpu_3150_5_large_aerial.json
+
+E37_E38_DONE

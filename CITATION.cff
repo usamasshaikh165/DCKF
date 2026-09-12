@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "DCKF: Drift-Controlled Knowledge Fusion for Training-Free Text-to-Image Retrieval"
+type: software
+authors:
+  - family-names: Shaikh
+    given-names: Usama Ali
+    affiliation: Dalian University of Technology
+  - family-names: Chen
+    given-names: Zhikui
+    affiliation: Dalian University of Technology
+  - family-names: Riaz
+    given-names: Muhammad Tahir
+    affiliation: Dalian University of Technology
+    orcid: https://orcid.org/0009-0001-5036-4350
+  - family-names: Raja
+    given-names: Muhammad Yaqoob
+year: 2026
+repository-code: https://github.com/Usama1651/DCKF
+license: MIT

@@ -1,0 +1,112 @@
+
+### 19:46 E37b gate ablation flickr30k_k1k
+Loaded cached features for 1000 images.
+5000 queries over 1000 images (flickr30k_k1k)
+Loaded no-floor pool (expansions_flickr30k_k1k_1000_5_nofloor.json)
+pool: mean 24.0 cands/query; 32446 of 120203 candidates below the old 0.5 floor
+parity with paper cache: identical tau=0.55 selection for 100.0% of queries
+
+baseline R@1 58.86
+
+[A] top5 (paper pipeline: top-5 by original prior x cos, then rerank); typed scoring, fusion b=0.9, gate sweep (tau=0 is gate OFF)
+  top5 typed tau=0.0  fusion n_exp=4999  R@1  59.36 | vs base +0.50 CI[+0.20,+0.82] p=0.0007
+  top5 typed tau=0.3  fusion n_exp=4941  R@1  59.36 | vs base +0.50 CI[+0.20,+0.82] p=0.0007
+  top5 typed tau=0.4  fusion n_exp=4775  R@1  59.28 | vs base +0.42 CI[+0.12,+0.74] p=0.0044
+  top5 typed tau=0.45 fusion n_exp=4582  R@1  59.24 | vs base +0.38 CI[+0.08,+0.68] p=0.0095
+  top5 typed tau=0.5  fusion n_exp=4366  R@1  59.22 | vs base +0.36 CI[+0.06,+0.66] p=0.0116
+  top5 typed tau=0.55 fusion n_exp=3967  R@1  59.24 | vs base +0.38 CI[+0.08,+0.68] p=0.0081
+  top5 typed tau=0.6  fusion n_exp=3353  R@1  59.20 | vs base +0.34 CI[+0.08,+0.60] p=0.0066
+  top5 typed tau=0.65 fusion n_exp=2630  R@1  59.16 | vs base +0.30 CI[+0.06,+0.56] p=0.0100
+[A'] the missing cell: gate-off fusion vs gate-on fusion
+  top5 typed tau=0.0  fusion n_exp=4999  R@1  59.36 | vs base +0.50 CI[+0.20,+0.82] p=0.0007 | vs tau=.55 +0.12 CI[+0.00,+0.26] p=0.0324
+[B] typed scoring, raw text, gate on/off
+  top5 typed tau=0.55 text   n_exp=3967  R@1  56.58 | vs base -2.28 CI[-3.10,-1.46] p=1.0000
+  top5 typed tau=0.0  text   n_exp=4999  R@1  56.46 | vs base -2.39 CI[-3.30,-1.50] p=1.0000
+[C] prior-only scoring (cos removed from the score), gate on/off
+  top5 prior tau=0.55 fusion n_exp=3967  R@1  59.26 | vs base +0.40 CI[+0.10,+0.70] p=0.0054 | vs typed,tau=.55 +0.02 CI[+0.00,+0.06] p=0.3649
+  top5 prior tau=0.0  fusion n_exp=4999  R@1  59.30 | vs base +0.44 CI[+0.14,+0.76] p=0.0032 | vs typed,tau=.55 +0.06 CI[-0.08,+0.20] p=0.2402
+  top5 prior tau=0.55 text   n_exp=3967  R@1  56.52 | vs base -2.34 CI[-3.18,-1.50] p=1.0000
+  top5 prior tau=0.0  text   n_exp=4999  R@1  56.30 | vs base -2.55 CI[-3.46,-1.64] p=1.0000
+
+[A] deep (no top-5 prefilter: rerank over the whole pool); typed scoring, fusion b=0.9, gate sweep (tau=0 is gate OFF)
+  deep typed tau=0.0  fusion n_exp=4999  R@1  58.92 | vs base +0.06 CI[-0.28,+0.40] p=0.3748
+  deep typed tau=0.3  fusion n_exp=4941  R@1  58.92 | vs base +0.06 CI[-0.28,+0.40] p=0.3748
+  deep typed tau=0.4  fusion n_exp=4775  R@1  58.94 | vs base +0.08 CI[-0.24,+0.42] p=0.3296
+  deep typed tau=0.45 fusion n_exp=4582  R@1  58.90 | vs base +0.04 CI[-0.28,+0.38] p=0.4212
+  deep typed tau=0.5  fusion n_exp=4366  R@1  58.94 | vs base +0.08 CI[-0.24,+0.40] p=0.3273
+  deep typed tau=0.55 fusion n_exp=4038  R@1  59.00 | vs base +0.14 CI[-0.18,+0.46] p=0.1987
+  deep typed tau=0.6  fusion n_exp=3571  R@1  59.04 | vs base +0.18 CI[-0.10,+0.46] p=0.1140
+  deep typed tau=0.65 fusion n_exp=2958  R@1  59.04 | vs base +0.18 CI[-0.06,+0.44] p=0.0883
+[A'] the missing cell: gate-off fusion vs gate-on fusion
+  deep typed tau=0.0  fusion n_exp=4999  R@1  58.92 | vs base +0.06 CI[-0.28,+0.40] p=0.3748 | vs tau=.55 -0.08 CI[-0.26,+0.10] p=0.8281
+[B] typed scoring, raw text, gate on/off
+  deep typed tau=0.55 text   n_exp=4038  R@1  55.54 | vs base -3.32 CI[-4.22,-2.44] p=1.0000
+  deep typed tau=0.0  text   n_exp=4999  R@1  54.30 | vs base -4.56 CI[-5.56,-3.56] p=1.0000
+[C] prior-only scoring (cos removed from the score), gate on/off
+  deep prior tau=0.55 fusion n_exp=4038  R@1  59.00 | vs base +0.14 CI[-0.18,+0.46] p=0.2047 | vs typed,tau=.55 -0.00 CI[-0.14,+0.14] p=0.5590
+  deep prior tau=0.0  fusion n_exp=4999  R@1  58.96 | vs base +0.10 CI[-0.24,+0.44] p=0.2921 | vs typed,tau=.55 -0.04 CI[-0.26,+0.18] p=0.6650
+  deep prior tau=0.55 text   n_exp=4038  R@1  55.12 | vs base -3.74 CI[-4.66,-2.84] p=1.0000
+  deep prior tau=0.0  text   n_exp=4999  R@1  53.60 | vs base -5.26 CI[-6.28,-4.24] p=1.0000
+
+[D] pool depth alone: deep vs top5 at tau=0.55, typed, fusion
+  deep typed tau=0.55 fusion n_exp=4038  R@1  59.00 | vs base +0.14 CI[-0.18,+0.46] p=0.1987 | vs top5,tau=.55 -0.24 CI[-0.52,+0.04] p=0.9597
+gate changes the k=2 selection (top5 pool) for 1427 of 5000 queries (28.5%)
+gate changes the k=2 selection (deep pool) for 1795 of 5000 queries (35.9%)
+wrote results/gate_ablation_flickr30k_k1k_1000_5.json
+
+### 19:48 E37b gate ablation rsicd
+Loaded cached features for 1093 images.
+5465 queries over 1093 images (rsicd)
+Loaded no-floor pool (expansions_rsicd_1093_5_nofloor.json)
+pool: mean 23.7 cands/query; 1925 of 129786 candidates below the old 0.5 floor
+parity with paper cache: identical tau=0.55 selection for 98.9% of queries
+
+baseline R@1 5.40
+
+[A] top5 (paper pipeline: top-5 by original prior x cos, then rerank); typed scoring, fusion b=0.9, gate sweep (tau=0 is gate OFF)
+  top5 typed tau=0.0  fusion n_exp=5465  R@1   5.60 | vs base +0.20 CI[+0.00,+0.42] p=0.0344
+  top5 typed tau=0.3  fusion n_exp=5464  R@1   5.60 | vs base +0.20 CI[+0.00,+0.42] p=0.0344
+  top5 typed tau=0.4  fusion n_exp=5463  R@1   5.60 | vs base +0.20 CI[+0.00,+0.42] p=0.0344
+  top5 typed tau=0.45 fusion n_exp=5460  R@1   5.60 | vs base +0.20 CI[+0.00,+0.42] p=0.0344
+  top5 typed tau=0.5  fusion n_exp=5458  R@1   5.58 | vs base +0.18 CI[-0.02,+0.40] p=0.0481
+  top5 typed tau=0.55 fusion n_exp=5433  R@1   5.58 | vs base +0.18 CI[-0.02,+0.40] p=0.0481
+  top5 typed tau=0.6  fusion n_exp=5374  R@1   5.60 | vs base +0.20 CI[+0.00,+0.40] p=0.0317
+  top5 typed tau=0.65 fusion n_exp=5197  R@1   5.58 | vs base +0.18 CI[-0.02,+0.38] p=0.0442
+[A'] the missing cell: gate-off fusion vs gate-on fusion
+  top5 typed tau=0.0  fusion n_exp=5465  R@1   5.60 | vs base +0.20 CI[+0.00,+0.42] p=0.0344 | vs tau=.55 +0.02 CI[+0.00,+0.05] p=0.3708
+[B] typed scoring, raw text, gate on/off
+  top5 typed tau=0.55 text   n_exp=5433  R@1   4.46 | vs base -0.93 CI[-1.50,-0.38] p=0.9997
+  top5 typed tau=0.0  text   n_exp=5465  R@1   4.46 | vs base -0.93 CI[-1.50,-0.37] p=0.9998
+[C] prior-only scoring (cos removed from the score), gate on/off
+  top5 prior tau=0.55 fusion n_exp=5433  R@1   5.60 | vs base +0.20 CI[+0.00,+0.40] p=0.0319 | vs typed,tau=.55 +0.02 CI[-0.04,+0.07] p=0.4055
+  top5 prior tau=0.0  fusion n_exp=5465  R@1   5.62 | vs base +0.22 CI[+0.02,+0.44] p=0.0230 | vs typed,tau=.55 +0.04 CI[-0.04,+0.11] p=0.2315
+  top5 prior tau=0.55 text   n_exp=5433  R@1   4.56 | vs base -0.84 CI[-1.39,-0.29] p=0.9990
+  top5 prior tau=0.0  text   n_exp=5465  R@1   4.56 | vs base -0.84 CI[-1.39,-0.27] p=0.9989
+
+[A] deep (no top-5 prefilter: rerank over the whole pool); typed scoring, fusion b=0.9, gate sweep (tau=0 is gate OFF)
+  deep typed tau=0.0  fusion n_exp=5465  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  deep typed tau=0.3  fusion n_exp=5464  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  deep typed tau=0.4  fusion n_exp=5463  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  deep typed tau=0.45 fusion n_exp=5460  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  deep typed tau=0.5  fusion n_exp=5458  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  deep typed tau=0.55 fusion n_exp=5441  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629
+  deep typed tau=0.6  fusion n_exp=5404  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4624
+  deep typed tau=0.65 fusion n_exp=5285  R@1   5.36 | vs base -0.04 CI[-0.24,+0.16] p=0.6776
+[A'] the missing cell: gate-off fusion vs gate-on fusion
+  deep typed tau=0.0  fusion n_exp=5465  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629 | vs tau=.55 +0.00 CI[+0.00,+0.00] p=1.0000
+[B] typed scoring, raw text, gate on/off
+  deep typed tau=0.55 text   n_exp=5441  R@1   4.21 | vs base -1.19 CI[-1.74,-0.64] p=1.0000
+  deep typed tau=0.0  text   n_exp=5465  R@1   4.17 | vs base -1.22 CI[-1.76,-0.68] p=1.0000
+[C] prior-only scoring (cos removed from the score), gate on/off
+  deep prior tau=0.55 fusion n_exp=5441  R@1   5.45 | vs base +0.06 CI[-0.15,+0.27] p=0.3351 | vs typed,tau=.55 +0.04 CI[+0.00,+0.09] p=0.1355
+  deep prior tau=0.0  fusion n_exp=5465  R@1   5.45 | vs base +0.06 CI[-0.15,+0.27] p=0.3351 | vs typed,tau=.55 +0.04 CI[+0.00,+0.09] p=0.1355
+  deep prior tau=0.55 text   n_exp=5441  R@1   4.25 | vs base -1.15 CI[-1.70,-0.59] p=1.0000
+  deep prior tau=0.0  text   n_exp=5465  R@1   4.21 | vs base -1.18 CI[-1.74,-0.62] p=1.0000
+
+[D] pool depth alone: deep vs top5 at tau=0.55, typed, fusion
+  deep typed tau=0.55 fusion n_exp=5441  R@1   5.42 | vs base +0.02 CI[-0.18,+0.24] p=0.4629 | vs top5,tau=.55 -0.16 CI[-0.35,+0.02] p=0.9705
+gate changes the k=2 selection (top5 pool) for 67 of 5465 queries (1.2%)
+gate changes the k=2 selection (deep pool) for 148 of 5465 queries (2.7%)
+wrote results/gate_ablation_rsicd_1093_5.json
+
+E37B_DONE

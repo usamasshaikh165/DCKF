@@ -1,0 +1,287 @@
++ source /home/usama/miniconda3/etc/profile.d/conda.sh
+++ export CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ export _CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ _CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/home/usama/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/usama/miniconda3/bin/python
+++ export _CONDA_ROOT=/home/usama/miniconda3
+++ _CONDA_ROOT=/home/usama/miniconda3
+++ '[' -z '' ']'
+++ export CONDA_SHLVL=0
+++ CONDA_SHLVL=0
+++ '[' -n '' ']'
+++++ dirname /home/usama/miniconda3/bin/conda
++++ dirname /home/usama/miniconda3/bin
+++ PATH=/home/usama/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export PATH
+++ '[' -z '' ']'
+++ PS1=
++ conda activate rakg
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate rakg
++ '[' -n '' ']'
++ local ask_conda
+++ PS1=
+++ __conda_exe shell.posix activate rakg
+++ '[' -n '' ']'
+++ /home/usama/miniconda3/bin/conda shell.posix activate rakg
++ ask_conda='export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(rakg) '\''
+export PATH='\''/home/usama/miniconda3/envs/rakg/bin:/home/usama/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_PREFIX='\''/home/usama/miniconda3/envs/rakg'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''rakg'\''
+export CONDA_PROMPT_MODIFIER='\''(rakg) '\''
+export CONDA_EXE='\''/home/usama/miniconda3/bin/conda'\''
+export _CONDA_EXE='\''/home/usama/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/home/usama/miniconda3/bin/python'\''
+export _CONDA_ROOT='\''/home/usama/miniconda3'\''
+. "/home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libglib_activate.sh"
+. "/home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libxml2-split_activate.sh"'
++ eval 'export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+PS1='\''(rakg) '\''
+export PATH='\''/home/usama/miniconda3/envs/rakg/bin:/home/usama/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'\''
+export CONDA_PREFIX='\''/home/usama/miniconda3/envs/rakg'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''rakg'\''
+export CONDA_PROMPT_MODIFIER='\''(rakg) '\''
+export CONDA_EXE='\''/home/usama/miniconda3/bin/conda'\''
+export _CONDA_EXE='\''/home/usama/miniconda3/bin/conda'\''
+export CONDA_PYTHON_EXE='\''/home/usama/miniconda3/bin/python'\''
+export _CONDA_ROOT='\''/home/usama/miniconda3'\''
+. "/home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libglib_activate.sh"
+. "/home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libxml2-split_activate.sh"'
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ PS1='(rakg) '
+++ export PATH=/home/usama/miniconda3/envs/rakg/bin:/home/usama/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ PATH=/home/usama/miniconda3/envs/rakg/bin:/home/usama/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+++ export CONDA_PREFIX=/home/usama/miniconda3/envs/rakg
+++ CONDA_PREFIX=/home/usama/miniconda3/envs/rakg
+++ export CONDA_SHLVL=1
+++ CONDA_SHLVL=1
+++ export CONDA_DEFAULT_ENV=rakg
+++ CONDA_DEFAULT_ENV=rakg
+++ export 'CONDA_PROMPT_MODIFIER=(rakg) '
+++ CONDA_PROMPT_MODIFIER='(rakg) '
+++ export CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ export _CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ _CONDA_EXE=/home/usama/miniconda3/bin/conda
+++ export CONDA_PYTHON_EXE=/home/usama/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/usama/miniconda3/bin/python
+++ export _CONDA_ROOT=/home/usama/miniconda3
+++ _CONDA_ROOT=/home/usama/miniconda3
+++ . /home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libglib_activate.sh
++++ export GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
++++ GSETTINGS_SCHEMA_DIR_CONDA_BACKUP=
++++ export GSETTINGS_SCHEMA_DIR=/home/usama/miniconda3/envs/rakg/share/glib-2.0/schemas
++++ GSETTINGS_SCHEMA_DIR=/home/usama/miniconda3/envs/rakg/share/glib-2.0/schemas
+++ . /home/usama/miniconda3/envs/rakg/etc/conda/activate.d/libxml2-split_activate.sh
++++ test -n ''
++++ xml_catalog_files_libxml2=
++++ XML_CATALOG_FILES=
++++ conda_catalog_files=
++++ ifs_libxml2=' 	
+'
++++ IFS=' '
++++ rem=/home/usama/miniconda3/envs/rakg
++++ for pre in ${rem}
++++ test '' = /home/usama/miniconda3/envs/rakg
++++ conda_catalog_files=/home/usama/miniconda3/envs/rakg
++++ rem=
++++ IFS=' 	
+'
++++ conda_catalog_files='file:///home/usama/miniconda3/envs/rakg/etc/xml/catalog file:///etc/xml/catalog'
++++ export 'XML_CATALOG_FILES=file:///home/usama/miniconda3/envs/rakg/etc/xml/catalog file:///etc/xml/catalog'
++++ XML_CATALOG_FILES='file:///home/usama/miniconda3/envs/rakg/etc/xml/catalog file:///etc/xml/catalog'
++++ unset conda_catalog_files ifs_libxml2 rem
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /home/usama/RA-KG-T2I
++ export CUDA_VISIBLE_DEVICES=0
++ CUDA_VISIBLE_DEVICES=0
++ export HF_ENDPOINT=https://hf-mirror.com
++ HF_ENDPOINT=https://hf-mirror.com
++ echo '=== E27 LLM baseline flickr30k_k1k ==='
+=== E27 LLM baseline flickr30k_k1k ===
++ python src/llm_rewrite_baseline.py --dataset flickr30k_k1k --limit 0 --captions-per-image 5
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loaded cached features for 1000 images.
+5000 captions over 1000 images (flickr30k_k1k)
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<00:37,  8.94it/s]Loading weights:  57%|█████▋    | 193/338 [00:00<00:00, 1020.39it/s]Loading weights:  93%|█████████▎| 315/338 [00:00<00:00, 1083.51it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 991.96it/s] 
+  rewritten 64/5000 (79 ms/q)
+  rewritten 704/5000 (33 ms/q)
+  rewritten 1344/5000 (30 ms/q)
+  rewritten 1984/5000 (28 ms/q)
+  rewritten 2624/5000 (28 ms/q)
+  rewritten 3264/5000 (27 ms/q)
+  rewritten 3904/5000 (27 ms/q)
+  rewritten 4544/5000 (27 ms/q)
+Rewrites done (28 ms/q), cached.
+example: The man with pierced ears is wearing glasses and an orange hat. -> The man with piercings has clear vision through his glasses and sports an orange baseball cap.
+
+config                     |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR
+------------------------------------------------------------------------------------------
+A baseline                 |   58.70%  83.50%  89.98% |   78.80%  94.90%  98.20% | 84.01%
+L-replace (LLM rewrite)    |   50.74%  78.14%  85.86% |   70.10%  92.20%  95.90% | 78.82%
+L-fused aq=0.9             |   59.30%  84.32%  90.34% |   78.90%  94.60%  98.60% | 84.34%
+B relation-KG aq=0.9       |   59.16%  83.72%  90.14% |   78.70%  95.00%  98.30% | 84.17%
+bootstrap L-replace (LLM rewrite) vs A, t2i R@1: -7.97 [-9.22, -6.72], p=1.0000
+bootstrap L-fused aq=0.9 vs A, t2i R@1: +0.60 [+0.22, +0.98], p=0.0012
+bootstrap B relation-KG aq=0.9 vs A, t2i R@1: +0.46 [+0.16, +0.76], p=0.0023
+bootstrap KG vs L-replace (LLM rewrite), t2i R@1: +8.43 [+7.20, +9.66], p=0.0000
+bootstrap KG vs L-fused aq=0.9, t2i R@1: -0.14 [-0.54, +0.26], p=0.7629
+
+wrote results/llm_baseline_flickr30k_k1k_1000_5.json
++ echo '=== E27 LLM baseline rsicd ==='
+=== E27 LLM baseline rsicd ===
++ python src/llm_rewrite_baseline.py --dataset rsicd --limit 0 --captions-per-image 5
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd)
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:  26%|██▌       | 88/338 [00:00<00:00, 874.29it/s]Loading weights:  61%|██████    | 207/338 [00:00<00:00, 1045.27it/s]Loading weights:  97%|█████████▋| 327/338 [00:00<00:00, 1087.81it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1088.96it/s]
+  rewritten 64/5465 (48 ms/q)
+  rewritten 704/5465 (26 ms/q)
+  rewritten 1344/5465 (25 ms/q)
+  rewritten 1984/5465 (24 ms/q)
+  rewritten 2624/5465 (23 ms/q)
+  rewritten 3264/5465 (22 ms/q)
+  rewritten 3904/5465 (22 ms/q)
+  rewritten 4544/5465 (23 ms/q)
+  rewritten 5184/5465 (23 ms/q)
+Rewrites done (23 ms/q), cached.
+example: The airport is very large. -> The expansive airport boasts vast expanses of terminal space and bustling activity.
+
+config                     |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR
+------------------------------------------------------------------------------------------
+A baseline                 |    5.45%  17.79%  27.98% |    5.40%  16.10%  25.98% | 16.45%
+L-replace (LLM rewrite)    |    4.78%  16.16%  26.13% |    4.67%  15.28%  22.05% | 14.84%
+L-fused aq=0.9             |    5.60%  18.19%  28.71% |    5.67%  18.02%  27.26% | 17.24%
+B relation-KG aq=0.9       |    5.56%  17.99%  28.22% |    5.95%  16.01%  25.71% | 16.57%
+bootstrap L-replace (LLM rewrite) vs A, t2i R@1: -0.68 [-1.34, -0.02], p=0.9809
+bootstrap L-fused aq=0.9 vs A, t2i R@1: +0.15 [-0.11, +0.40], p=0.1372
+bootstrap B relation-KG aq=0.9 vs A, t2i R@1: +0.11 [-0.11, +0.33], p=0.1751
+bootstrap KG vs L-replace (LLM rewrite), t2i R@1: +0.79 [+0.13, +1.45], p=0.0091
+bootstrap KG vs L-fused aq=0.9, t2i R@1: -0.04 [-0.29, +0.20], p=0.6380
+
+wrote results/llm_baseline_rsicd_1093_5.json
++ echo '=== E28 BLIP-large RSICD captions ==='
+=== E28 BLIP-large RSICD captions ===
++ python src/rsicd_blip_large.py
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd)
+Loading weights:   0%|          | 0/616 [00:00<?, ?it/s]Loading weights:  33%|███▎      | 206/616 [00:00<00:00, 2038.94it/s]Loading weights:  67%|██████▋   | 410/616 [00:00<00:00, 1401.23it/s]Loading weights:  95%|█████████▍| 584/616 [00:00<00:00, 1524.03it/s]Loading weights: 100%|██████████| 616/616 [00:00<00:00, 1556.60it/s]
+  captioned 32/1093
+  captioned 64/1093
+  captioned 96/1093
+  captioned 128/1093
+  captioned 160/1093
+  captioned 192/1093
+  captioned 224/1093
+  captioned 256/1093
+  captioned 288/1093
+  captioned 320/1093
+  captioned 352/1093
+  captioned 384/1093
+  captioned 416/1093
+  captioned 448/1093
+  captioned 480/1093
+  captioned 512/1093
+  captioned 544/1093
+  captioned 576/1093
+  captioned 608/1093
+  captioned 640/1093
+  captioned 672/1093
+  captioned 704/1093
+  captioned 736/1093
+  captioned 768/1093
+  captioned 800/1093
+  captioned 832/1093
+  captioned 864/1093
+  captioned 896/1093
+  captioned 928/1093
+  captioned 960/1093
+  captioned 992/1093
+  captioned 1024/1093
+  captioned 1056/1093
+  captioned 1088/1093
+  captioned 1093/1093
+conditional captioning [an aerial photograph of]: 24 ms/image
+example caption: an aerial photograph of a soccer field in a city
+
+config                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR
+--------------------------------------------------------------------------------------
+A baseline             |    5.45%  17.79%  27.98% |    5.40%  16.10%  25.98% | 16.45%
+C large-cap ag=0.9     |    5.86%  17.79%  29.17% |    6.50%  18.02%  26.99% | 17.39%
+D both ag=0.9          |    6.06%  17.73%  28.86% |    6.13%  17.47%  26.26% | 17.08%
+C large-cap ag=0.95    |    5.71%  17.99%  28.56% |    5.95%  17.02%  26.90% | 17.02%
+D both ag=0.95         |    5.82%  18.30%  28.40% |    5.76%  17.57%  26.72% | 17.09%
+bootstrap C large-cap ag=0.9 vs A, t2i R@1: +0.41 [-0.04, +0.86], p=0.0420
+bootstrap D both ag=0.9 vs A, t2i R@1: +0.61 [+0.15, +1.06], p=0.0053
+bootstrap C large-cap ag=0.95 vs A, t2i R@1: +0.26 [-0.07, +0.59], p=0.0658
+bootstrap D both ag=0.95 vs A, t2i R@1: +0.37 [+0.04, +0.70], p=0.0174
+bootstrap KG increment (D both ag=0.9 vs C large-cap ag=0.9), t2i R@1: +0.20 [+0.02, +0.38], p=0.0161
+
+wrote results/rsicd_blip_large.json
++ echo '=== E26b text-mode baselines flickr30k_k1k ==='
+=== E26b text-mode baselines flickr30k_k1k ===
++ python src/knowledge_baselines.py --dataset flickr30k_k1k --limit 0 --captions-per-image 5 --mode text
+Loaded cached features for 1000 images.
+5000 captions over 1000 images (flickr30k_k1k)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |   58.70%  83.50%  89.98% |   78.80%  94.90%  98.20% | 84.01% |     -
+random (KTIR-style)      |   55.90%  80.98%  88.74% |   76.90%  95.00%  98.10% | 82.60% |  3967
+original priors          |   56.50%  81.46%  88.78% |   77.20%  94.10%  97.90% | 82.66% |  3967
+wordnet synonyms         |   56.72%  81.86%  88.80% |   77.60%  94.30%  97.10% | 82.73% |  4138
+relation-aware (ours)    |   56.54%  81.36%  88.78% |   77.10%  94.30%  97.50% | 82.60% |  3967
+bootstrap random (KTIR-style) vs baseline, t2i R@1: -2.80 [-3.68, -1.92], p=1.0000
+bootstrap original priors vs baseline, t2i R@1: -2.20 [-3.02, -1.38], p=1.0000
+bootstrap wordnet synonyms vs baseline, t2i R@1: -1.98 [-2.80, -1.16], p=1.0000
+bootstrap relation-aware (ours) vs baseline, t2i R@1: -2.16 [-2.98, -1.34], p=1.0000
+bootstrap ours vs random (KTIR-style), t2i R@1: +0.64 [-0.08, +1.38], p=0.0411
+bootstrap ours vs original priors, t2i R@1: +0.04 [-0.20, +0.28], p=0.4082
+bootstrap ours vs wordnet synonyms, t2i R@1: -0.18 [-1.04, +0.66], p=0.6666
+
+wrote results/baselines_flickr30k_k1k_1000_5_text.json
++ echo '=== E26b text-mode baselines rsicd ==='
+=== E26b text-mode baselines rsicd ===
++ python src/knowledge_baselines.py --dataset rsicd --limit 0 --captions-per-image 5 --mode text
+Loaded cached features for 1093 images.
+5465 captions over 1093 images (rsicd)
+
+strategy                 |  t2i R@1     R@5    R@10 |  i2t R@1     R@5    R@10 |     mR |  #exp
+------------------------------------------------------------------------------------------------
+none (baseline)          |    5.45%  17.79%  27.98% |    5.40%  16.10%  25.98% | 16.45% |     -
+random (KTIR-style)      |    4.63%  15.65%  25.36% |    4.67%  14.82%  24.70% | 14.97% |  5433
+original priors          |    4.76%  16.32%  25.80% |    4.30%  14.91%  22.96% | 14.84% |  5433
+wordnet synonyms         |    4.57%  14.91%  25.18% |    4.48%  14.09%  23.70% | 14.49% |  5340
+relation-aware (ours)    |    4.50%  15.96%  25.69% |    4.30%  14.82%  22.60% | 14.64% |  5433
+bootstrap random (KTIR-style) vs baseline, t2i R@1: -0.82 [-1.39, -0.26], p=0.9977
+bootstrap original priors vs baseline, t2i R@1: -0.69 [-1.24, -0.15], p=0.9938
+bootstrap wordnet synonyms vs baseline, t2i R@1: -0.87 [-1.41, -0.35], p=0.9993
+bootstrap relation-aware (ours) vs baseline, t2i R@1: -0.95 [-1.52, -0.40], p=0.9998
+bootstrap ours vs random (KTIR-style), t2i R@1: -0.13 [-0.57, +0.31], p=0.7334
+bootstrap ours vs original priors, t2i R@1: -0.26 [-0.44, -0.07], p=0.9987
+bootstrap ours vs wordnet synonyms, t2i R@1: -0.08 [-0.59, +0.42], p=0.6299
+
+wrote results/baselines_rsicd_1093_5_text.json
++ df -h /
++ tail -1
+/dev/sda3       2.2T  2.1T  4.8G 100% /
++ echo '=== E27 RUN COMPLETE ==='
+=== E27 RUN COMPLETE ===
