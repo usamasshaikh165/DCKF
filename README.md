@@ -73,4 +73,4 @@ MIT, see `LICENSE`. The datasets, CLIP, BLIP, RemoteCLIP, Qwen2.5 and ConceptNet
 
 ## Contact
 
-Usama Ali Shaikh, School of Software Technology, Dalian University of Technology (usamasheikh833@gmail.com).
+Usama Ali Shaikh, School of Software Technology, Dalian University of Technology (usama7097@mail.dlut.edu.cn).
